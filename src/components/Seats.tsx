@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { countries } from "./countries";
-
+import { useSelector } from 'react-redux'
 
 export interface Party {
   name: string;
@@ -54,24 +54,24 @@ const TrashIcon = () => {
   );
 };
 
-const getPosition = (position: number) => {
+const getPosition = (position: number, locale: string) => {
   const ranges = [
-    { min: 100, max: Infinity, full: "Far right", short: "RR" },
-    { min: 75, max: 99, full: "Right-wing", short: "Rr" },
-    { min: 50, max: 74, full: "Centre right", short: "rr" },
-    { min: 25, max: 49, full: "Lean right", short: "r" },
-    { min: -24, max: 24, full: "Centre", short: "C" },
-    { min: -49, max: -25, full: "Lean left", short: "l" },
-    { min: -74, max: -50, full: "Centre left", short: "ll" },
-    { min: -99, max: -75, full: "Left-wing", short: "Ll" },
-    { min: -Infinity, max: -100, full: "Far left", short: "LL" },
+    { min: 100, max: Infinity, full: locale === 'en' ? "Far right" : "Extrême droite", short: "RR" },
+    { min: 75, max: 99, full: locale === 'en' ? "Right-wing" : "Droite", short: "Rr" },
+    { min: 50, max: 74, full: locale === 'en' ? "Centre right" : "Centre droit", short: "rr" },
+    { min: 25, max: 49, full: locale === 'en' ? "Lean right" : "Légèrement à droite", short: "r" },
+    { min: -24, max: 24, full: locale === 'en' ? "Centre" : "Centre", short: "C" },
+    { min: -49, max: -25, full: locale === 'en' ? "Lean left" : "Légèrement à gauche", short: "l" },
+    { min: -74, max: -50, full: locale === 'en' ? "Centre left" : "Centre gauche", short: "ll" },
+    { min: -99, max: -75, full: locale === 'en' ? "Left-wing" : "Gauche", short: "Ll" },
+    { min: -Infinity, max: -100, full: locale === 'en' ? "Far left" : "Extrême gauche", short: "LL" },
   ];
 
   const match = ranges.find(
     (range) => position >= range.min && position <= range.max
   );
 
-  return match || { full: "Centre", short: "C" };
+  return match || { full: locale === 'en' ? "Centre" : "Centre", short: "C" };
 };
 
 const PartyButton = ({
@@ -89,6 +89,8 @@ const PartyButton = ({
   parties: Party[];
   isEditMode: boolean;
 }) => {
+
+  const locale = useSelector((state: { i18n: { locale: string } }) => state.i18n.locale)
   const selected = selectedParties.includes(party);
   //   const colour = party.isIndependent ? "#6B7280" : party.colour;
   const colour = party.colour;
@@ -268,7 +270,7 @@ const PartyButton = ({
                 }}
               />
               <span className="text-center">
-                {getPosition(party.position).full}
+                {getPosition(party.position, locale).full}
               </span>
             </label>
           </div>
@@ -292,7 +294,7 @@ const PartyButton = ({
                   }
                 }}
               />
-              <span className="select-none">Independent</span>
+              <span className="select-none">{locale === 'en' ? "Independent" : "Indépendant"}</span>
             </label>
           </div>
           <div className="w-full flex justify-evenly items-center gap-2">
@@ -372,6 +374,7 @@ const PartyButton = ({
 };
 
 const Seats = () => {
+  const locale = useSelector((state: { i18n: { locale: string } }) => state.i18n.locale)
   const [parties, setParties] = useState<Party[]>(
     countries.find((country) => country.name === "European Union")?.parties ||
       []
@@ -439,29 +442,29 @@ const Seats = () => {
 
   const buttonConfigurations: ButtonConfig[] = [
     {
-      label: "Select All",
+      label: {en: "Select All", fr: "Tout sélectionner"}[locale] || "Select All",
       onClick: () => setSelectedParties([...parties]),
     },
     {
-      label: "Deselect All",
+      label: {en: "Deselect All", fr: "Tout désélectionner"}[locale] || "Deselect All",
       onClick: () => setSelectedParties([]),
     },
     {
-      label: "Left",
+      label: {en: "Left", fr: "Gauche"}[locale] || "Left",
       onClick: () => {
         const leftParties = parties.filter((party) => party.position < 0);
         setSelectedParties(leftParties);
       },
     },
     {
-      label: "Right",
+      label: {en: "Right", fr: "Droite"}[locale] || "Right",
       onClick: () => {
         const rightParties = parties.filter((party) => party.position > 0);
         setSelectedParties(rightParties);
       },
     },
     {
-      label: "Left (without far left)",
+      label: {en: "Left (without far left)", fr: "Gauche (sans extrême gauche)"}[locale] || "Left (without far left)",
       onClick: () => {
         const leftParties = parties.filter(
           (party) => party.position < 0 && party.position > -100
@@ -470,7 +473,7 @@ const Seats = () => {
       },
     },
     {
-      label: "Right (without far right)",
+      label: {en: "Right (without far right)", fr: "Droite (sans extrême droite)"}[locale] || "Right (without far right)",
       onClick: () => {
         const rightParties = parties.filter(
           (party) => party.position > 0 && party.position < 100
@@ -479,21 +482,21 @@ const Seats = () => {
       },
     },
     {
-      label: "Left-wing",
+      label: {en: "Left-wing", fr: "Aile gauche"}[locale] || "Left-wing",
       onClick: () => {
         const leftParties = parties.filter((party) => party.position <= -75);
         setSelectedParties(leftParties);
       },
     },
     {
-      label: "Right-wing",
+      label: {en: "Right-wing", fr: "Aile droite"}[locale] || "Right-wing",
       onClick: () => {
         const rightParties = parties.filter((party) => party.position >= 75);
         setSelectedParties(rightParties);
       },
     },
     {
-      label: "Centre",
+      label: {en: "Centre", fr: "Centre"}[locale] || "Centre",
       onClick: () => {
         const centerParties = parties.filter(
           (party) =>
@@ -505,7 +508,7 @@ const Seats = () => {
       },
     },
     {
-      label: "Grand (centre)",
+      label: {en: "Grand (centre)", fr: "Grand (centre)"}[locale] || "Grand (centre)",
       onClick: () => {
         const centerParties = parties.filter(
           (party) =>
@@ -515,7 +518,7 @@ const Seats = () => {
       },
     },
     {
-      label: "Grand (without extremists)",
+      label: {en: "Grand (without extremists)", fr: "Grand (sans extrémistes)"}[locale] || "Grand (without extremists)",
       onClick: () => {
         const grandParties = parties.filter(
           (party) =>
@@ -529,13 +532,22 @@ const Seats = () => {
   ];
 
   const sortButtonConfigs = [
-    { label: "Name", sortByKey: "name", title: "Sort by Name" },
+    { label: {
+      en: "Name",
+      fr: "Nom"
+    }[locale] || "Name", sortByKey: "name", title: "Sort by Name" },
     {
-      label: "Position",
+      label: {
+        en: "Position",
+        fr: "Position"
+      }[locale] || "Position",
       sortByKey: "position",
       title: "Sort by Political Position",
     },
-    { label: "Seats", sortByKey: "seats", title: "Sort by Seats" },
+    { label: {
+      en: "Seats",
+      fr: "Sièges"
+    }[locale] || "Seats", sortByKey: "seats", title: "Sort by Seats" },
   ] as {
     label: string;
     sortByKey: "name" | "position" | "seats";
@@ -705,7 +717,7 @@ const Seats = () => {
                 )}
               </div>
             </span>
-            <span className="select-none ">Allow Tie Breaker</span>
+            <span className="select-none ">{locale === 'en' ? "Allow Tie Breaker" : "Autoriser le briseur d'égalité"}</span>
           </label>
         </div>
         <div className="flex sm:order-2 order-3 rounded-lg overflow-y-hidden overflow-x-auto whitespace-nowrap sm:w-auto w-full">
@@ -730,7 +742,7 @@ const Seats = () => {
             className="select-none cursor-default"
             onClick={() => setIsEditMode(false)}
           >
-            View
+            {locale === 'en' ? "View" : "Vue"}
           </span>
           <div
             onClick={() => setIsEditMode(!isEditMode)}
@@ -748,7 +760,7 @@ const Seats = () => {
             className="select-none cursor-default"
             onClick={() => setIsEditMode(true)}
           >
-            Edit
+            {locale === 'en' ? "Edit" : "Éditer"}
           </span>
         </div>
       </div>
@@ -808,7 +820,7 @@ const Seats = () => {
           </li>
         )}
       </ul>
-      {parties.length <= 0 && <p className="text-center">No parties</p>}
+      {parties.length <= 0 && <p className="text-center">{locale === 'en' ? "No parties" : "Aucun parti"}</p>}
 
       <div className="flex gap-2 flex-wrap mt-4 bg-gray-200 dark:bg-gray-700 rounded-lg p-4 overflow-auto">
         {buttonConfigurations.map((buttonConfig, index) => (
@@ -837,7 +849,7 @@ const Seats = () => {
         }}
         className="p-2 border-2 rounded-lg w-full mt-4 border-gray-200 dark:border-gray-700"
       >
-        Clear
+        {locale === 'en' ? "Clear All Parties" : "Effacer tous les partis"}
       </button>
       <button
         onClick={() => {
@@ -857,7 +869,7 @@ const Seats = () => {
         aria-describedby="Export Parties"
         aria-disabled={false}
       >
-        Export Parties
+        {locale === 'en' ? "Export Parties" : "Exporter les partis"}
       </button>
       <input
         type="file"

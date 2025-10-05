@@ -3,9 +3,7 @@ import Seats from "./components/Seats";
 import {useEffect, useState} from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { setLocale } from "./i18n/i18n";
-
-import en from './i18n/en.json' with { type: 'json' };
-import fr from './i18n/fr.json' with { type: 'json' };
+import { useI18n } from "./i18n/i18nMessage";
 
 type Theme = "light" | "dark" | "auto";
 
@@ -50,12 +48,13 @@ function App() {
     }
   }, [theme]);
 
-
+  const i = useI18n();
+  
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-950 dark:text-white min-h-screen transition-colors duration-300">
         <div className="max-w-2xl mx-auto p-4 ">
             <div className={"flex justify-between items-center  mb-4"}>
-                <h1 className="text-2xl font-bold">{locale === 'en' ? en.parliament : fr.parliament}</h1>
+                <h1 className="text-2xl font-bold">{i('parliament')}</h1>
                 <div className="flex gap-2">
                   <div>
                   <button className={`px-2 py-1 border-2 border-e-0 rounded-s-lg border-gray-200 dark:border-gray-700 ${locale === 'en' ? 'bg-gray-200 dark:bg-gray-700' : ''}`} title={"English"} onClick={() => dispatch(setLocale('en'))}>EN</button>
@@ -66,9 +65,9 @@ function App() {
                     value={theme} title={"Appearance"} onChange={
                     (e) => setTheme(e.target.value as 'light' | 'dark' | 'auto')
                 }>
-                    <option value={'light'}>Light</option>
-                    <option value={'dark'}>Dark</option>
-                    <option value={'auto'}>Auto</option>
+                    <option value={'light'}>{i('appearances.light')}</option>
+                    <option value={'dark'}>{i('appearances.dark')}</option>
+                    <option value={'auto'}>{i('appearances.auto')}</option>
                 </select>
                 </div>
 

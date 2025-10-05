@@ -1,3 +1,8 @@
 {
-    "parliament": "Parliament"
+    "parliament": "Parliament",
+    "appearances": {
+        "light": "Light",
+        "dark": "Dark",
+        "auto": "Auto"
+    }
 }

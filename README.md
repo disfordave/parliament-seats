@@ -4,7 +4,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-**Check [Parliame.com](https://parliame.com) for the live version with custom backend features.**
+**Check [Parliame.com](https://parliame.com) for the live version with custom backend features. ([Parliame.com Frontend Repository](https://github.com/disfordave/parliame-client))**
 
 ## ✨ What is Parliament Seats?
 

@@ -2,8 +2,6 @@
 
 > A powerful and intuitive parliamentary seat distribution visualizer and coalition simulator
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 **Check [Parliame.com](https://parliame.com) for the live version with custom backend features. ([Parliame.com Frontend Repository](https://github.com/disfordave/parliame-client))**
 
 ## ✨ What is Parliament Seats?
@@ -112,7 +110,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-This project is licensed under the GNU General Public License v3.0 or later - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU Affero General Public License v3.0 or later - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 

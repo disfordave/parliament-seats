@@ -101,7 +101,7 @@ const Seats = () => {
         <ul
           className={`grid grid-cols-1 gap-4 transition-all xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 md:grid-cols-4`}
         >
-          {parties
+          {[...parties]
             .sort((a, b) => sort(a, b, isEditMode, sortBy))
             .map((party, index) => (
               <li key={index}>

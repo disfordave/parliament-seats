@@ -20,11 +20,6 @@
 
 import { Country, Party } from "@/types";
 
-interface BearState {
-  bears: number;
-  increase: (by: number) => void;
-}
-
 interface DefaultCountryValueState {
   defaultCountryValue: string | null;
   setDefaultCountryValue: (by: string) => void;
@@ -67,7 +62,6 @@ interface SelectedCountryState {
 }
 
 export type {
-  BearState,
   DefaultCountryValueState,
   PartiesState,
   SelectedPartiesState,

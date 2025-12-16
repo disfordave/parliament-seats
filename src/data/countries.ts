@@ -222,7 +222,7 @@ export const countries: Country[] = [
         colour: "#242B57",
         position: 75,
         isIndependent: false,
-      }, 
+      },
       {
         name: "50PLUS",
         shortName: "50PLUS",
@@ -230,7 +230,7 @@ export const countries: Country[] = [
         colour: "#92107D",
         position: 0,
         isIndependent: false,
-      }, 
+      },
     ],
   },
   {

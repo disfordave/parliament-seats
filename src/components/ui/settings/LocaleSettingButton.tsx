@@ -68,7 +68,7 @@ export default function LocaleSettingButton() {
               animate={{ opacity: 1, translateY: 0 }}
               exit={{ opacity: 0, translateY: 2 }}
               ref={dropdownRef}
-              className="absolute z-[100] flex w-full flex-col overflow-hidden rounded-lg border-2 border-gray-200 shadow-md dark:border-gray-700 bottom-10"
+              className="absolute bottom-10 z-[100] flex w-full flex-col overflow-hidden rounded-lg border-2 border-gray-200 shadow-md dark:border-gray-700"
             >
               {Object.keys(locales).map((loc) => (
                 <button

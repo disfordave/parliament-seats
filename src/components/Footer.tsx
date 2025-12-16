@@ -55,11 +55,11 @@ export default function Footer() {
             @disfordave
           </a>{" "}
         </p>
-        <div className="flex gap-2 justify-start items-center flex-wrap">
+        <div className="flex flex-wrap items-center justify-start gap-2">
           <ThemeButton />
-        <div className="flex gap-2">
-          <LocaleSettingButton />
-        </div>
+          <div className="flex gap-2">
+            <LocaleSettingButton />
+          </div>
         </div>
       </footer>
     </>

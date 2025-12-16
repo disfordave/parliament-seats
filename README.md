@@ -55,17 +55,20 @@ Parliament Seats is an interactive web application that helps you visualize and 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/disfordave/parliament-seats.git
 cd parliament-seats
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```

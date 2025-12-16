@@ -30,9 +30,9 @@ export default function Header() {
           <Logo className="size-12 flex-shrink-0" />
           <div className="flex flex-col justify-start">
             <h1 className="text-2xl font-bold uppercase">Parliame</h1>
-          <p className="text-gray-600 dark:text-gray-500 text-sm leading-4">
-            {i("subtitle")}
-          </p>
+            <p className="text-sm leading-4 text-gray-600 dark:text-gray-500">
+              {i("subtitle")}
+            </p>
           </div>
         </div>
       </header>

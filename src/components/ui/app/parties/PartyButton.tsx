@@ -46,7 +46,7 @@ export default function PartyButton({ party }: { party: Party }) {
   const shortDesc = `${partyName} (${party.seats})`;
   const { i } = useI18n();
   return (
-    <div
+    <button
       onClick={() => {
         if (isEditMode) return;
         if (selected) {
@@ -311,6 +311,6 @@ export default function PartyButton({ party }: { party: Party }) {
         // </span>
         <></>
       )}
-    </div>
+    </button>
   );
 }

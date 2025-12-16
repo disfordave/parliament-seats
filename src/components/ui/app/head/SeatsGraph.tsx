@@ -108,12 +108,19 @@ export default function SeatsGraph() {
           className="relative flex h-4 overflow-hidden rounded-lg bg-gray-200 transition-all dark:bg-gray-700"
           dir={sortBy === "position" ? "ltr" : ""}
         >
-          {parties
+          {[...parties]
             .sort((a, b) => sort(a, b, isEditMode, sortBy))
             .map((party, index) => (
               <div
                 key={index}
                 title={`${
+                  party.isIndependent
+                    ? party.shortName.length > 0
+                      ? party.shortName + " (I)"
+                      : "Independent"
+                    : party.shortName
+                } (${party.seats})`}
+                aria-label={`${
                   party.isIndependent
                     ? party.shortName.length > 0
                       ? party.shortName + " (I)"

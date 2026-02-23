@@ -2,8 +2,6 @@
 
 > A powerful and intuitive parliamentary seat distribution visualizer and coalition simulator
 
-**Check [Parliame.com](https://parliame.com) for the live version with custom backend features. ([Parliame.com Frontend Repository](https://github.com/disfordave/parliame-client))**
-
 ## ✨ What is Parliament Seats?
 
 Parliament Seats is an interactive web application that helps you visualize and calculate seat distributions in parliamentary systems. Whether you're analyzing real-world election results, exploring coalition possibilities, or creating custom parliament configurations, this tool makes it easy and engaging!

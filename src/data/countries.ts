@@ -732,7 +732,7 @@ export const countries: Country[] = [
       {
         name: "Conservative Party of Canada/Parti conservateur du Canada",
         shortName: "Conservative",
-        seats: 144,
+        seats: 141,
         colour: "#6495ED",
         position: 50,
         isIndependent: false,

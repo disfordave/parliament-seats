@@ -80,12 +80,14 @@ npm run dev
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint to check code quality
 - `npm run format` - Format code with Prettier
+- `npm run test` - Run tests with Vitest
 
 ## 🏗️ Built With
 
 - **[React](https://react.dev/)** - UI framework
 - **[TypeScript](https://www.typescriptlang.org/)** - Type safety
 - **[Vite](https://vitejs.dev/)** - Build tool and dev server
+- **[Vitest](https://vitest.dev/)** - Testing framework
 - **[Tailwind CSS](https://tailwindcss.com/)** - Styling
 - **[Zustand](https://github.com/pmndrs/zustand)** - State management
 - **[Nivo](https://nivo.rocks/)** - Data visualization (charts)

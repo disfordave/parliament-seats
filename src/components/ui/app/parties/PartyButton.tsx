@@ -212,7 +212,7 @@ export default function PartyButton({ party }: { party: Party }) {
                 }}
               />
               <span className="text-center">
-                {getPosition(party.position, i).full}
+                {i(`spectrum.${getPosition(party.position).full}`)}
               </span>
             </label>
           </div>

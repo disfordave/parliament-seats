@@ -28,6 +28,7 @@ import {
 } from "@/lib/zustandStore";
 import { CaretDownIcon } from "@/components/icons/Icons";
 import { sort } from "@/utils/sort";
+import { getMajority } from "@/utils/getMajority";
 
 export default function SeatsGraph() {
   const { parties } = useParties();
@@ -43,59 +44,44 @@ export default function SeatsGraph() {
     0,
   );
 
-  const majorityThreshold = (
-    total % 2 === 0
-      ? total / 2 + (allowTieBreaker ? 0 : 1)
-      : Math.ceil(total / 2)
-  ) as number;
+  const majority = getMajority(total, selectedTotal, allowTieBreaker);
 
   return (
     <>
       <div className="sticky top-0 z-50 -mx-4 mb-2 rounded-lg border border-gray-200 bg-white/50 p-2 backdrop-blur-sm transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900/50">
         <div className="flex items-center justify-between">
           <p className="flex-1">
-            {selectedTotal === total || selectedTotal === 0 ? (
-              ""
-            ) : allowTieBreaker && majorityThreshold === selectedTotal ? (
-              <span className="line-clamp-1 text-emerald-600 dark:text-emerald-400">
-                {i("header.tieBreakingMajority")}
-              </span>
-            ) : (total % 2 === 0 ? total / 2 + 1 : Math.ceil(total / 2)) <=
-              selectedTotal ? (
-              <span className="line-clamp-1 text-violet-600 dark:text-violet-400">
-                {selectedTotal - majorityThreshold + (allowTieBreaker ? 0 : 1)}{" "}
-                {selectedTotal -
-                  majorityThreshold +
-                  (allowTieBreaker ? 0 : 1) ===
-                1
-                  ? i("header.seat")
-                  : i("header.seats")}{" "}
-                {i("header.majority")}
-              </span>
-            ) : (
-              <span className="text-rose-600 dark:text-rose-400">{`${
-                majorityThreshold - selectedTotal
-              } ${
-                majorityThreshold - selectedTotal === 1
-                  ? i("header.seat")
-                  : i("header.seats")
-              } ${i("header.left")}
-                        `}</span>
-            )}
+            {
+              // All parties selected or no parties selected
+              majority.status === "all" || majority.status === "none" ? (
+                ""
+              ) : // Tie-breaking majority
+              majority.status === "tie-breaking majority" ? (
+                <span className="line-clamp-1 text-emerald-600 dark:text-emerald-400">
+                  {i("header.tieBreakingMajority")}
+                </span>
+              ) : // Majority achieved
+              majority.status === "majority" ? (
+                <span className="line-clamp-1 text-violet-600 dark:text-violet-400">
+                  {majority.margin} {i("header.seats")} {i("header.majority")}
+                </span>
+              ) : (
+                // Not yet a majority
+                <span className="text-rose-600 dark:text-rose-400">{`${
+                  majority.margin
+                } ${i("header.seats")} ${i("header.left")}`}</span>
+              )
+            }
           </p>
           <div
             className="relative flex items-center justify-center"
             title={`${
-              total % 2 === 0
-                ? total / 2 + (allowTieBreaker ? 0 : 1)
-                : Math.ceil(total / 2)
+              majority.seatsForMajority
             } ${i("header.seatsForMajority")}`}
           >
             <CaretDownIcon />
             <p className="absolute left-5 rtl:right-5">
-              {total % 2 === 0
-                ? total / 2 + (allowTieBreaker ? 0 : 1)
-                : Math.ceil(total / 2)}{" "}
+              {majority.seatsForMajority}{" "}
             </p>
           </div>
           <div className="flex flex-1 justify-end text-end">

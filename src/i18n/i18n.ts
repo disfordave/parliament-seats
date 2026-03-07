@@ -44,9 +44,8 @@ function locate(obj: any, path: string) {
 }
 
 export function translate({ locale, id }: { locale: string; id: string }) {
-  if (!(locale in locales)) {
-    return locate(defaultLocale, id) || id;
-  } else {
-    return locate(locales[locale as Locale], id) || id;
-  }
+  const selectedLocale =
+    locale in locales ? locales[locale as Locale] : locales[defaultLocale];
+
+  return locate(selectedLocale, id) ?? id;
 }

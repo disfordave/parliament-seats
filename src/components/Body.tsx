@@ -18,7 +18,6 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { countries } from "@/data/countries";
 import { sort } from "@/utils/sort";
@@ -74,7 +73,7 @@ const Seats = () => {
     if (lang && ["en", "fr", "de", "nl"].includes(lang)) {
       setLocale(lang);
     }
-  }, []);
+  }, [setLocale, setParties, setSelectedCountry, setSelectedParties]);
 
   return (
     <div>

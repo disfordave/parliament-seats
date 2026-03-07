@@ -97,14 +97,6 @@ export const countries: Country[] = [
         position: 0,
         isIndependent: true,
       },
-      {
-        name: "Vacant",
-        shortName: "Vacant",
-        seats: 1,
-        colour: "#6B7280",
-        position: 0,
-        isIndependent: true,
-      },
     ],
   },
   {
@@ -917,14 +909,6 @@ export const countries: Country[] = [
         position: 0,
         isIndependent: true,
       },
-      {
-        name: "Vacant",
-        shortName: "Vacant",
-        seats: 2,
-        colour: "#DCDCDC",
-        position: 0,
-        isIndependent: true,
-      },
     ],
   },
 {
@@ -1074,14 +1058,6 @@ export const countries: Country[] = [
       colour: "#000000",
       position: -50,
       isIndependent: false,
-    },
-    {
-      name: "Vacant",
-      shortName: "Vacant",
-      seats: 0,
-      colour: "#6B7280",
-      position: 0,
-      isIndependent: true,
     },
   ],
 }

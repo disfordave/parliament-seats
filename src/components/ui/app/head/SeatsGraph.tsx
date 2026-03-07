@@ -29,6 +29,7 @@ import {
 import { CaretDownIcon } from "@/components/icons/Icons";
 import { sort } from "@/utils/sort";
 import { getMajority } from "@/utils/getMajority";
+import { pluralize } from "@/utils/pluralize";
 
 export default function SeatsGraph() {
   const { parties } = useParties();
@@ -63,13 +64,20 @@ export default function SeatsGraph() {
               ) : // Majority achieved
               majority.status === "majority" ? (
                 <span className="line-clamp-1 text-violet-600 dark:text-violet-400">
-                  {majority.margin} {i("header.seats")} {i("header.majority")}
+                  {pluralize(
+                    majority.margin,
+                    i("header.seat"),
+                    i("header.seats"),
+                  )}{" "}
+                  {i("header.majority")}
                 </span>
               ) : (
                 // Not yet a majority
-                <span className="text-rose-600 dark:text-rose-400">{`${
-                  majority.margin
-                } ${i("header.seats")} ${i("header.left")}`}</span>
+                <span className="text-rose-600 dark:text-rose-400">{`${pluralize(
+                  majority.margin,
+                  i("header.seat"),
+                  i("header.seats"),
+                )} ${i("header.left")}`}</span>
               )
             }
           </p>

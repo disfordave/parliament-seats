@@ -63,13 +63,18 @@ const useAllowTieBreaker = create<AllowTieBreakerState>((set) => ({
 }));
 
 const useI18n = create<I18nState>((set, get) => ({
-  locale: localStorage.getItem("locale") || defaultLocale,
+  locale:
+    typeof window !== "undefined"
+      ? (localStorage.getItem("locale") ?? defaultLocale)
+      : defaultLocale,
   i: (key) => {
     const currentLocale = get().locale;
     return translate({ locale: currentLocale, id: key });
   },
   setLocale: (by) => {
-    localStorage.setItem("locale", by);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("locale", by);
+    }
     set(() => ({ locale: by }));
   },
 }));

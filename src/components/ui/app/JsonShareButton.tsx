@@ -48,7 +48,6 @@ export default function JsonShareButton() {
         type="button"
         title="Export Parties"
         aria-label="Export Parties"
-        aria-describedby="Export Parties"
         aria-disabled={false}
       >
         {i("buttons.exportParties")}

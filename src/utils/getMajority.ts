@@ -8,15 +8,17 @@ export function getMajority(
   margin: number;
 } {
   const majorityThreshold = (
-    totalSeats % 2 === 0
-      ? totalSeats / 2 + (allowTieBreaker ? 0 : 1)
-      : Math.ceil(totalSeats / 2)
+    totalSeats === 0
+      ? 0
+      : totalSeats % 2 === 0
+        ? totalSeats / 2 + (allowTieBreaker ? 0 : 1)
+        : Math.ceil(totalSeats / 2)
   ) as number;
 
   // Selected all parties
   if (selectedSeats === totalSeats) {
     return {
-      seatsForMajority: (totalSeats === 0 ? 0 : majorityThreshold),
+      seatsForMajority: majorityThreshold,
       status: "all",
       margin: 0,
     };
@@ -25,7 +27,7 @@ export function getMajority(
   // Selected no parties
   if (selectedSeats === 0) {
     return {
-      seatsForMajority: (totalSeats === 0 ? 0 : majorityThreshold),
+      seatsForMajority: majorityThreshold,
       status: "none",
       margin: majorityThreshold,
     };

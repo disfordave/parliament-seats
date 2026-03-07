@@ -16,7 +16,7 @@ export function getMajority(
   // Selected all parties
   if (selectedSeats === totalSeats) {
     return {
-      seatsForMajority: majorityThreshold,
+      seatsForMajority: (totalSeats === 0 ? 0 : majorityThreshold),
       status: "all",
       margin: 0,
     };

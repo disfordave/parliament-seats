@@ -24,14 +24,26 @@ export default function SortButton() {
   const { sortBy, setSortBy } = useSortBy();
   const { i } = useI18n();
   const sortButtonConfigs = [
-    { label: i("body.name"), sortByKey: "name", title: "Sort by Name" },
     {
+      id: "name",
+      label: i("body.name"),
+      sortByKey: "name",
+      title: "Sort by Name",
+    },
+    {
+      id: "position",
       label: i("body.position"),
       sortByKey: "position",
       title: "Sort by Political Position",
     },
-    { label: i("body.seats"), sortByKey: "seats", title: "Sort by Seats" },
+    {
+      id: "seats",
+      label: i("body.seats"),
+      sortByKey: "seats",
+      title: "Sort by Seats",
+    },
   ] as {
+    id: string;
     label: string;
     sortByKey: "name" | "position" | "seats";
     title: string;
@@ -40,9 +52,9 @@ export default function SortButton() {
   return (
     <>
       <div className="order-3 flex w-full overflow-x-auto overflow-y-hidden whitespace-nowrap rounded-lg sm:order-2 sm:w-auto">
-        {sortButtonConfigs.map((config, index) => (
+        {sortButtonConfigs.map((config) => (
           <button
-            key={index}
+            key={config.id}
             onClick={() => setSortBy(config.sortByKey)}
             className={`${
               sortBy === config.sortByKey

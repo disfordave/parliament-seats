@@ -21,6 +21,7 @@
 import { useParties, useSelectedParties, useI18n } from "@/lib/zustandStore";
 
 interface ButtonConfig {
+  id: string;
   label: string;
   onClick: () => void;
 }
@@ -31,14 +32,17 @@ export default function CoalitionBySpectrumButtons() {
   const { i } = useI18n();
   const buttonConfigurations: ButtonConfig[] = [
     {
+      id: "selectAll",
       label: i("controls.selectAll"),
       onClick: () => setSelectedParties([...parties]),
     },
     {
+      id: "deselectAll",
       label: i("controls.deselectAll"),
       onClick: () => setSelectedParties([]),
     },
     {
+      id: "left",
       label: i("controls.left"),
       onClick: () => {
         const leftParties = parties.filter((party) => party.position < 0);
@@ -46,6 +50,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "right",
       label: i("controls.right"),
       onClick: () => {
         const rightParties = parties.filter((party) => party.position > 0);
@@ -53,6 +58,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "leftWithoutFarLeft",
       label: i("controls.leftWithoutFarLeft"),
       onClick: () => {
         const leftParties = parties.filter(
@@ -62,6 +68,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "rightWithoutFarRight",
       label: i("controls.rightWithoutFarRight"),
       onClick: () => {
         const rightParties = parties.filter(
@@ -71,6 +78,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "leftWing",
       label: i("controls.leftWing"),
       onClick: () => {
         const leftParties = parties.filter((party) => party.position <= -75);
@@ -78,6 +86,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "rightWing",
       label: i("controls.rightWing"),
       onClick: () => {
         const rightParties = parties.filter((party) => party.position >= 75);
@@ -85,6 +94,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "centre",
       label: i("controls.centre"),
       onClick: () => {
         const centerParties = parties.filter(
@@ -97,6 +107,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "grandCentre",
       label: i("controls.grandCentre"),
       onClick: () => {
         const centerParties = parties.filter(
@@ -107,6 +118,7 @@ export default function CoalitionBySpectrumButtons() {
       },
     },
     {
+      id: "grandWithoutExtremes",
       label: i("controls.grandWithoutExtremes"),
       onClick: () => {
         const grandParties = parties.filter(
@@ -123,9 +135,9 @@ export default function CoalitionBySpectrumButtons() {
   return (
     <>
       <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-lg bg-gray-200 p-4 dark:bg-gray-700">
-        {buttonConfigurations.map((buttonConfig, index) => (
+        {buttonConfigurations.map((buttonConfig) => (
           <button
-            key={index}
+            key={buttonConfig.id}
             onClick={buttonConfig.onClick}
             className="text-nowrap rounded-full border-2 border-transparent bg-white px-3 py-1 transition-colors hover:border-violet-600 dark:bg-gray-900 dark:hover:border-violet-400"
             type="button"

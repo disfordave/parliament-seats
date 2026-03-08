@@ -26,6 +26,7 @@ export const countries: Country[] = [
     emoji: "🇪🇺",
     parties: [
       {
+        id: "eu-epp",
         name: "European People's Party",
         shortName: "EPP",
         seats: 188,
@@ -34,6 +35,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-sd",
         name: "Progressive Alliance of Socialists and Democrats",
         shortName: "S&D",
         seats: 136,
@@ -42,6 +44,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-re",
         name: "Renew Europe",
         shortName: "RE",
         seats: 75,
@@ -50,6 +53,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-pfe",
         name: "Patriots for Europe",
         shortName: "PfE",
         seats: 86,
@@ -58,6 +62,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-ecr",
         name: "European Conservatives and Reformists",
         shortName: "ECR",
         seats: 80,
@@ -66,6 +71,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-greens",
         name: "The Greens/European Free Alliance",
         shortName: "Greens",
         seats: 53,
@@ -74,6 +80,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-left",
         name: "The Left in the European Parliament",
         shortName: "Left",
         seats: 46,
@@ -82,6 +89,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-esn",
         name: "Europe of Sovereign Nations",
         shortName: "ESN",
         seats: 26,
@@ -90,6 +98,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "eu-non-inscrits",
         name: "Others",
         shortName: "Others",
         seats: 29,
@@ -104,6 +113,7 @@ export const countries: Country[] = [
     emoji: "🇳🇱",
     parties: [
       {
+        id: "nl-pvv",
         name: "Partij voor de Vrijheid",
         shortName: "PVV",
         seats: 26,
@@ -112,6 +122,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Far-right
       {
+        id: "nl-vvd",
         name: "Volkspartij voor Vrijheid en Democratie",
         shortName: "VVD",
         seats: 22,
@@ -120,6 +131,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre-right
       {
+        id: "nl-gl-pvda",
         name: "GroenLinks/Partij van de Arbeid",
         shortName: "GL/PvdA",
         seats: 20,
@@ -128,6 +140,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre-left
       {
+        id: "nl-d66",
         name: "Democraten 66",
         shortName: "D66",
         seats: 26,
@@ -136,6 +149,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Lean left
       {
+        id: "nl-cda",
         name: "Christen-Democratisch Appèl",
         shortName: "CDA",
         seats: 18,
@@ -144,6 +158,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre
       {
+        id: "nl-bbb",
         name: "BoerBurgerBeweging",
         shortName: "BBB",
         seats: 4,
@@ -152,6 +167,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Lean right
       {
+        id: "nl-volt",
         name: "Volt",
         shortName: "Volt",
         seats: 1,
@@ -160,6 +176,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Lean left
       {
+        id: "nl-pvdd",
         name: "Partij voor de Dieren",
         shortName: "PvdD",
         seats: 3,
@@ -168,6 +185,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre-left
       {
+        id: "nl-cu",
         name: "ChristenUnie",
         shortName: "CU",
         seats: 3,
@@ -176,6 +194,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre
       {
+        id: "nl-sgp",
         name: "Staatkundig Gereformeerde Partij",
         shortName: "SGP",
         seats: 3,
@@ -184,6 +203,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Right-wing
       {
+        id: "nl-fvd",
         name: "Forum voor Democratie",
         shortName: "FvD",
         seats: 7,
@@ -192,6 +212,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Right-wing
       {
+        id: "nl-sp",
         name: "Socialistische Partij",
         shortName: "SP",
         seats: 3,
@@ -200,6 +221,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Left-wing
       {
+        id: "nl-denk",
         name: "Denk",
         shortName: "Denk",
         seats: 3,
@@ -208,6 +230,7 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Lean left
       {
+        id: "nl-ja21",
         name: "JA21",
         shortName: "JA21",
         seats: 9,
@@ -216,6 +239,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nl-50plus",
         name: "50PLUS",
         shortName: "50PLUS",
         seats: 2,
@@ -230,6 +254,7 @@ export const countries: Country[] = [
     emoji: "🇩🇪",
     parties: [
       {
+        id: "de-cducsu",
         name: "CDU/CSU",
         shortName: "CDU/CSU",
         seats: 208,
@@ -238,6 +263,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "de-spd",
         name: "Sozialdemokratische Partei Deutschlands",
         shortName: "SPD",
         seats: 120,
@@ -246,6 +272,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "de-fdp",
         name: "Alternative für Deutschland",
         shortName: "AfD",
         seats: 152,
@@ -254,6 +281,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       //   {
+      //     id: "de-fdp",
       //      name: "Freie Demokratische Partei",
       //     shortName: "FDP",
       //     seats: 91,
@@ -262,6 +290,7 @@ export const countries: Country[] = [
       //     isIndependent: false,
       //   },
       {
+        id: "de-linke",
         name: "Die Linke",
         shortName: "Linke",
         seats: 64,
@@ -270,6 +299,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "de-gruene",
         name: "Bündnis 90/Die Grünen",
         shortName: "Grüne",
         seats: 85,
@@ -278,6 +308,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       //      {
+      //          id: "de-bsw",
       //          name: "Bündnis Sahra Wagenknecht",
       //          shortName: "BSW",
       //          seats: 10,
@@ -286,6 +317,7 @@ export const countries: Country[] = [
       //          isIndependent: false,
       //      },
       {
+        id: "de-ssw",
         name: "Südschleswigscher Wählerverband",
         shortName: "SSW",
         seats: 1,
@@ -300,6 +332,7 @@ export const countries: Country[] = [
     emoji: "🇧🇪",
     parties: [
       {
+        id: "be-nva",
         name: "Nieuw-Vlaamse Alliantie",
         shortName: "N-VA",
         seats: 24,
@@ -308,6 +341,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-vb",
         name: "Vlaams Belang",
         shortName: "VB",
         seats: 20,
@@ -316,6 +350,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-openvld",
         name: "Open Vlaamse Liberalen en Democraten",
         shortName: "Open VLD",
         seats: 7,
@@ -324,6 +359,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-vooruit",
         name: "Vooruit",
         shortName: "Vooruit",
         seats: 13,
@@ -332,6 +368,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-groen",
         name: "Groen",
         shortName: "Groen",
         seats: 6,
@@ -340,6 +377,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-cdv",
         name: "Christen-Democratisch en Vlaams",
         shortName: "CD&V",
         seats: 11,
@@ -348,6 +386,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-pvda-ptb",
         name: "Partij van de Arbeid/Parti du Travail de Belgique",
         shortName: "PVDA-PTB",
         seats: 15,
@@ -356,6 +395,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-mr",
         name: "Mouvement Réformateur",
         shortName: "MR",
         seats: 20,
@@ -364,6 +404,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-ecolo",
         name: "Ecolo",
         shortName: "Ecolo",
         seats: 3,
@@ -372,6 +413,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-defi",
         name: "DéFI",
         shortName: "DéFI",
         seats: 1,
@@ -380,6 +422,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-ps",
         name: "Parti Socialiste",
         shortName: "PS",
         seats: 16,
@@ -388,6 +431,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "be-le",
         name: "Les Engagés",
         shortName: "LE",
         seats: 14,
@@ -402,6 +446,7 @@ export const countries: Country[] = [
     emoji: "🇬🇧",
     parties: [
       {
+        id: "uk-labour",
         name: "Labour Party",
         shortName: "Labour",
         seats: 403,
@@ -410,6 +455,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-conservative",
         name: "Conservative Party",
         shortName: "Conservative",
         seats: 121,
@@ -418,6 +464,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-libdem",
         name: "Liberal Democrats",
         shortName: "Lib Dems",
         seats: 72,
@@ -426,6 +473,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-snp",
         name: "Scottish National Party",
         shortName: "SNP",
         seats: 9,
@@ -434,6 +482,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-dup",
         name: "Democratic Unionist Party",
         shortName: "DUP",
         seats: 5,
@@ -442,6 +491,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-reform",
         name: "Reform UK",
         shortName: "Reform",
         seats: 5,
@@ -450,6 +500,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-sinnfein",
         name: "Green Party",
         shortName: "Green",
         seats: 4,
@@ -458,6 +509,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-plaid",
         name: "Plaid Cymru",
         shortName: "PC",
         seats: 4,
@@ -466,6 +518,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-sdlp",
         name: "Social Democratic and Labour Party",
         shortName: "SDLP",
         seats: 2,
@@ -474,6 +527,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-apni",
         name: "Alliance Party of Northern Ireland",
         shortName: "APNI",
         seats: 1,
@@ -482,6 +536,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-tuv",
         name: "Traditional Unionist Voice",
         shortName: "TUV",
         seats: 1,
@@ -490,6 +545,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-uup",
         name: "Ulster Unionist Party",
         shortName: "UUP",
         seats: 1,
@@ -498,6 +554,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "uk-independents",
         name: "Independents",
         shortName: "",
         seats: 9,
@@ -506,6 +563,7 @@ export const countries: Country[] = [
         isIndependent: true,
       },
       {
+        id: "uk-speaker",
         name: "Speaker",
         shortName: "Speaker",
         seats: 1,
@@ -514,6 +572,7 @@ export const countries: Country[] = [
         isIndependent: true,
       },
       {
+        id: "uk-ia",
         name: "Independent Alliance",
         shortName: "IA",
         seats: 5,
@@ -528,6 +587,7 @@ export const countries: Country[] = [
     emoji: "🇦🇹",
     parties: [
       {
+        id: "at-ovp",
         name: "Österreichische Volkspartei",
         shortName: "ÖVP",
         seats: 51,
@@ -536,6 +596,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "at-spoe",
         name: "Sozialdemokratische Partei Österreichs",
         shortName: "SPÖ",
         seats: 41,
@@ -544,6 +605,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "at-fpoe",
         name: "Freiheitliche Partei Österreichs",
         shortName: "FPÖ",
         seats: 57,
@@ -552,6 +614,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "at-gruene",
         name: "Die Grünen – Die Grüne Alternative",
         shortName: "Grüne",
         seats: 16,
@@ -560,6 +623,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "at-neos",
         name: "Neos – Das Neue Österreich",
         shortName: "NEOS",
         seats: 18,
@@ -574,6 +638,7 @@ export const countries: Country[] = [
     emoji: "🇦🇺",
     parties: [
       {
+        id: "au-liberal",
         name: "Liberal Party of Australia",
         shortName: "Liberal",
         seats: 28,
@@ -582,6 +647,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-labor",
         name: "Australian Labor Party",
         shortName: "Labor",
         seats: 94,
@@ -590,6 +656,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-nationals",
         name: "The Nationals",
         shortName: "Nationals",
         seats: 15,
@@ -598,6 +665,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-greens",
         name: "Greens",
         shortName: "Greens",
         seats: 1,
@@ -606,6 +674,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-ca",
         name: "Centre Alliance",
         shortName: "CA",
         seats: 1,
@@ -614,6 +683,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-kap",
         name: "Katter's Australian Party",
         shortName: "KAP",
         seats: 1,
@@ -622,6 +692,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-independents",
         name: "Independents",
         shortName: "IND",
         seats: 10,
@@ -636,6 +707,7 @@ export const countries: Country[] = [
     emoji: "🇦🇺",
     parties: [
       {
+        id: "au-senate-liberal",
         name: "Liberal Party of Australia",
         shortName: "Liberal",
         seats: 23,
@@ -644,6 +716,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-labor",
         name: "Australian Labor Party",
         shortName: "Labor",
         seats: 29,
@@ -652,6 +725,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-nationals",
         name: "The Nationals",
         shortName: "Nationals",
         seats: 4,
@@ -660,6 +734,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-greens",
         name: "Greens",
         shortName: "Greens",
         seats: 10,
@@ -668,6 +743,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-ca",
         name: "Independents",
         shortName: "IND",
         seats: 3,
@@ -676,6 +752,7 @@ export const countries: Country[] = [
         isIndependent: true,
       },
       {
+        id: "au-senate-kap",
         name: "Jacqui Lambie Network",
         shortName: "JLN",
         seats: 1,
@@ -684,6 +761,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-onp",
         name: "One Nation",
         shortName: "ONP",
         seats: 4,
@@ -692,6 +770,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-uap",
         name: "United Australia Party",
         shortName: "UAP",
         seats: 1,
@@ -700,6 +779,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "au-senate-av",
         name: "Australia's Voice",
         shortName: "AV",
         seats: 1,
@@ -714,6 +794,7 @@ export const countries: Country[] = [
     emoji: "🇨🇦",
     parties: [
       {
+        id: "ca-liberal",
         name: "Liberal Party of Canada/Parti libéral du Canada",
         shortName: "Liberal",
         seats: 169,
@@ -722,6 +803,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "ca-conservative",
         name: "Conservative Party of Canada/Parti conservateur du Canada",
         shortName: "Conservative",
         seats: 141,
@@ -730,6 +812,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "ca-bq",
         name: "Bloc Québécois",
         shortName: "BQ",
         seats: 22,
@@ -738,6 +821,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "ca-ndp",
         name: "New Democratic Party/Nouveau Parti démocratique",
         shortName: "NDP/NPD",
         seats: 7,
@@ -746,6 +830,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "ca-green",
         name: "Green Party of Canada/Parti vert du Canada",
         shortName: "Green/Verts",
         seats: 1,
@@ -760,6 +845,7 @@ export const countries: Country[] = [
     emoji: "🇳🇿",
     parties: [
       {
+        id: "nz-labour",
         name: "Labour Party",
         shortName: "Labour",
         seats: 34,
@@ -768,6 +854,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nz-national",
         name: "National Party",
         shortName: "National",
         seats: 49,
@@ -776,6 +863,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nz-greens",
         name: "Green Party of Aotearoa New Zealand",
         shortName: "Greens",
         seats: 15,
@@ -784,6 +872,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nz-act",
         name: "ACT New Zealand",
         shortName: "ACT",
         seats: 11,
@@ -792,6 +881,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nz-maori",
         name: "Māori Party",
         shortName: "Māori",
         seats: 6,
@@ -800,6 +890,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "nz-nzfirst",
         name: "New Zealand First",
         shortName: "NZ First",
         seats: 8,
@@ -814,6 +905,7 @@ export const countries: Country[] = [
     emoji: "🇫🇷",
     parties: [
       {
+        id: "fr-er",
         name: "Groupe Ensemble pour la République",
         shortName: "ER",
         seats: 91,
@@ -822,6 +914,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-dr",
         name: "Groupe Droite républicaine",
         shortName: "DR",
         seats: 50,
@@ -830,6 +923,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-modem",
         name: "Groupe Les Démocrates",
         shortName: "MoDem",
         seats: 36,
@@ -838,6 +932,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-horizons",
         name: "Le groupe Horizons",
         shortName: "Horizons",
         seats: 34,
@@ -846,6 +941,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-rn",
         name: "Rassemblement National",
         shortName: "RN",
         seats: 123,
@@ -854,6 +950,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-lfi",
         name: "La France Insoumise",
         shortName: "LFI",
         seats: 72,
@@ -862,6 +959,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-soc",
         name: "Groupe Socialistes & apparentés",
         shortName: "SOC",
         seats: 68,
@@ -870,6 +968,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-es",
         name: "Groupe écologiste et social",
         shortName: "E&S",
         seats: 38,
@@ -878,6 +977,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-liot",
         name: "Libertés, indépendants, outre-mer & territoires",
         shortName: "LIOT",
         seats: 23,
@@ -886,6 +986,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-gdr",
         name: "Groupe de la Gauche démocrate et républicaine",
         shortName: "GDR",
         seats: 17,
@@ -894,6 +995,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-udr",
         name: "Groupe UDR",
         shortName: "UDR",
         seats: 15,
@@ -902,6 +1004,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "fr-non-inscrits",
         name: "Non-inscrits",
         shortName: "NI",
         seats: 7,
@@ -916,6 +1019,7 @@ export const countries: Country[] = [
     emoji: "🇿🇦",
     parties: [
       {
+        id: "za-anc",
         name: "African National Congress",
         shortName: "ANC",
         seats: 159,
@@ -924,6 +1028,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-da",
         name: "Democratic Alliance",
         shortName: "DA",
         seats: 87,
@@ -932,6 +1037,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-mk",
         name: "uMkhonto weSizwe",
         shortName: "MK",
         seats: 58,
@@ -940,6 +1046,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-eff",
         name: "Economic Freedom Fighters",
         shortName: "EFF",
         seats: 39,
@@ -948,6 +1055,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-ifp",
         name: "Inkatha Freedom Party",
         shortName: "IFP",
         seats: 17,
@@ -956,6 +1064,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-pa",
         name: "Patriotic Alliance",
         shortName: "PA",
         seats: 9,
@@ -964,6 +1073,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-ffplus",
         name: "Freedom Front Plus",
         shortName: "FF Plus",
         seats: 6,
@@ -972,6 +1082,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-actionsa",
         name: "ActionSA",
         shortName: "ActionSA",
         seats: 6,
@@ -980,6 +1091,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-acdp",
         name: "African Christian Democratic Party",
         shortName: "ACDP",
         seats: 3,
@@ -988,6 +1100,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-udm",
         name: "United Democratic Movement",
         shortName: "UDM",
         seats: 3,
@@ -996,6 +1109,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-atm",
         name: "African Transformation Movement",
         shortName: "ATM",
         seats: 2,
@@ -1004,6 +1118,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-aljama",
         name: "Al Jama-ah",
         shortName: "ALJAMA",
         seats: 2,
@@ -1012,6 +1127,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-bosa",
         name: "Build One South Africa",
         shortName: "BOSA",
         seats: 2,
@@ -1020,6 +1136,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-ncc",
         name: "National Coloured Congress",
         shortName: "NCC",
         seats: 2,
@@ -1028,6 +1145,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-rise",
         name: "RISE Mzansi",
         shortName: "RISE",
         seats: 2,
@@ -1036,6 +1154,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-good",
         name: "GOOD",
         shortName: "GOOD",
         seats: 1,
@@ -1044,6 +1163,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-pac",
         name: "Pan Africanist Congress of Azania",
         shortName: "PAC",
         seats: 1,
@@ -1052,6 +1172,7 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
+        id: "za-uat",
         name: "United Africans Transformation",
         shortName: "UAT",
         seats: 1,

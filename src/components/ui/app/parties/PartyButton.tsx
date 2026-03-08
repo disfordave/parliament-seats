@@ -34,7 +34,7 @@ export default function PartyButton({ party }: { party: Party }) {
   const { parties, setParties } = useParties();
   const { selectedParties, setSelectedParties } = useSelectedParties();
 
-  const selected = selectedParties.includes(party);
+  const selected = selectedParties.some((p) => p.id === party.id);
   //   const colour = party.isIndependent ? "#6B7280" : party.colour;
   const colour = party.colour;
   const partyName = party.isIndependent
@@ -50,7 +50,7 @@ export default function PartyButton({ party }: { party: Party }) {
       onClick={() => {
         if (isEditMode) return;
         if (selected) {
-          setSelectedParties(selectedParties.filter((p) => p !== party));
+          setSelectedParties(selectedParties.filter((p) => p.id !== party.id));
         } else {
           setSelectedParties([...selectedParties, party]);
         }
@@ -244,7 +244,7 @@ export default function PartyButton({ party }: { party: Party }) {
               onClick={() => {
                 if (selected) {
                   setSelectedParties(
-                    selectedParties.filter((p) => p !== party),
+                    selectedParties.filter((p) => p.id !== party.id),
                   );
                 } else {
                   setSelectedParties([...selectedParties, party]);
@@ -289,10 +289,10 @@ export default function PartyButton({ party }: { party: Party }) {
             </button>
             <button
               onClick={() => {
-                setParties(parties.filter((p) => p !== party));
+                setParties(parties.filter((p) => p.id !== party.id));
                 if (selected) {
                   setSelectedParties(
-                    selectedParties.filter((p) => p !== party),
+                    selectedParties.filter((p) => p.id !== party.id),
                   );
                 }
               }}

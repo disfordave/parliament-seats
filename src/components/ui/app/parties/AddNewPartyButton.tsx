@@ -29,6 +29,7 @@ export default function AddNewPartyButton() {
           setParties([
             ...parties,
             {
+              id: crypto.randomUUID(),
               name: "",
               shortName: "",
               seats: 0,

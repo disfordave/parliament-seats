@@ -104,9 +104,9 @@ export default function SeatsGraph() {
         >
           {[...parties]
             .sort((a, b) => sort(a, b, isEditMode, sortBy))
-            .map((party, index) => (
+            .map((party) => (
               <div
-                key={index}
+                key={party.id}
                 title={`${
                   party.isIndependent
                     ? party.shortName.length > 0
@@ -124,7 +124,7 @@ export default function SeatsGraph() {
                 style={{
                   backgroundColor: party.colour,
                   minWidth: "0%",
-                  width: selectedParties.includes(party)
+                  width: selectedParties.some((p) => p.id === party.id)
                     ? `${(party.seats / total) * 100}%`
                     : "0%",
                 }}

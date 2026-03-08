@@ -19,6 +19,7 @@
 */
 
 export interface Party {
+  id: string;
   name: string;
   shortName: string;
   seats: number;

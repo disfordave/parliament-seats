@@ -86,10 +86,14 @@ export default function PartyButton({ party }: { party: Party }) {
             value={colour}
             onChange={(e) => {
               const newParty = { ...party, colour: e.target.value };
-              setParties(parties.map((p) => (p === party ? newParty : p)));
+              setParties(
+                parties.map((p) => (p.id === party.id ? newParty : p)),
+              );
               if (selected) {
                 setSelectedParties(
-                  selectedParties.map((p) => (p === party ? newParty : p)),
+                  selectedParties.map((p) =>
+                    p.id === party.id ? newParty : p,
+                  ),
                 );
               }
             }}
@@ -114,10 +118,14 @@ export default function PartyButton({ party }: { party: Party }) {
             value={party.name}
             onChange={(e) => {
               const newParty = { ...party, name: e.target.value };
-              setParties(parties.map((p) => (p === party ? newParty : p)));
+              setParties(
+                parties.map((p) => (p.id === party.id ? newParty : p)),
+              );
               if (selected) {
                 setSelectedParties(
-                  selectedParties.map((p) => (p === party ? newParty : p)),
+                  selectedParties.map((p) =>
+                    p.id === party.id ? newParty : p,
+                  ),
                 );
               }
             }}
@@ -137,10 +145,14 @@ export default function PartyButton({ party }: { party: Party }) {
             value={party.shortName}
             onChange={(e) => {
               const newParty = { ...party, shortName: e.target.value };
-              setParties(parties.map((p) => (p === party ? newParty : p)));
+              setParties(
+                parties.map((p) => (p.id === party.id ? newParty : p)),
+              );
               if (selected) {
                 setSelectedParties(
-                  selectedParties.map((p) => (p === party ? newParty : p)),
+                  selectedParties.map((p) =>
+                    p.id === party.id ? newParty : p,
+                  ),
                 );
               }
             }}
@@ -162,19 +174,27 @@ export default function PartyButton({ party }: { party: Party }) {
             value={party.seats.toFixed(0)}
             onChange={(e) => {
               const newParty = { ...party, seats: parseInt(e.target.value) };
-              setParties(parties.map((p) => (p === party ? newParty : p)));
+              setParties(
+                parties.map((p) => (p.id === party.id ? newParty : p)),
+              );
               if (selected) {
                 setSelectedParties(
-                  selectedParties.map((p) => (p === party ? newParty : p)),
+                  selectedParties.map((p) =>
+                    p.id === party.id ? newParty : p,
+                  ),
                 );
               }
 
               if (e.target.value.length <= 0) {
                 const newParty = { ...party, seats: 0 };
-                setParties(parties.map((p) => (p === party ? newParty : p)));
+                setParties(
+                  parties.map((p) => (p.id === party.id ? newParty : p)),
+                );
                 if (selected) {
                   setSelectedParties(
-                    selectedParties.map((p) => (p === party ? newParty : p)),
+                    selectedParties.map((p) =>
+                      p.id === party.id ? newParty : p,
+                    ),
                   );
                 }
               }
@@ -203,10 +223,14 @@ export default function PartyButton({ party }: { party: Party }) {
                     ...party,
                     position: parseInt(e.target.value),
                   };
-                  setParties(parties.map((p) => (p === party ? newParty : p)));
+                  setParties(
+                    parties.map((p) => (p.id === party.id ? newParty : p)),
+                  );
                   if (selected) {
                     setSelectedParties(
-                      selectedParties.map((p) => (p === party ? newParty : p)),
+                      selectedParties.map((p) =>
+                        p.id === party.id ? newParty : p,
+                      ),
                     );
                   }
                 }}
@@ -228,10 +252,14 @@ export default function PartyButton({ party }: { party: Party }) {
                     ...party,
                     isIndependent: e.target.checked,
                   };
-                  setParties(parties.map((p) => (p === party ? newParty : p)));
+                  setParties(
+                    parties.map((p) => (p.id === party.id ? newParty : p)),
+                  );
                   if (selected) {
                     setSelectedParties(
-                      selectedParties.map((p) => (p === party ? newParty : p)),
+                      selectedParties.map((p) =>
+                        p.id === party.id ? newParty : p,
+                      ),
                     );
                   }
                 }}

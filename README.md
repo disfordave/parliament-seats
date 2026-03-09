@@ -1,6 +1,6 @@
 # 🏛️ Parliament Seats
 
-[![Parliament Seats Mockup](docs/images/mockup.jpg)](https://parliame.com)
+[![Parliament Seats Mockup](docs/images/parliament-seats-mockup.jpg)](https://parliame.com)
 
 Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.
 
@@ -20,10 +20,10 @@ However, these tools are usually tied to **a specific election and dataset**.
 
 Parliament Seats was created to make that experience reusable:
 
-* explore different parliamentary systems
-* test hypothetical election outcomes
-* experiment with coalition combinations
-* visualize how seat distributions affect governing majorities
+- explore different parliamentary systems
+- test hypothetical election outcomes
+- experiment with coalition combinations
+- visualize how seat distributions affect governing majorities
 
 ---
 
@@ -49,17 +49,17 @@ Tie-breaking is treated as a **vote outcome rule**, not as an additional seat.
 
 Includes sample parliamentary structures such as:
 
-* European Union
-* Germany (Bundestag)
-* Austria (Nationalrat)
-* Netherlands (Tweede Kamer)
-* Belgium (Kamer / Chambre)
-* United Kingdom (House of Commons)
-* South Africa (National Assembly)
-* Australia (Senate and House)
-* Canada (House of Commons / Chambre des communes)
-* France (Assemblée nationale)
-* New Zealand (House of Representatives)
+- European Union
+- Germany (Bundestag)
+- Austria (Nationalrat)
+- Netherlands (Tweede Kamer)
+- Belgium (Kamer / Chambre)
+- United Kingdom (House of Commons)
+- South Africa (National Assembly)
+- Australia (Senate and House)
+- Canada (House of Commons / Chambre des communes)
+- France (Assemblée nationale)
+- New Zealand (House of Representatives)
 
 Users can also create custom parliament configurations.
 
@@ -75,9 +75,9 @@ Parties can be sorted and displayed according to their **political positioning**
 
 Seat distributions are displayed using:
 
-* horizontal bar charts for seat counts
-* pie charts for seat distribution
-* majority threshold indicators
+- horizontal bar charts for seat counts
+- pie charts for seat distribution
+- majority threshold indicators
 
 Visualizations update instantly when party data changes.
 
@@ -89,9 +89,9 @@ Parliament configurations can be saved and shared using **JSON import/export**.
 
 This allows users to:
 
-* store custom scenarios
-* recreate hypothetical elections
-* share configurations with others
+- store custom scenarios
+- recreate hypothetical elections
+- share configurations with others
 
 ---
 
@@ -99,10 +99,10 @@ This allows users to:
 
 The application currently supports:
 
-* English
-* German (Deutsch)
-* French (Français)
-* Dutch (Nederlands)
+- English
+- German (Deutsch)
+- French (Français)
+- Dutch (Nederlands)
 
 Language can be changed using the `?lang=` URL parameter.
 
@@ -120,8 +120,8 @@ The visualization layout adapts automatically to different screen sizes.
 
 ## Prerequisites
 
-* Node.js 20+
-* npm or yarn
+- Node.js 20+
+- npm or yarn
 
 ---
 
@@ -169,14 +169,14 @@ http://localhost:5173
 
 # Built With
 
-* **React** — UI framework
-* **TypeScript** — static typing
-* **Vite** — development server and build tool
-* **Zustand** — state management
-* **Tailwind CSS** — styling
-* **Nivo** — data visualization
-* **Motion** — UI animations
-* **Vitest** — unit testing
+- **React** — UI framework
+- **TypeScript** — static typing
+- **Vite** — development server and build tool
+- **Zustand** — state management
+- **Tailwind CSS** — styling
+- **Nivo** — data visualization
+- **Motion** — UI animations
+- **Vitest** — unit testing
 
 ---
 
@@ -196,10 +196,10 @@ Contributions are welcome.
 
 Possible areas for improvement include:
 
-* additional parliamentary systems
-* visualization improvements
-* accessibility enhancements
-* additional language support
+- additional parliamentary systems
+- visualization improvements
+- accessibility enhancements
+- additional language support
 
 To contribute:
 

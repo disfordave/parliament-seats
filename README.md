@@ -1,5 +1,7 @@
 # 🏛️ Parliament Seats
 
+![Parliament Seats Mockup](docs/images/mockup.jpg)
+
 Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.
 
 Many election visualizations show seat distributions for a single election. Parliament Seats generalizes that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across multiple countries.

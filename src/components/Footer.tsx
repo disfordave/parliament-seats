@@ -30,11 +30,11 @@ export default function Footer() {
           {i("footer.feelFree")}{" "}
           <a
             className={"underline hover:no-underline"}
-            href={"https://disfordave.com/projects/parliament/#comments"}
+            href={"https://github.com/disfordave/parliament-seats"}
             rel={"noreferrer noopener"}
             target={"_blank"}
           >
-            {i("footer.myWebsite")}
+            {i("footer.onGitHub")}
           </a>{" "}
           {i("footer.ifYouHave")}
         </p>

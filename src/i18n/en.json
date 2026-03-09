@@ -58,8 +58,8 @@
     "independent": "Independent"
   },
   "footer": {
-    "feelFree": "Feel free to contact me through",
-    "myWebsite": "my website",
+    "feelFree": "Feel free to open an issue",
+    "onGitHub": "on GitHub",
     "ifYouHave": "if you have any issues or suggestions."
   }
 }

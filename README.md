@@ -1,120 +1,220 @@
 # 🏛️ Parliament Seats
 
-> A powerful and intuitive parliamentary seat distribution visualizer and coalition simulator
+Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.
 
-## ✨ What is Parliament Seats?
+Many election visualizations show seat distributions for a single election. Parliament Seats generalizes that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across multiple countries.
 
-Parliament Seats is an interactive web application that helps you visualize and calculate seat distributions in parliamentary systems. Whether you're analyzing real-world election results, exploring coalition possibilities, or creating custom parliament configurations, this tool makes it easy and engaging!
+The application allows users to experiment with political party configurations and instantly see how seat distributions translate into potential governing coalitions.
 
-## 🎯 Key Features
+🌐 **Live Demo:** [https://parliame.com](https://parliame.com)
 
-- **🌍 Pre-loaded Country Data**: Explore parliamentary configurations for:
-  - European Union
-  - Germany
-  - Austria
-  - Netherlands
-  - United Kingdom
-  - Belgium
-  - And more!
+---
 
-- **🎨 Beautiful Visualizations**:
-  - Interactive parliament seat diagrams
-  - Pie charts for seat distribution
-  - Real-time coalition calculations
-  - Seats graph showing majority thresholds
+# Why This Project Exists
 
-- **🔧 Powerful Tools**:
-  - Add and customize political parties
-  - Sort parties by political spectrum or seat count
-  - Calculate majority and tie-breaking scenarios
-  - Build coalition scenarios with automatic seat counting
-  - Export/import configurations via JSON
+Election broadcasts often include beautiful interactive graphics showing how seats are distributed in a parliament and which coalitions might form a government.
 
-- **🌐 Multilingual Support**:
-  - English
-  - German (Deutsch)
-  - French (Français)
-  - Dutch (Nederlands)
+However, these tools are usually tied to **a specific election and dataset**.
 
-- **🎭 Theme Support**:
-  - Light mode
-  - Dark mode
-  - Auto (system preference)
+Parliament Seats was created to make that experience reusable:
 
-- **📱 Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+* explore different parliamentary systems
+* test hypothetical election outcomes
+* experiment with coalition combinations
+* visualize how seat distributions affect governing majorities
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+# Features
 
-- Node.js (v18 or higher)
-- npm or yarn
+## Coalition Simulation
 
-### Installation
+Select political parties and instantly see whether they reach a governing majority.
 
-1. Clone the repository:
+Seat totals and majority thresholds update in real time as parties are selected.
+
+---
+
+## Tie-Breaker Logic
+
+Supports parliamentary systems where a **tie-breaking vote** may determine the outcome (e.g. the US Senate model).
+
+Tie-breaking is treated as a **vote outcome rule**, not as an additional seat.
+
+---
+
+## Multi-Country Support
+
+Includes sample parliamentary structures such as:
+
+* European Union
+* Germany (Bundestag)
+* Austria (Nationalrat)
+* Netherlands (Tweede Kamer)
+* Belgium (Kamer / Chambre)
+* United Kingdom (House of Commons)
+* South Africa (National Assembly)
+* Australia (Senate and House)
+* Canada (House of Commons / Chambre des communes)
+* France (Assemblée nationale)
+* New Zealand (House of Representatives)
+
+Users can also create custom parliament configurations.
+
+---
+
+## Political Spectrum Visualization
+
+Parties can be sorted and displayed according to their **political positioning** (left → center → right), allowing users to visualize ideological balance within coalitions.
+
+---
+
+## Interactive Seat Visualization
+
+Seat distributions are displayed using:
+
+* horizontal bar charts for seat counts
+* pie charts for seat distribution
+* majority threshold indicators
+
+Visualizations update instantly when party data changes.
+
+---
+
+## Scenario Import / Export
+
+Parliament configurations can be saved and shared using **JSON import/export**.
+
+This allows users to:
+
+* store custom scenarios
+* recreate hypothetical elections
+* share configurations with others
+
+---
+
+## Multilingual Interface
+
+The application currently supports:
+
+* English
+* German (Deutsch)
+* French (Français)
+* Dutch (Nederlands)
+
+Language can be changed using the `?lang=` URL parameter.
+
+---
+
+## Responsive Design
+
+Parliament Seats works across desktop, tablet, and mobile devices.
+
+The visualization layout adapts automatically to different screen sizes.
+
+---
+
+# Getting Started
+
+## Prerequisites
+
+* Node.js 20+
+* npm or yarn
+
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/disfordave/parliament-seats.git
 cd parliament-seats
 ```
 
-2. Install dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+Open:
 
-## 🛠️ Available Scripts
+```
+http://localhost:5173
+```
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint to check code quality
-- `npm run format` - Format code with Prettier
-- `npm run test` - Run tests with Vitest
+---
 
-## 🏗️ Built With
+# Available Scripts
 
-- **[React](https://react.dev/)** - UI framework
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
-- **[Vite](https://vitejs.dev/)** - Build tool and dev server
-- **[Vitest](https://vitest.dev/)** - Testing framework
-- **[Tailwind CSS](https://tailwindcss.com/)** - Styling
-- **[Zustand](https://github.com/pmndrs/zustand)** - State management
-- **[Nivo](https://nivo.rocks/)** - Data visualization (charts)
-- **[Motion](https://motion.dev/)** - Animations
+| Command           | Description               |
+| ----------------- | ------------------------- |
+| `npm run dev`     | Start development server  |
+| `npm run build`   | Build for production      |
+| `npm run preview` | Preview production build  |
+| `npm run lint`    | Run ESLint                |
+| `npm run format`  | Format code with Prettier |
+| `npm run test`    | Run tests using Vitest    |
 
-## 💡 How to Use
+---
 
-1. **Select a Country**: Choose from pre-loaded parliamentary configurations or create a custom one
-2. **Add Parties**: Click "Add Party" to add political parties with their seat counts
-3. **Customize**: Set party names, political positions (left/center/right), colors, and seat numbers
-4. **Visualize**: Watch the parliament diagram update in real-time
-5. **Build Coalitions**: Select parties to see if they achieve a majority
-6. **Share**: Export your configuration as JSON to share or save for later
+# Built With
 
-## 🤝 Contributing
+* **React** — UI framework
+* **TypeScript** — static typing
+* **Vite** — development server and build tool
+* **Zustand** — state management
+* **Tailwind CSS** — styling
+* **Nivo** — data visualization
+* **Motion** — UI animations
+* **Vitest** — unit testing
 
-Contributions are welcome! Feel free to:
+---
 
-- Report bugs
-- Suggest new features
-- Submit pull requests
-- Improve documentation
+# How It Works
 
-## 📄 License
+1. Select a country or create a custom parliament
+2. Add or modify political parties and seat counts
+3. Adjust ideological positions or party metadata
+4. Select parties to form potential coalitions
+5. Instantly see whether a governing majority is reached
 
-This project is licensed under the GNU Affero General Public License v3.0 or later - see the [LICENSE](LICENSE) file for details.
+---
 
-## 👨‍💻 Author
+# Contributing
 
-Created by [@disfordave](https://github.com/disfordave)
+Contributions are welcome.
+
+Possible areas for improvement include:
+
+* additional parliamentary systems
+* visualization improvements
+* accessibility enhancements
+* additional language support
+
+To contribute:
+
+```bash
+git checkout -b feature/your-feature-name
+git commit -m "Add feature"
+git push origin feature/your-feature-name
+```
+
+Then open a pull request.
+
+---
+
+# License
+
+This project is licensed under the **GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)**.
+
+You are free to use and modify the project, but if you deploy it as a service, you must also share your modifications under the same license.
+
+See the [LICENSE](LICENSE) file for details.

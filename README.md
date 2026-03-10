@@ -1,6 +1,6 @@
 # 🏛️ Parliament Seats
 
-[![Parliament Seats Mockup](docs/images/parliament-seats-mockup.jpg)](https://parliame.com)
+![Parliament Seats Mockup](docs/images/parliament-seats-mockup.jpg)
 
 🌐 **Live Demo:** [https://parliame.com](https://parliame.com)
 

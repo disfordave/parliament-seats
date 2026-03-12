@@ -34,7 +34,7 @@ export default function LandscapeCountryListBanner() {
   const { setSelectedParties } = useSelectedParties();
   return (
     <>
-      <div className="sticky top-4 h-[80vh] w-full overflow-auto rounded-lg border-2 border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-900">
+      <div className="sticky top-4 h-[80vh] w-full overflow-auto rounded-lg border-2 border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
         <h2 className="p-2 text-xl font-semibold">{i("header.countries")}</h2>
         <ul>
           <li>

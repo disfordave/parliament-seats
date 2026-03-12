@@ -114,13 +114,6 @@ export default function SeatsGraph() {
                       : "Independent"
                     : party.shortName
                 } (${party.seats})`}
-                aria-label={`${
-                  party.isIndependent
-                    ? party.shortName.length > 0
-                      ? party.shortName + " (I)"
-                      : "Independent"
-                    : party.shortName
-                } (${party.seats})`}
                 style={{
                   backgroundColor: party.colour,
                   minWidth: "0%",

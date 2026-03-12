@@ -19,19 +19,35 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Parliame" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>Parliame</title>
+    <title>Parliame - Parliament Seat & Coalition Majority Calculator</title>
     <meta
       name="description"
-      content="Parliame is a tool for visualizing and calculating the distribution of seats in a parliamentary system."
+      content="Interactive parliament seat distribution and coalition majority calculator for Germany, France, the UK, Canada, the EU and more."
     />
-    <meta property="og:title" content="Parliame" />
+    <link rel="canonical" href="https://parliame.com/" />
+
+    <meta
+      property="og:title"
+      content="Parliame - Parliament Seat & Coalition Majority Calculator"
+    />
     <meta
       property="og:description"
-      content="Parliame is a tool for visualizing and calculating the distribution of seats in a parliamentary system."
+      content="Visualize parliamentary seat distributions and test coalition majorities for Germany, France, the UK, Canada, the EU and more."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://parliame.com" />
+    <meta property="og:url" content="https://parliame.com/" />
     <meta property="og:image" content="https://parliame.com/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Parliame - Parliament Seat & Coalition Majority Calculator"
+    />
+    <meta
+      name="twitter:description"
+      content="Visualize parliamentary seat distributions and test coalition majorities."
+    />
+    <meta name="twitter:image" content="https://parliame.com/og-image.jpg" />
   </head>
   <body>
     <div id="root"></div>
@@ -44,50 +60,60 @@
         border-radius: 16px;
         margin: 8px auto;
         font-family: sans-serif;
-        line-height: 1.25;
+        line-height: 1.5;
         border: 2px solid #e5e7eb;
-        max-width: 640px;
+        max-width: 720px;
       "
     >
-      <img
-        width="72px"
-        height="72px"
-        style="border-radius: 8px; margin-bottom: 16px"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-      />
-      <p style="margin: 0px 0px 16px 0px">
-        <strong
-          >Parliament (EN) | Parlement (FR) | Parlament (DE) | Parlement
-          (NL)</strong
-        >
+      <h1 style="margin: 0 0 16px 0">
+        Parliame - Parliament Seat & Coalition Majority Calculator
+      </h1>
+
+      <p style="margin: 0 0 16px 0">
+        Parliame is an interactive tool for visualizing parliamentary seat
+        distributions and checking whether a coalition reaches a majority.
       </p>
-      <p style="margin: 0px 0px 16px 0px">
-        (EN) This application only works with JavaScript enabled. Please enable
-        JavaScript in your browser settings and reload the page.
+
+      <p style="margin: 0 0 16px 0">
+        Supported examples include the European Union, Germany, Austria, the
+        Netherlands, Belgium, the United Kingdom, South Africa, Australia,
+        Canada, France, and New Zealand.
       </p>
-      <p style="margin: 0px 0px 16px 0px">
-        (FR) C'est une application qui ne fonctionne qu'avec JavaScript activé.
-        Veuillez activer JavaScript dans les paramètres de votre navigateur et
-        recharger la page.
+
+      <p style="margin: 0 0 16px 0">
+        You can also create a custom parliament configuration and test coalition
+        combinations manually.
       </p>
-      <p style="margin: 0px 0px 16px 0px">
-        (DE) Diese Anwendung funktioniert nur mit aktiviertem JavaScript. Bitte
-        aktivieren Sie JavaScript in den Einstellungen Ihres Browsers und laden
-        Sie die Seite neu.
+
+      <h2 style="margin: 0 0 12px 0">Supported parliaments</h2>
+      <ul style="margin: 0 0 16px 20px; padding: 0">
+        <li>European Union</li>
+        <li>Germany (Bundestag)</li>
+        <li>Austria (Nationalrat)</li>
+        <li>Netherlands (Tweede Kamer)</li>
+        <li>Belgium (Kamer / Chambre)</li>
+        <li>United Kingdom (House of Commons)</li>
+        <li>South Africa (National Assembly)</li>
+        <li>Australia</li>
+        <li>Canada</li>
+        <li>France</li>
+        <li>New Zealand</li>
+      </ul>
+
+      <p style="margin: 0 0 16px 0">
+        This application works only with JavaScript enabled. Please enable
+        JavaScript in your browser settings and reload the page to use this
+        application.
       </p>
-      <p style="margin: 0px 0px 16px 0px">
-        (NL) Deze applicatie werkt alleen met JavaScript ingeschakeld. Schakel
-        JavaScript in de browserinstellingen in en herlaad de pagina.
-      </p>
-      <p style="margin: 0px">
+
+      <p style="margin: 0">
         &copy; 2026
         <a
           href="https://disfordave.com"
           rel="noreferrer noopener"
           target="_blank"
+          >@disfordave</a
         >
-          @disfordave
-        </a>
       </p>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>

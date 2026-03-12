@@ -57,7 +57,7 @@ export default function PartyButton({ party }: { party: Party }) {
       }}
       className={`${
         isEditMode ? "" : "cursor-pointer"
-      } party-button flex w-full items-center gap-2 overflow-hidden rounded-lg border-2 bg-white p-2 shadow-md transition-all duration-300 dark:bg-gray-900`}
+      } party-button flex w-full items-center gap-2 overflow-hidden rounded-lg border-2 bg-white p-2 transition-all duration-300 dark:bg-gray-900`}
       style={{
         borderColor: selected ? colour : "var(--border-colour)", // dark mode #374151
         flexDirection: isEditMode ? "column" : "row",

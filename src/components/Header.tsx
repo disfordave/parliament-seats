@@ -26,15 +26,17 @@ export default function Header() {
   return (
     <>
       <header className={"flex flex-wrap items-center justify-between gap-4"}>
-        <div className={"flex items-center gap-2"}>
-          <Logo className="size-12 flex-shrink-0" />
-          <div className="flex flex-col justify-start">
-            <h1 className="text-2xl font-bold uppercase">Parliame</h1>
-            <p className="text-sm leading-4 text-gray-600 dark:text-gray-500">
-              {i("subtitle")}
-            </p>
+        <a href="/">
+          <div className={"flex items-center gap-2"}>
+            <Logo className="size-12 flex-shrink-0" />
+            <div className="flex flex-col justify-start">
+              <h1 className="text-2xl font-bold">Parliame</h1>
+              <p className="text-sm leading-4 text-gray-600 dark:text-gray-500">
+                {i("subtitle")}
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </header>
     </>
   );

@@ -797,7 +797,7 @@ export const countries: Country[] = [
         id: "ca-liberal",
         name: "Liberal Party of Canada/Parti libéral du Canada",
         shortName: "Liberal",
-        seats: 173,
+        seats: 174,
         colour: "#EA6D6A",
         position: -50,
         isIndependent: false,

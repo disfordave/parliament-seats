@@ -48,7 +48,7 @@ const Seats = () => {
   const { isEditMode } = useIsEditMode();
   const { sortBy } = useSortBy();
   const { i, setLocale } = useI18n();
-  const { setSelectedCountry } = useSelectedCountry();
+  const { selectedCountry, setSelectedCountry } = useSelectedCountry();
 
   useEffect(() => {
     const queryParams = new URLSearchParams(document.location.search);
@@ -129,6 +129,13 @@ const Seats = () => {
         {i("buttons.clear")}
       </button>
       <JsonShareButton />
+      {selectedCountry && (
+        <>
+          <p className="mt-4 italic opacity-75">
+            {i("body.updatedAt")}: {selectedCountry?.updateDate}
+          </p>
+        </>
+      )}
     </div>
   );
 };

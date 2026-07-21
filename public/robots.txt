@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://parliame.com/sitemap.xml
+Sitemap: https://parl.hsw.is/sitemap.xml

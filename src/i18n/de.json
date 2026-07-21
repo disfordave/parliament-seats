@@ -26,7 +26,8 @@
     "seats": "Sitze",
     "view": "Ansehen",
     "edit": "Bearbeiten",
-    "noParties": "Keine Parteien verfügbar"
+    "noParties": "Keine Parteien verfügbar",
+    "updatedAt": "Aktualisiert am"
   },
   "controls": {
     "selectAll": "Alle auswählen",

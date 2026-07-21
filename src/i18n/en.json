@@ -26,7 +26,8 @@
     "seats": "Seats",
     "view": "View",
     "edit": "Edit",
-    "noParties": "No parties available"
+    "noParties": "No parties available",
+    "updatedAt": "Updated at"
   },
   "controls": {
     "selectAll": "Select All",

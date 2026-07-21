@@ -26,7 +26,8 @@
     "seats": "Zetels",
     "view": "Bekijken",
     "edit": "Bewerken",
-    "noParties": "Geen partijen beschikbaar"
+    "noParties": "Geen partijen beschikbaar",
+    "updatedAt": "Bijgewerkt op"
   },
   "controls": {
     "selectAll": "Alles selecteren",

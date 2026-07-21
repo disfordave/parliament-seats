@@ -927,7 +927,7 @@ export const countries: Country[] = [
         colour: "#6B7280",
         position: 0,
         isIndependent: true,
-      }
+      },
     ],
   },
   {
@@ -997,7 +997,7 @@ export const countries: Country[] = [
         colour: "#6B7280",
         position: 0,
         isIndependent: true,
-      }
+      },
     ],
   },
   {

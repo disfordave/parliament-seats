@@ -2,7 +2,7 @@
 
 ![Parliament Seats Mockup](docs/images/parliament-seats-mockup.jpg)
 
-🌐 **Live Demo:** [https://parliame.com](https://parliame.com)
+🌐 **Live Demo:** [https://parl.hsw.is](https://parl.hsw.is)
 
 Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.
 

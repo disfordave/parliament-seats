@@ -26,7 +26,8 @@
     "seats": "Sièges",
     "view": "Voir",
     "edit": "Modifier",
-    "noParties": "Aucun parti disponible"
+    "noParties": "Aucun parti disponible",
+    "updatedAt": "Mis à jour le"
   },
   "controls": {
     "selectAll": "Sélectionner tout",

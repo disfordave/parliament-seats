@@ -131,8 +131,11 @@ const Seats = () => {
       <JsonShareButton />
       {selectedCountry && (
         <>
-          <p className="mt-4 italic opacity-75">
-            {i("body.updatedAt")}: {selectedCountry?.updateDate}
+          <p className="mt-4 opacity-75">
+            {i("body.exampleDataUpdatedAt")}:{" "}
+            {new Date(selectedCountry.updateDate).toLocaleDateString(
+              i("locale"),
+            )}
           </p>
         </>
       )}

@@ -1,4 +1,5 @@
 {
+  "locale": "de",
   "parliament": "Parlament",
   "subtitle": "Ein Werkzeug zur Verteilung von Parlamentssitzen",
   "appearance": {
@@ -27,7 +28,7 @@
     "view": "Ansehen",
     "edit": "Bearbeiten",
     "noParties": "Keine Parteien verfügbar",
-    "updatedAt": "Aktualisiert am"
+    "exampleDataUpdatedAt": "Beispieldaten aktualisiert am"
   },
   "controls": {
     "selectAll": "Alle auswählen",

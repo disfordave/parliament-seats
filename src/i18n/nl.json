@@ -1,4 +1,5 @@
 {
+  "locale": "nl",
   "parliament": "Parlement",
   "subtitle": "Een hulpmiddel voor de verdeling van parlementaire zetels",
   "appearance": {
@@ -27,7 +28,7 @@
     "view": "Bekijken",
     "edit": "Bewerken",
     "noParties": "Geen partijen beschikbaar",
-    "updatedAt": "Bijgewerkt op"
+    "exampleDataUpdatedAt": "Beispieldaten aktualisiert am"
   },
   "controls": {
     "selectAll": "Alles selecteren",

@@ -1,4 +1,5 @@
 {
+  "locale": "fr",
   "parliament": "Parlement",
   "subtitle": "Un outil de distribution des sièges parlementaires",
   "appearance": {
@@ -27,7 +28,7 @@
     "view": "Voir",
     "edit": "Modifier",
     "noParties": "Aucun parti disponible",
-    "updatedAt": "Mis à jour le"
+    "exampleDataUpdatedAt": "Données d'exemple mises à jour le"
   },
   "controls": {
     "selectAll": "Sélectionner tout",

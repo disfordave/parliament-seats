@@ -1,4 +1,5 @@
 {
+  "locale": "en",
   "parliament": "Parliament",
   "subtitle": "A Parliamentary Seat Distribution Tool",
   "appearance": {
@@ -27,7 +28,7 @@
     "view": "View",
     "edit": "Edit",
     "noParties": "No parties available",
-    "updatedAt": "Updated at"
+    "exampleDataUpdatedAt": "Example data updated at"
   },
   "controls": {
     "selectAll": "Select All",

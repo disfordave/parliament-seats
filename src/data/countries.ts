@@ -975,7 +975,7 @@ export const countries: Country[] = [
         id: "nz-maori",
         name: "Māori Party",
         shortName: "Māori",
-        seats: 6,
+        seats: 5,
         colour: "#B2001A",
         position: -25,
         isIndependent: false,
@@ -989,6 +989,15 @@ export const countries: Country[] = [
         position: 100,
         isIndependent: false,
       },
+      {
+        id: "nz-independents",
+        name: "Independents",
+        shortName: "Independents",
+        seats: 1,
+        colour: "#6B7280",
+        position: 0,
+        isIndependent: true,
+      }
     ],
   },
   {

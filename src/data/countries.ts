@@ -293,10 +293,10 @@ export const countries: Country[] = [
         isIndependent: false,
       },
       {
-        id: "de-fdp",
+        id: "de-afd",
         name: "Alternative für Deutschland",
         shortName: "AfD",
-        seats: 152,
+        seats: 150,
         colour: "#00A2DE",
         position: 100,
         isIndependent: false,
@@ -346,6 +346,15 @@ export const countries: Country[] = [
         position: 0,
         isIndependent: false,
       },
+      {
+        id: "de-independents",
+        name: "Non-attached",
+        shortName: "Non-attached",
+        seats: 2,
+        colour: "#6B7280",
+        position: 100,
+        isIndependent: true,
+      }
     ],
   },
   {

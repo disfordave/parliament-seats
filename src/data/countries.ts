@@ -24,12 +24,13 @@ export const countries: Country[] = [
   {
     name: "European Union",
     emoji: "🇪🇺",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "eu-epp",
         name: "European People's Party",
         shortName: "EPP",
-        seats: 188,
+        seats: 185,
         colour: "#3399FF",
         position: 50,
         isIndependent: false,
@@ -38,7 +39,7 @@ export const countries: Country[] = [
         id: "eu-sd",
         name: "Progressive Alliance of Socialists and Democrats",
         shortName: "S&D",
-        seats: 136,
+        seats: 134,
         colour: "#F0001C",
         position: -50,
         isIndependent: false,
@@ -47,7 +48,7 @@ export const countries: Country[] = [
         id: "eu-re",
         name: "Renew Europe",
         shortName: "RE",
-        seats: 75,
+        seats: 78,
         colour: "#FFD700",
         position: 0,
         isIndependent: false,
@@ -56,7 +57,7 @@ export const countries: Country[] = [
         id: "eu-pfe",
         name: "Patriots for Europe",
         shortName: "PfE",
-        seats: 86,
+        seats: 85,
         colour: "#2F1C59",
         position: 100,
         isIndependent: false,
@@ -65,7 +66,7 @@ export const countries: Country[] = [
         id: "eu-ecr",
         name: "European Conservatives and Reformists",
         shortName: "ECR",
-        seats: 80,
+        seats: 83,
         colour: "#196CA8",
         position: 75,
         isIndependent: false,
@@ -83,7 +84,7 @@ export const countries: Country[] = [
         id: "eu-left",
         name: "The Left in the European Parliament",
         shortName: "Left",
-        seats: 46,
+        seats: 44,
         colour: "#B71C1C",
         position: -75,
         isIndependent: false,
@@ -92,7 +93,7 @@ export const countries: Country[] = [
         id: "eu-esn",
         name: "Europe of Sovereign Nations",
         shortName: "ESN",
-        seats: 26,
+        seats: 27,
         colour: "#13517E",
         position: 100,
         isIndependent: false,
@@ -111,12 +112,13 @@ export const countries: Country[] = [
   {
     name: "Netherlands",
     emoji: "🇳🇱",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "nl-pvv",
         name: "Partij voor de Vrijheid",
         shortName: "PVV",
-        seats: 26,
+        seats: 19,
         colour: "#012758",
         position: 100,
         isIndependent: false,
@@ -131,11 +133,11 @@ export const countries: Country[] = [
         isIndependent: false,
       }, // Centre-right
       {
-        id: "nl-gl-pvda",
-        name: "GroenLinks/Partij van de Arbeid",
-        shortName: "GL/PvdA",
+        id: "nl-pro",
+        name: "Progressief Nederland",
+        shortName: "PRO",
         seats: 20,
-        colour: "#DC1F26",
+        colour: "#ff0000",
         position: -50,
         isIndependent: false,
       }, // Centre-left
@@ -161,7 +163,7 @@ export const countries: Country[] = [
         id: "nl-bbb",
         name: "BoerBurgerBeweging",
         shortName: "BBB",
-        seats: 4,
+        seats: 3,
         colour: "#94C11F",
         position: 50,
         isIndependent: false,
@@ -200,6 +202,15 @@ export const countries: Country[] = [
         seats: 3,
         colour: "#EA5B0B",
         position: 75,
+        isIndependent: false,
+      }, // Right-wing
+      {
+        id: "nl-dna",
+        name: "De Nederlandse Alliantie",
+        shortName: "DNA",
+        seats: 7,
+        colour: "#354050",
+        position: 100,
         isIndependent: false,
       }, // Right-wing
       {
@@ -247,11 +258,21 @@ export const countries: Country[] = [
         position: 0,
         isIndependent: false,
       },
+      {
+        id: "nl-lidkeijzer",
+        name: "Lid Keijzer",
+        shortName: "LK",
+        seats: 1,
+        colour: "#6B7280",
+        position: 50,
+        isIndependent: true,
+      },
     ],
   },
   {
     name: "Germany",
     emoji: "🇩🇪",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "de-cducsu",
@@ -330,6 +351,7 @@ export const countries: Country[] = [
   {
     name: "Belgium",
     emoji: "🇧🇪",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "be-nva",
@@ -444,6 +466,7 @@ export const countries: Country[] = [
   {
     name: "United Kingdom",
     emoji: "🇬🇧",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "uk-labour",
@@ -585,6 +608,7 @@ export const countries: Country[] = [
   {
     name: "Austria",
     emoji: "🇦🇹",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "at-ovp",
@@ -636,6 +660,7 @@ export const countries: Country[] = [
   {
     name: "Australia (House)",
     emoji: "🇦🇺",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "au-liberal",
@@ -705,6 +730,7 @@ export const countries: Country[] = [
   {
     name: "Australia (Senate)",
     emoji: "🇦🇺",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "au-senate-liberal",
@@ -792,6 +818,7 @@ export const countries: Country[] = [
   {
     name: "Canada",
     emoji: "🇨🇦",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "ca-liberal",
@@ -843,6 +870,7 @@ export const countries: Country[] = [
   {
     name: "New Zealand",
     emoji: "🇳🇿",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "nz-labour",
@@ -903,6 +931,7 @@ export const countries: Country[] = [
   {
     name: "France",
     emoji: "🇫🇷",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "fr-er",
@@ -1017,6 +1046,7 @@ export const countries: Country[] = [
   {
     name: "South Africa",
     emoji: "🇿🇦",
+    updateDate: "2026-07-21",
     parties: [
       {
         id: "za-anc",

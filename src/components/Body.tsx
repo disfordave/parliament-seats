@@ -81,7 +81,7 @@ const Seats = () => {
       <div className="mt-4 block lg:hidden">
         <CountryListDropdown />
       </div>
-      <div className="-mb-4 aspect-video h-full w-full md:-mb-8">
+      <div className="-mb-4 aspect-video h-full w-full md:-mb-4">
         <PieChart
           parties={parties}
           selectedParties={selectedParties}
@@ -89,7 +89,7 @@ const Seats = () => {
           sortBy={sortBy}
         />
       </div>
-      <div className="sticky top-0 z-10 mx-auto w-[calc(100%-2rem)] pb-2 pt-4">
+      <div className="sticky top-0 z-10 mx-auto w-[calc(100%-2rem)]">
         <SeatsGraph />
       </div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-4">

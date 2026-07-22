@@ -59,7 +59,7 @@ export default function SortButton() {
             className={`${
               sortBy === config.sortByKey
                 ? "rounded-full bg-violet-600 text-white dark:bg-violet-600"
-                : "rounded-full bg-zinc-200 dark:bg-zinc-700"
+                : "rounded-full"
             } flex-1 px-3 py-1 transition-colors duration-300`}
             title={config.title}
           >

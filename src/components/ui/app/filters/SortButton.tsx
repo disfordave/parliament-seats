@@ -51,7 +51,7 @@ export default function SortButton() {
 
   return (
     <>
-      <div className="order-3 flex w-full overflow-x-auto overflow-y-hidden whitespace-nowrap rounded-full border-2 border-transparent bg-zinc-200 sm:order-2 sm:w-auto dark:bg-zinc-700">
+      <div className="order-3 flex w-full overflow-x-auto overflow-y-hidden rounded-full border-2 border-transparent bg-zinc-200 whitespace-nowrap sm:order-2 sm:w-auto dark:bg-zinc-700">
         {sortButtonConfigs.map((config) => (
           <button
             key={config.id}

@@ -139,7 +139,7 @@ export default function CoalitionBySpectrumButtons() {
           <button
             key={buttonConfig.id}
             onClick={buttonConfig.onClick}
-            className="text-nowrap rounded-full border-2 border-transparent bg-white px-3 py-1 transition-colors hover:bg-violet-600 hover:text-white dark:bg-zinc-900 dark:hover:bg-violet-600"
+            className="rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-violet-600 hover:text-white dark:bg-zinc-900 dark:hover:bg-violet-600"
             type="button"
             title={buttonConfig.label}
             aria-label={buttonConfig.label}

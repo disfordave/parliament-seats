@@ -113,7 +113,7 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="flex h-full items-center justify-center gap-[0.125rem] rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
+      <div className="flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
         {themes.map((t) => (
           <div className="" key={t.value}>
             <button

@@ -49,7 +49,7 @@ export default function SeatsGraph() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white pb-4 pt-3 transition-colors duration-300 dark:bg-zinc-900">
+      <div className="sticky top-0 z-50 bg-white pt-3 pb-4 transition-colors duration-300 dark:bg-zinc-900">
         <div className="flex items-center justify-between">
           <p className="flex-1">
             {
@@ -121,7 +121,7 @@ export default function SeatsGraph() {
                     ? `${(party.seats / total) * 100}%`
                     : "0%",
                 }}
-                className={`r-0 h-full overflow-hidden text-ellipsis text-nowrap transition-[width] duration-300`}
+                className={`r-0 h-full overflow-hidden text-nowrap text-ellipsis transition-[width] duration-300`}
               ></div>
             ))}
           <div className="bg-background-elevated absolute left-[calc(50%-1px)] h-full border-l-2 border-dashed border-violet-500"></div>

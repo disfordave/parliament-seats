@@ -28,7 +28,7 @@ export default function Header() {
       <header className={"flex flex-wrap items-center justify-between gap-4"}>
         <a href="/">
           <div className={"flex items-center gap-2"}>
-            <Logo className="size-12 flex-shrink-0" />
+            <Logo className="size-12 shrink-0" />
             <div className="flex flex-col justify-start">
               <h1 className="text-2xl font-bold">Parliament Seats</h1>
               <p className="text-sm leading-4 text-zinc-600 dark:text-zinc-500">

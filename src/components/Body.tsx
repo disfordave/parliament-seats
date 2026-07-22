@@ -81,7 +81,7 @@ const Seats = () => {
       <div className="mt-4 block lg:hidden">
         <CountryListDropdown />
       </div>
-      <div className="mt-4 aspect-[2/1] h-full w-full">
+      <div className="mt-4 aspect-2/1 h-full w-full">
         <PieChart
           parties={parties}
           selectedParties={selectedParties}
@@ -99,7 +99,7 @@ const Seats = () => {
       </div>
       <>
         <ul
-          className={`grid grid-cols-1 gap-4 transition-all xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 md:grid-cols-4`}
+          className={`xs:grid-cols-2 grid grid-cols-1 gap-4 transition-all sm:grid-cols-3 sm:gap-4 md:grid-cols-4`}
         >
           {[...parties]
             .sort((a, b) => sort(a, b, isEditMode, sortBy))
@@ -126,7 +126,7 @@ const Seats = () => {
             setSelectedParties([]);
             setSelectedCountry(null);
           }}
-          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
         >
           {i("buttons.clear")}
         </button>

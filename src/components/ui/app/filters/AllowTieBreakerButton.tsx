@@ -70,7 +70,7 @@ export default function AllowTieBreakerButton() {
               )}
             </div>
           </span>
-          <span className="select-none text-wrap">
+          <span className="text-wrap select-none">
             {i("body.allowTieBreaker")}
           </span>
         </label>

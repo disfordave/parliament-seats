@@ -54,7 +54,7 @@ export default function LandscapeCountryListBanner() {
                   className={`w-full p-2 transition-colors duration-300 ${
                     !selectedCountry
                       ? "bg-zinc-200 dark:bg-zinc-700"
-                      : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+                      : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-700"
                   }`}
                 >
                   <div className="flex gap-1">
@@ -95,7 +95,7 @@ export default function LandscapeCountryListBanner() {
                       className={`flex w-full flex-col items-start p-2 text-start transition-colors duration-300 ${
                         selectedCountry === country
                           ? "bg-zinc-200 dark:bg-zinc-700"
-                          : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+                          : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-700"
                       }`}
                     >
                       <div className="line-clamp-1 flex gap-1">

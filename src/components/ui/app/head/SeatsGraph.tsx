@@ -49,7 +49,7 @@ export default function SeatsGraph() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 -mx-8 bg-white px-4 pb-4 pt-3 transition-colors duration-300 dark:bg-zinc-900">
+      <div className="sticky top-0 z-50 bg-white pb-4 pt-3 transition-colors duration-300 dark:bg-zinc-900">
         <div className="flex items-center justify-between">
           <p className="flex-1">
             {

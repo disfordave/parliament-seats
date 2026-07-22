@@ -89,7 +89,7 @@ const Seats = () => {
           sortBy={sortBy}
         />
       </div>
-      <div className="sticky top-0 z-10 mx-auto w-[calc(100%-2rem)]">
+      <div className="sticky top-0 z-10 mx-auto w-full">
         <SeatsGraph />
       </div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-4">

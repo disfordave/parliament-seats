@@ -113,16 +113,23 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
+      <div className="relative flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
+        <div
+          className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-violet-600 transition-transform duration-300 dark:bg-violet-600 ${
+            theme === themes[0].value
+              ? "translate-x-0"
+              : theme === themes[1].value
+                ? "translate-x-full"
+                : "translate-x-[200%]"
+          }`}
+        ></div>
         {themes.map((t) => (
-          <div className="" key={t.value}>
+          <div className="z-4" key={t.value}>
             <button
               onClick={() => setTheme(t.value as Theme)}
               title={t.label}
               className={`flex aspect-square size-full items-center justify-center rounded-full p-1.5 transition-colors duration-300 ${
-                t.value === theme
-                  ? "rounded-full bg-violet-600 text-white dark:bg-violet-600"
-                  : "dark:text-white"
+                t.value === theme ? "text-white" : "dark:text-white"
               }`}
             >
               {t.icon}

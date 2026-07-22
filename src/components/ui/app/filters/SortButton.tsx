@@ -67,7 +67,7 @@ export default function SortButton() {
             onClick={() => setSortBy(config.sortByKey)}
             className={`${
               sortBy === config.sortByKey ? "text-white" : ""
-            } z-4 flex flex-1 items-center justify-center px-3 py-1 text-center transition-colors duration-300`}
+            } z-4 flex flex-1 items-center justify-center px-3 py-1 text-center text-sm transition-colors duration-300`}
             title={config.title}
           >
             {config.label}

@@ -97,9 +97,17 @@ export default function CountryListDropdown() {
       >
         <div className="flex items-center justify-between gap-1">
           {selectedCountry ? (
-            <div className="flex gap-1">
-              <span>{selectedCountry.name}</span>
-              <span>{selectedCountry.emoji}</span>
+            <div className="flex flex-col items-start gap-0">
+              <div className="flex gap-1">
+                <span>{selectedCountry.name}</span>
+                <span>{selectedCountry.emoji}</span>
+              </div>
+              <p className="text-xs opacity-75">
+                {i("body.exampleDataUpdatedAt")}:{" "}
+                {new Date(selectedCountry.updateDate).toLocaleDateString(
+                  i("locale"),
+                )}
+              </p>
             </div>
           ) : (
             <>
@@ -175,7 +183,7 @@ export default function CountryListDropdown() {
                               onClick={() => {
                                 select(country);
                               }}
-                              className={`w-full p-2 transition-colors duration-300 ${
+                              className={`flex w-full flex-col items-start p-2 transition-colors duration-300 ${
                                 selectedCountry === country
                                   ? "bg-zinc-200 dark:bg-zinc-700"
                                   : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
@@ -185,6 +193,14 @@ export default function CountryListDropdown() {
                                 <span>{country.name}</span>
                                 <span>{country.emoji}</span>
                               </div>
+                              {selectedCountry === country && (
+                                <p className="text-xs opacity-75">
+                                  {i("body.exampleDataUpdatedAt")}:{" "}
+                                  {new Date(
+                                    country.updateDate,
+                                  ).toLocaleDateString(i("locale"))}
+                                </p>
+                              )}
                             </button>
                           </li>
                         ))}

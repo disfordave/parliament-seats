@@ -35,7 +35,7 @@ export default function SwitchViewModeButton() {
         </span>
         <div
           onClick={() => setIsEditMode(!isEditMode)}
-          className={`relative box-content flex h-6 w-12 cursor-pointer rounded-full border-2 border-transparent bg-zinc-200 dark:bg-zinc-700`}
+          className={`relative box-content flex h-6 w-12 rounded-full border-2 border-transparent bg-zinc-200 dark:bg-zinc-700`}
           title={isEditMode ? "Switch to View Mode" : "Switch to Edit Mode"}
         >
           <div

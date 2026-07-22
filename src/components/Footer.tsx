@@ -42,7 +42,7 @@ export default function Footer() {
                 rel={"noreferrer noopener"}
                 target={"_blank"}
               >
-                @disfordave
+                HSW.is
               </a>{" "}
             </p>
             <p className={"text-sm opacity-75"}>

@@ -79,7 +79,7 @@ export default function PieChart({
         padAngle={0.2}
         startAngle={-90}
         endAngle={90}
-        margin={{ top: 16, right: 16, bottom: 16, left: 16 }}
+        margin={{ top: 4, right: 4, bottom: 4, left: 4 }}
         sortByValue={false}
         innerRadius={0.35}
         colors={{ datum: "data.color" }}

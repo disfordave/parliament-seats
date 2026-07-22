@@ -76,7 +76,7 @@ export default function PieChart({
             color: isDarkMode ? "#3f3f46" : "#e4e4e7",
           },
         ]}
-        padAngle={0.2}
+        padAngle={0}
         startAngle={-90}
         endAngle={90}
         margin={{ top: 2, right: 2, bottom: 2, left: 2 }}

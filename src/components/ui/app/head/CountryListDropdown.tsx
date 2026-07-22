@@ -89,7 +89,7 @@ export default function CountryListDropdown() {
         onClick={() => {
           setOpenCountryList(!openCountryList);
         }}
-        className={`w-full  rounded-2xl border-2 border-zinc-200 p-2 pe-1 transition-colors duration-300 dark:border-zinc-700 ${
+        className={`w-full rounded-2xl border-2 border-zinc-200 p-2 pe-1 transition-colors duration-300 dark:border-zinc-700 ${
           openCountryList
             ? "bg-zinc-200 dark:bg-zinc-700"
             : "bg-white dark:bg-zinc-900"
@@ -123,7 +123,7 @@ export default function CountryListDropdown() {
                 initial={{ opacity: 0, translateY: -8 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 exit={{ opacity: 0, translateY: -2 }}
-                className="absolute top-0 z-[75] max-h-[50vh] w-full overflow-auto rounded-2xl border-2 border-zinc-200 bg-white  dark:border-zinc-700 dark:bg-zinc-900"
+                className="absolute top-0 z-[75] max-h-[50vh] w-full overflow-auto rounded-2xl border-2 border-zinc-200 bg-white shadow-xl dark:border-zinc-700 dark:bg-zinc-900"
                 ref={dropdownRef}
               >
                 <ul>

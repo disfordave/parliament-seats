@@ -18,10 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import {
-  useParties,
-  useI18n,
-} from "@/lib/zustandStore";
+import { useParties, useI18n } from "@/lib/zustandStore";
 
 export default function JsonShareButton() {
   const { parties } = useParties();
@@ -39,7 +36,7 @@ export default function JsonShareButton() {
           a.click();
           URL.revokeObjectURL(url);
         }}
-        className="w-full flex-1 rounded-2xl border-2 transition-colors duration-300 border-zinc-200 p-2 dark:border-zinc-700  bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+        className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 hover:dark:bg-zinc-700"
         type="button"
         title="Export Parties"
         aria-label="Export Parties"

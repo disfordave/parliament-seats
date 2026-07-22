@@ -25,17 +25,15 @@ export default function Footer() {
   const { i } = useI18n();
   return (
     <>
-      <footer className={"p-4 bg-zinc-200 dark:bg-zinc-700 rounded-t-2xl -mb-4 mt-4"}>
+      <footer
+        className={"-mb-4 mt-4 rounded-t-2xl bg-zinc-200 p-4 dark:bg-zinc-700"}
+      >
         <div
-          className={"flex items-center justify-between gap-2"}
+          className={
+            "flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-center"
+          }
         >
-          <div className="flex flex-wrap items-center justify-start gap-2">
-            <ThemeButton />
-            <div className="flex gap-2">
-              <LocaleSettingButton />
-            </div>
-          </div>
-          <div className={"text-end"}>
+          <div className={"flex-1 text-start"}>
             <p>
               &copy; {new Date().getFullYear()}{" "}
               <a
@@ -59,6 +57,12 @@ export default function Footer() {
               </a>{" "}
               {i("footer.ifYouHave")}
             </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <ThemeButton />
+            <div className="flex gap-2">
+              <LocaleSettingButton />
+            </div>
           </div>
         </div>
       </footer>

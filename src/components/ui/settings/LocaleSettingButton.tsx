@@ -46,7 +46,7 @@ export default function LocaleSettingButton() {
       }}
     >
       <button
-        className={`flex min-w-16 items-center justify-between rounded-full border-2 border-white dark:border-zinc-900 py-1 pe-1 ps-2  ${
+        className={`flex min-w-16 items-center justify-between rounded-full border-2 border-white py-1 pe-1 ps-2 dark:border-zinc-900 ${
           isOpen ? "bg-zinc-200 dark:bg-zinc-700" : "bg-white dark:bg-zinc-900"
         }`}
         onClick={() => setIsOpen(!isOpen)}
@@ -68,7 +68,7 @@ export default function LocaleSettingButton() {
               animate={{ opacity: 1, translateY: 0 }}
               exit={{ opacity: 0, translateY: 2 }}
               ref={dropdownRef}
-              className="absolute bottom-10 z-[100] flex w-full flex-col overflow-hidden rounded-2xl border-2 border-zinc-200  dark:border-zinc-700"
+              className="absolute bottom-10 z-[100] flex w-full flex-col overflow-hidden rounded-2xl border-2 border-zinc-200 shadow-xl dark:border-zinc-700"
             >
               {Object.keys(locales).map((loc) => (
                 <button

@@ -134,12 +134,12 @@ export default function CoalitionBySpectrumButtons() {
 
   return (
     <>
-      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl  bg-zinc-200 p-4 dark:bg-zinc-700">
+      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
         {buttonConfigurations.map((buttonConfig) => (
           <button
             key={buttonConfig.id}
             onClick={buttonConfig.onClick}
-            className="text-nowrap rounded-full border-2 border-transparent bg-white px-3 py-1 transition-colors hover:bg-violet-600 dark:bg-zinc-900 dark:hover:bg-violet-600 hover:text-white "
+            className="text-nowrap rounded-full border-2 border-transparent bg-white px-3 py-1 transition-colors hover:bg-violet-600 hover:text-white dark:bg-zinc-900 dark:hover:bg-violet-600"
             type="button"
             title={buttonConfig.label}
             aria-label={buttonConfig.label}

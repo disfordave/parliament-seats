@@ -119,18 +119,18 @@ const Seats = () => {
         <p className="text-center">{i("body.noParties")}</p>
       )}
       <CoalitionBySpectrumButtons />
-      <div className="mt-4 flex sm:flex-row flex-col gap-4">
+      <div className="mt-4 flex flex-col gap-4 sm:flex-row">
         <button
-        onClick={() => {
-          setParties([]);
-          setSelectedParties([]);
-          setSelectedCountry(null);
-        }}
-        className="w-full rounded-2xl border-2 border-zinc-200 transition-colors duration-300 p-2 dark:border-zinc-700  bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700 flex-1"
-      >
-        {i("buttons.clear")}
-      </button>
-      <JsonShareExportButton />
+          onClick={() => {
+            setParties([]);
+            setSelectedParties([]);
+            setSelectedCountry(null);
+          }}
+          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+        >
+          {i("buttons.clear")}
+        </button>
+        <JsonShareExportButton />
       </div>
       <div className="mt-4 flex flex-col gap-4">
         <JsonShareImportButton />

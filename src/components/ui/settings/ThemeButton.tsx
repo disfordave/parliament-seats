@@ -20,7 +20,6 @@
 
 import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/zustandStore";
-import { motion } from "motion/react";
 
 type Theme = "light" | "dark" | "auto";
 
@@ -66,13 +65,13 @@ export default function ThemeButton() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          viewBox="0 0 20 20"
           fill="currentColor"
-          className="size-4"
+          className="size-5"
         >
           <path
             fillRule="evenodd"
-            d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z"
+            d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5Zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5Z"
             clipRule="evenodd"
           />
         </svg>
@@ -98,13 +97,13 @@ export default function ThemeButton() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          viewBox="0 0 20 20"
           fill="currentColor"
-          className="size-4"
+          className="size-5"
         >
           <path
             fillRule="evenodd"
-            d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+            d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
             clipRule="evenodd"
           />
         </svg>
@@ -114,32 +113,21 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-[0.125rem] h-full rounded-full bg-white p-1.5 dark:bg-zinc-900">
+      <div className="flex h-full items-center justify-center gap-[0.125rem] rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
         {themes.map((t) => (
-          <motion.div className="relative size-6" key={t.value}>
-            {t.value === theme ? (
-              <motion.div
-                layoutId="button"
-                transition={{
-                  duration: 0.3,
-                }}
-                className="absolute size-6 rounded-full bg-violet-600 dark:bg-violet-600"
-              ></motion.div>
-            ) : (
-              <></>
-            )}
+          <div className="" key={t.value}>
             <button
               onClick={() => setTheme(t.value as Theme)}
               title={t.label}
-              className={`absolute flex size-6 items-center justify-center rounded-full transition-colors duration-300 ${
+              className={`flex aspect-square size-full items-center justify-center rounded-full p-1.5 transition-colors duration-300 ${
                 t.value === theme
-                  ? "text-white "
+                  ? "rounded-full bg-violet-600 text-white dark:bg-violet-600"
                   : "dark:text-white"
               }`}
             >
               {t.icon}
             </button>
-          </motion.div>
+          </div>
         ))}
       </div>
     </>

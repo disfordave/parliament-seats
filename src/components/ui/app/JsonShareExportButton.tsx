@@ -36,7 +36,7 @@ export default function JsonShareButton() {
           a.click();
           URL.revokeObjectURL(url);
         }}
-        className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+        className="line-clamp-1 w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white py-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
         type="button"
         title="Export Parties"
         aria-label="Export Parties"

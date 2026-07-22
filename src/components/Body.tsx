@@ -119,14 +119,14 @@ const Seats = () => {
         <p className="text-center">{i("body.noParties")}</p>
       )}
       <CoalitionBySpectrumButtons />
-      <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+      <div className="xs:flex-row mt-4 flex flex-col gap-4">
         <button
           onClick={() => {
             setParties([]);
             setSelectedParties([]);
             setSelectedCountry(null);
           }}
-          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white p-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white py-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
         >
           {i("buttons.clear")}
         </button>

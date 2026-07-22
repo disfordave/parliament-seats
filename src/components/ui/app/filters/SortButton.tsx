@@ -51,16 +51,23 @@ export default function SortButton() {
 
   return (
     <>
-      <div className="order-3 flex w-full overflow-x-auto overflow-y-hidden rounded-full border-2 border-transparent bg-zinc-200 whitespace-nowrap sm:order-2 sm:w-auto dark:bg-zinc-700">
+      <div className="relative order-3 flex w-full overflow-x-auto overflow-y-hidden rounded-full border-2 border-transparent bg-zinc-200 whitespace-nowrap sm:order-2 sm:w-2/5 dark:bg-zinc-700">
+        <div
+          className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-violet-600 transition-transform duration-300 dark:bg-violet-600 ${
+            sortBy === sortButtonConfigs[0].sortByKey
+              ? "translate-x-0"
+              : sortBy === sortButtonConfigs[1].sortByKey
+                ? "translate-x-full"
+                : "translate-x-[200%]"
+          }`}
+        ></div>
         {sortButtonConfigs.map((config) => (
           <button
             key={config.id}
             onClick={() => setSortBy(config.sortByKey)}
             className={`${
-              sortBy === config.sortByKey
-                ? "rounded-full bg-violet-600 text-white dark:bg-violet-600"
-                : "rounded-full"
-            } flex-1 px-3 py-1 transition-colors duration-300`}
+              sortBy === config.sortByKey ? "text-white" : ""
+            } z-4 flex flex-1 items-center justify-center px-3 py-1 text-center transition-colors duration-300`}
             title={config.title}
           >
             {config.label}

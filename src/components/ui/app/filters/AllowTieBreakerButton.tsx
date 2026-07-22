@@ -27,7 +27,7 @@ export default function AllowTieBreakerButton() {
   return (
     <>
       <div className="flex-1 justify-start text-nowrap sm:w-auto">
-        <label className="flex items-center gap-2">
+        <label className="flex max-w-fit items-center gap-2">
           <span className="relative">
             <input
               title="Allow Tie Breaker"

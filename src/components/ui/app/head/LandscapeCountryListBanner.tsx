@@ -104,7 +104,7 @@ export default function LandscapeCountryListBanner() {
                       </div>
                       {selectedCountry === country && (
                         <p className="text-xs opacity-75">
-                          {i("body.exampleDataUpdatedAt")}:{" "}
+                          {i("body.sampleDataUpdatedAt")}:{" "}
                           {new Date(country.updateDate).toLocaleDateString(
                             i("locale"),
                           )}

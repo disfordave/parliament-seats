@@ -103,7 +103,7 @@ export default function CountryListDropdown() {
                 <span>{selectedCountry.emoji}</span>
               </div>
               <p className="text-xs opacity-75">
-                {i("body.exampleDataUpdatedAt")}:{" "}
+                {i("body.sampleDataUpdatedAt")}:{" "}
                 {new Date(selectedCountry.updateDate).toLocaleDateString(
                   i("locale"),
                 )}
@@ -195,7 +195,7 @@ export default function CountryListDropdown() {
                               </div>
                               {selectedCountry === country && (
                                 <p className="text-xs opacity-75">
-                                  {i("body.exampleDataUpdatedAt")}:{" "}
+                                  {i("body.sampleDataUpdatedAt")}:{" "}
                                   {new Date(
                                     country.updateDate,
                                   ).toLocaleDateString(i("locale"))}

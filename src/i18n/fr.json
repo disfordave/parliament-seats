@@ -28,7 +28,7 @@
     "view": "Voir",
     "edit": "Modifier",
     "noParties": "Aucun parti disponible",
-    "exampleDataUpdatedAt": "Données d'exemple mises à jour le"
+    "sampleDataUpdatedAt": "Données d'exemple mises à jour le"
   },
   "controls": {
     "selectAll": "Sélectionner tout",

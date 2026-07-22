@@ -28,7 +28,7 @@
     "view": "View",
     "edit": "Edit",
     "noParties": "No parties available",
-    "exampleDataUpdatedAt": "Example data updated at"
+    "sampleDataUpdatedAt": "Sample data updated at"
   },
   "controls": {
     "selectAll": "Select All",

@@ -28,7 +28,7 @@
     "view": "Bekijken",
     "edit": "Bewerken",
     "noParties": "Geen partijen beschikbaar",
-    "exampleDataUpdatedAt": "Beispieldaten aktualisiert am"
+    "sampleDataUpdatedAt": "Beispieldaten aktualisiert am"
   },
   "controls": {
     "selectAll": "Alles selecteren",

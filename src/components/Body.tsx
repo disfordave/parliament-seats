@@ -124,30 +124,30 @@ const Seats = () => {
         <p className="text-center">{i("body.noParties")}</p>
       )}
       <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
-      {/* <p className="flex-1 text-sm opacity-75 ">
+        {/* <p className="flex-1 text-sm opacity-75 ">
           Simulation Controls
         </p> */}
-      <CoalitionBySpectrumButtons />
-      
+        <CoalitionBySpectrumButtons />
+
         {/* <p className="flex-1 text-sm opacity-75 mt-2">
           Data Management
         </p> */}
 
-<div className="my-2 w-full h-0.5 bg-white dark:bg-zinc-900 rounded-full opacity-75" />
-      <div className="xs:flex-row w-full flex flex-col gap-2">
-        <button
-          onClick={() => {
-            setParties([]);
-            setSelectedParties([]);
-            setSelectedCountry(null);
-          }}
-          className="w-full flex-1 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900 py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white"
-        >
-          {i("buttons.clear")}
-        </button>
-        <JsonShareExportButton />
-      </div>
-      <JsonShareImportButton />
+        <div className="my-2 h-0.5 w-full rounded-full bg-white opacity-75 dark:bg-zinc-900" />
+        <div className="xs:flex-row flex w-full flex-col gap-2">
+          <button
+            onClick={() => {
+              setParties([]);
+              setSelectedParties([]);
+              setSelectedCountry(null);
+            }}
+            className="w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white dark:bg-zinc-900"
+          >
+            {i("buttons.clear")}
+          </button>
+          <JsonShareExportButton />
+        </div>
+        <JsonShareImportButton />
       </div>
     </div>
   );

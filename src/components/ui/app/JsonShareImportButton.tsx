@@ -34,7 +34,7 @@ export default function JsonShareButton() {
       <input
         type="file"
         accept=".json"
-        className="block w-fit overflow-hidden rounded-2xl file:transition-colors duration-300 file:me-2 hover:file:bg-violet-600 hover:file:text-white file:rounded-full file:bg-white file:px-4 file:py-1 dark:file:bg-zinc-900 "
+        className="block w-fit overflow-hidden rounded-2xl duration-300 file:me-2 file:rounded-full file:border-2 file:border-transparent file:bg-white file:px-4 file:py-1 file:transition-colors hover:file:bg-violet-600 hover:file:text-white dark:file:bg-zinc-900"
         title="Import Parties"
         aria-label="Import Parties"
         onChange={(e) => {

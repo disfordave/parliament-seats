@@ -134,7 +134,7 @@ export default function CoalitionBySpectrumButtons() {
 
   return (
     <>
-      <div className=" flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 dark:bg-zinc-700">
+      <div className="flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 dark:bg-zinc-700">
         {buttonConfigurations.map((buttonConfig) => (
           <button
             key={buttonConfig.id}

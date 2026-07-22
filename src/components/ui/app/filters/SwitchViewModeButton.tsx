@@ -25,7 +25,7 @@ export default function SwitchViewModeButton() {
   const { i } = useI18n();
   return (
     <>
-      <div className="order-2 flex flex-1 items-center justify-end gap-2 select-none sm:order-3">
+      <div className="order-2 flex flex-1 items-center justify-end gap-2 select-none md:order-3">
         <span
           title={"Switch to View Mode"}
           className="cursor-default select-none"

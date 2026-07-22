@@ -81,13 +81,18 @@ const Seats = () => {
       <div className="mt-4 block lg:hidden">
         <CountryListDropdown />
       </div>
-      <div className="mt-4 aspect-2/1 h-full w-full">
+      <div className="relative mt-4 aspect-2/1 h-full w-full">
         <PieChart
           parties={parties}
           selectedParties={selectedParties}
           isEditMode={isEditMode}
           sortBy={sortBy}
         />
+        {parties.length > 0 && (
+          <div className="absolute top-px left-0 flex h-full w-full items-start justify-center">
+            <div className="bg-background-elevated absolute left-[calc(50%-1px)] h-[64.5%] border-l-2 border-dashed border-white"></div>
+          </div>
+        )}
       </div>
       <div className="sticky top-0 z-10 mx-auto w-full">
         <SeatsGraph />

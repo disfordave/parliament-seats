@@ -124,7 +124,7 @@ export default function SeatsGraph() {
                 className={`r-0 h-full overflow-hidden text-nowrap text-ellipsis transition-[width] duration-300`}
               ></div>
             ))}
-          <div className="bg-background-elevated absolute left-[calc(50%-1px)] h-full border-l-2 border-dashed border-violet-500"></div>
+          <div className="bg-background-elevated absolute left-[calc(50%-1px)] h-full border-l-2 border-dashed border-white"></div>
         </div>
       </div>
     </>

@@ -193,14 +193,14 @@ export default function CountryListDropdown() {
                                 <span>{country.name}</span>
                                 <span>{country.emoji}</span>
                               </div>
-                              {selectedCountry === country && (
-                                <p className="text-xs opacity-75">
-                                  {i("body.sampleDataUpdatedAt")}:{" "}
-                                  {new Date(
-                                    country.updateDate,
-                                  ).toLocaleDateString(i("locale"))}
-                                </p>
-                              )}
+                              {/* {selectedCountry === country && ( */}
+                              <p className="text-xs opacity-75">
+                                {i("body.sampleDataUpdatedAt")}:{" "}
+                                {new Date(
+                                  country.updateDate,
+                                ).toLocaleDateString(i("locale"))}
+                              </p>
+                              {/* )} */}
                             </button>
                           </li>
                         ))}

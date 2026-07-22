@@ -123,22 +123,31 @@ const Seats = () => {
       {parties.length <= 0 && !isEditMode && (
         <p className="text-center">{i("body.noParties")}</p>
       )}
+      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
+      {/* <p className="flex-1 text-sm opacity-75 ">
+          Simulation Controls
+        </p> */}
       <CoalitionBySpectrumButtons />
-      <div className="xs:flex-row mt-4 flex flex-col gap-4">
+      
+        {/* <p className="flex-1 text-sm opacity-75 mt-2">
+          Data Management
+        </p> */}
+
+<div className="my-2 w-full h-0.5 bg-white dark:bg-zinc-900 rounded-full opacity-75" />
+      <div className="xs:flex-row w-full flex flex-col gap-2">
         <button
           onClick={() => {
             setParties([]);
             setSelectedParties([]);
             setSelectedCountry(null);
           }}
-          className="w-full flex-1 rounded-2xl border-2 border-zinc-200 bg-white py-2 transition-colors duration-300 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-700"
+          className="w-full flex-1 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900 py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white"
         >
           {i("buttons.clear")}
         </button>
         <JsonShareExportButton />
       </div>
-      <div className="mt-4 flex flex-col gap-4">
-        <JsonShareImportButton />
+      <JsonShareImportButton />
       </div>
     </div>
   );

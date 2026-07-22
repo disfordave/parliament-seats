@@ -44,8 +44,8 @@
     "rightWing": "Right-wing"
   },
   "buttons": {
-    "clear": "Clear",
-    "exportParties": "Export parties"
+    "clear": "Clear data",
+    "exportParties": "Export data"
   },
   "spectrum": {
     "farLeft": "Far left",

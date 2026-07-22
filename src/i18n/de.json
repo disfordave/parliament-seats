@@ -44,8 +44,8 @@
     "rightWing": "Rechts (rechte Flügel)"
   },
   "buttons": {
-    "clear": "Löschen",
-    "exportParties": "Parteien exportieren"
+    "clear": "Daten löschen",
+    "exportParties": "Daten exportieren"
   },
   "spectrum": {
     "farLeft": "Äußerste Linke",

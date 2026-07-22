@@ -44,8 +44,8 @@
     "rightWing": "Droite (right-wing)"
   },
   "buttons": {
-    "clear": "Effacer",
-    "exportParties": "Exporter les partis"
+    "clear": "Effacer les données",
+    "exportParties": "Exporter les données"
   },
   "spectrum": {
     "farLeft": "Extrême gauche",

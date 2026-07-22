@@ -44,8 +44,8 @@
     "rightWing": "Rechts (rechtervleugel)"
   },
   "buttons": {
-    "clear": "Wissen",
-    "exportParties": "Partijen exporteren"
+    "clear": "Daten wissen",
+    "exportParties": "Daten exporteren"
   },
   "spectrum": {
     "farLeft": "Uiterste links",

@@ -23,5 +23,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-gray-950 dark:bg-gray-900 dark:text-white;
+  @apply bg-white text-zinc-950 dark:bg-zinc-900 dark:text-white;
 }

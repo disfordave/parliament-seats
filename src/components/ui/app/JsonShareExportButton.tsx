@@ -18,26 +18,35 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { useI18n } from "@/lib/zustandStore";
-import { Logo } from "./icons/Logo";
+import {
+  useParties,
+  useI18n,
+} from "@/lib/zustandStore";
 
-export default function Header() {
+export default function JsonShareButton() {
+  const { parties } = useParties();
   const { i } = useI18n();
   return (
     <>
-      <header className={"flex flex-wrap items-center justify-between gap-4"}>
-        <a href="/">
-          <div className={"flex items-center gap-2"}>
-            <Logo className="size-12 flex-shrink-0" />
-            <div className="flex flex-col justify-start">
-              <h1 className="text-2xl font-bold">Parliament Seats</h1>
-              <p className="text-sm leading-4 text-zinc-600 dark:text-zinc-500">
-                {i("subtitle")}
-              </p>
-            </div>
-          </div>
-        </a>
-      </header>
+      <button
+        onClick={() => {
+          const data = JSON.stringify(parties);
+          const blob = new Blob([data], { type: "text/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "parties.json";
+          a.click();
+          URL.revokeObjectURL(url);
+        }}
+        className="w-full flex-1 rounded-2xl border-2 transition-colors duration-300 border-zinc-200 p-2 dark:border-zinc-700  bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
+        type="button"
+        title="Export Parties"
+        aria-label="Export Parties"
+        aria-disabled={false}
+      >
+        {i("buttons.exportParties")}
+      </button>
     </>
   );
 }

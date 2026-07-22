@@ -39,7 +39,7 @@ export default function AddNewPartyButton() {
             },
           ]);
         }}
-        className="m-4 aspect-square w-1/3 rounded-full border-2 border-transparent bg-gray-200 p-2 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+        className="m-4 aspect-square w-1/3 rounded-full border-2 border-transparent bg-zinc-200 p-2 transition-colors hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600"
         type="button"
         title="Add Party"
         aria-label="Add Party"
@@ -50,7 +50,7 @@ export default function AddNewPartyButton() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="m-auto size-2/3 stroke-2 text-gray-950 dark:text-white"
+          className="m-auto size-2/3 stroke-2 text-zinc-950 dark:text-white"
         >
           <path
             strokeLinecap="round"

@@ -114,7 +114,7 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-[0.125rem] rounded-full bg-gray-200 p-1 dark:bg-gray-700">
+      <div className="flex items-center justify-center gap-[0.125rem] h-full rounded-full bg-white p-1.5 dark:bg-zinc-900">
         {themes.map((t) => (
           <motion.div className="relative size-6" key={t.value}>
             {t.value === theme ? (
@@ -123,7 +123,7 @@ export default function ThemeButton() {
                 transition={{
                   duration: 0.3,
                 }}
-                className="absolute size-6 rounded-full bg-violet-600 dark:bg-violet-400"
+                className="absolute size-6 rounded-full bg-violet-600 dark:bg-violet-600"
               ></motion.div>
             ) : (
               <></>
@@ -133,7 +133,7 @@ export default function ThemeButton() {
               title={t.label}
               className={`absolute flex size-6 items-center justify-center rounded-full transition-colors duration-300 ${
                 t.value === theme
-                  ? "text-white dark:text-gray-950"
+                  ? "text-white "
                   : "dark:text-white"
               }`}
             >

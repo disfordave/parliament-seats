@@ -57,7 +57,7 @@ export default function PartyButton({ party }: { party: Party }) {
       }}
       className={`${
         isEditMode ? "" : "cursor-pointer"
-      } party-button flex w-full items-center gap-2 overflow-hidden rounded-lg border-2 bg-white p-2 transition-all duration-300 dark:bg-gray-900`}
+      } party-button flex w-full items-center gap-2 overflow-hidden rounded-2xl border-2 bg-white p-2 transition-all duration-300 dark:bg-zinc-900`}
       style={{
         borderColor: selected ? colour : "var(--border-colour)", // dark mode #374151
         flexDirection: isEditMode ? "column" : "row",
@@ -102,7 +102,7 @@ export default function PartyButton({ party }: { party: Party }) {
         <div
           className={`transition-all ${
             isEditMode
-              ? "h-6 w-full rounded-full border border-gray-200 dark:border-gray-700"
+              ? "h-6 w-full rounded-full border-zinc-200 dark:border-zinc-700"
               : "aspect-square size-4 rounded-full"
           }`}
           style={{ backgroundColor: colour }}
@@ -114,7 +114,7 @@ export default function PartyButton({ party }: { party: Party }) {
             name="partyName"
             type="text"
             placeholder="Party Name"
-            className="w-full border-b border-gray-200 bg-transparent outline-none dark:border-gray-700"
+            className="w-full border-b border-zinc-200 bg-transparent outline-none dark:border-zinc-700"
             value={party.name}
             onChange={(e) => {
               const newParty = { ...party, name: e.target.value };
@@ -141,7 +141,7 @@ export default function PartyButton({ party }: { party: Party }) {
             name="partyShortName"
             type="text"
             placeholder="Party Short Name"
-            className="w-full border-b border-gray-200 bg-transparent outline-none dark:border-gray-700"
+            className="w-full border-b border-zinc-200 bg-transparent outline-none dark:border-zinc-700"
             value={party.shortName}
             onChange={(e) => {
               const newParty = { ...party, shortName: e.target.value };
@@ -168,7 +168,7 @@ export default function PartyButton({ party }: { party: Party }) {
             name="seats"
             type="number"
             placeholder="Seats"
-            className="w-full border-b border-gray-200 bg-transparent outline-none dark:border-gray-700"
+            className="w-full border-b border-zinc-200 bg-transparent outline-none dark:border-zinc-700"
             min={0}
             max={99999}
             value={party.seats.toFixed(0)}
@@ -213,7 +213,7 @@ export default function PartyButton({ party }: { party: Party }) {
                 dir="ltr"
                 id="position-range"
                 step={25}
-                className="w-full appearance-none rounded-full bg-gray-200 dark:bg-gray-700"
+                className="w-full appearance-none rounded-full bg-zinc-200 dark:bg-zinc-700"
                 type="range"
                 min="-100"
                 max="100"

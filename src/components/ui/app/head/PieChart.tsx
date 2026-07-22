@@ -73,7 +73,7 @@ export default function PieChart({
             value:
               parties.reduce((acc, party) => acc + party.seats, 0) -
               selectedParties.reduce((acc, party) => acc + party.seats, 0),
-            color: isDarkMode ? "#374151" : "#e5e7eb",
+            color: isDarkMode ? "#3f3f46" : "#e4e4e7",
           },
         ]}
         padAngle={0.2}

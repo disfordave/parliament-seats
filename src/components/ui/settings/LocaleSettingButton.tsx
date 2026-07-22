@@ -46,8 +46,8 @@ export default function LocaleSettingButton() {
       }}
     >
       <button
-        className={`flex min-w-16 items-center justify-between rounded-lg border-2 border-gray-200 py-1 pe-1 ps-2 dark:border-gray-700 ${
-          isOpen ? "bg-gray-200 dark:bg-gray-700" : "bg-white dark:bg-gray-900"
+        className={`flex min-w-16 items-center justify-between rounded-full border-2 border-white dark:border-zinc-900 py-1 pe-1 ps-2  ${
+          isOpen ? "bg-zinc-200 dark:bg-zinc-700" : "bg-white dark:bg-zinc-900"
         }`}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -68,7 +68,7 @@ export default function LocaleSettingButton() {
               animate={{ opacity: 1, translateY: 0 }}
               exit={{ opacity: 0, translateY: 2 }}
               ref={dropdownRef}
-              className="absolute bottom-10 z-[100] flex w-full flex-col overflow-hidden rounded-lg border-2 border-gray-200 shadow-md dark:border-gray-700"
+              className="absolute bottom-10 z-[100] flex w-full flex-col overflow-hidden rounded-2xl border-2 border-zinc-200  dark:border-zinc-700"
             >
               {Object.keys(locales).map((loc) => (
                 <button
@@ -79,8 +79,8 @@ export default function LocaleSettingButton() {
                   }}
                   className={`appearance-none px-2 py-1 text-start transition-colors duration-300 ${
                     locale === loc
-                      ? "bg-gray-200 dark:bg-gray-700"
-                      : "bg-white dark:bg-gray-900"
+                      ? "bg-zinc-200 dark:bg-zinc-700"
+                      : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
                   }`}
                 >
                   {loc.toUpperCase()}

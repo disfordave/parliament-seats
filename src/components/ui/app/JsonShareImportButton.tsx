@@ -22,40 +22,19 @@ import { Party } from "@/types";
 import {
   useSelectedParties,
   useParties,
-  useI18n,
   useSelectedCountry,
 } from "@/lib/zustandStore";
 
 export default function JsonShareButton() {
-  const { parties, setParties } = useParties();
+  const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
-  const { i } = useI18n();
   const { setSelectedCountry } = useSelectedCountry();
   return (
     <>
-      <button
-        onClick={() => {
-          const data = JSON.stringify(parties);
-          const blob = new Blob([data], { type: "text/json" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "parties.json";
-          a.click();
-          URL.revokeObjectURL(url);
-        }}
-        className="mt-4 w-full rounded-lg border-2 border-gray-200 p-2 dark:border-gray-700"
-        type="button"
-        title="Export Parties"
-        aria-label="Export Parties"
-        aria-disabled={false}
-      >
-        {i("buttons.exportParties")}
-      </button>
       <input
         type="file"
         accept=".json"
-        className="mt-4 max-w-full"
+        className="max-w-full"
         title="Import Parties"
         aria-label="Import Parties"
         onChange={(e) => {

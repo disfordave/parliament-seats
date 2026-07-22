@@ -34,7 +34,7 @@ export default function LandscapeCountryListBanner() {
   const { setSelectedParties } = useSelectedParties();
   return (
     <>
-      <div className="sticky top-4 h-[80vh] w-full overflow-auto rounded-lg border-2 border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+      <div className="sticky top-4 h-[80vh] w-full overflow-auto rounded-2xl border-2 border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900 ">
         <h2 className="p-2 text-xl font-semibold">{i("header.countries")}</h2>
         <ul>
           <li>
@@ -53,8 +53,8 @@ export default function LandscapeCountryListBanner() {
                   }}
                   className={`w-full p-2 transition-colors duration-300 ${
                     !selectedCountry
-                      ? "bg-gray-200 dark:bg-gray-700"
-                      : "bg-white hover:bg-gray-100 dark:bg-gray-900 hover:dark:bg-gray-800"
+                      ? "bg-zinc-200 dark:bg-zinc-700"
+                      : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
                   }`}
                 >
                   <div className="flex gap-1">
@@ -94,8 +94,8 @@ export default function LandscapeCountryListBanner() {
                       }}
                       className={`w-full p-2 transition-colors duration-300 ${
                         selectedCountry === country
-                          ? "bg-gray-200 dark:bg-gray-700"
-                          : "bg-white hover:bg-gray-100 dark:bg-gray-900 hover:dark:bg-gray-800"
+                          ? "bg-zinc-200 dark:bg-zinc-700"
+                          : "bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700"
                       }`}
                     >
                       <div className="line-clamp-1 flex gap-1">

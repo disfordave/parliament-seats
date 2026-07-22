@@ -25,9 +25,9 @@ export default function Footer() {
   const { i } = useI18n();
   return (
     <>
-      <footer className={"py-8"}>
+      <footer className={"p-4 bg-zinc-200 dark:bg-zinc-700 rounded-t-2xl -mb-4 mt-4"}>
         <div
-          className={"flex w-full flex-wrap items-center justify-between gap-2"}
+          className={"flex items-center justify-between gap-2"}
         >
           <div className="flex flex-wrap items-center justify-start gap-2">
             <ThemeButton />

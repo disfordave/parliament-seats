@@ -30,4 +30,5 @@ export { default as CoalitionBySpectrumButtons } from "./filters/CoalitionBySpec
 export { default as PartyButton } from "./parties/PartyButton";
 export { default as AddNewPartyButton } from "./parties/AddNewPartyButton";
 
-export { default as JsonShareButton } from "./JsonShareButton";
+export { default as JsonShareExportButton } from "./JsonShareExportButton";
+export { default as JsonShareImportButton } from "./JsonShareImportButton";

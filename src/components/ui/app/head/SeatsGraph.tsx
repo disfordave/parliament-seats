@@ -49,7 +49,7 @@ export default function SeatsGraph() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 -mx-4 mb-2 rounded-lg border border-gray-200 bg-white/50 p-2 backdrop-blur-sm transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900/50">
+      <div className="sticky top-0 z-50 -mx-4 mb-2 rounded-2xl border-2 border-zinc-200 bg-white/50 p-2 backdrop-blur-sm transition-colors duration-300 dark:border-zinc-700 dark:bg-zinc-900/50 ">
         <div className="flex items-center justify-between">
           <p className="flex-1">
             {
@@ -63,7 +63,7 @@ export default function SeatsGraph() {
                 </span>
               ) : // Majority achieved
               majority.status === "majority" ? (
-                <span className="line-clamp-1 text-violet-600 dark:text-violet-400">
+                <span className="line-clamp-1 text-violet-600 dark:text-violet-600">
                   {pluralize(
                     majority.margin,
                     i("header.seat"),
@@ -99,7 +99,7 @@ export default function SeatsGraph() {
           </div>
         </div>
         <div
-          className="relative flex h-4 overflow-hidden rounded-lg bg-gray-200 transition-all dark:bg-gray-700"
+          className="relative flex h-4 overflow-hidden rounded-2xl bg-zinc-200 transition-all dark:bg-zinc-700"
           dir={sortBy === "position" ? "ltr" : ""}
         >
           {[...parties]

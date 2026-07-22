@@ -38,7 +38,8 @@ import {
   AddNewPartyButton,
   SeatsGraph,
   CountryListDropdown,
-  JsonShareButton,
+  JsonShareExportButton,
+  JsonShareImportButton,
   PieChart,
 } from "@/components/ui/app";
 
@@ -88,7 +89,7 @@ const Seats = () => {
           sortBy={sortBy}
         />
       </div>
-      <div className="sticky top-0 z-10 mx-auto w-[calc(100%-2rem)] pb-2 pt-4 sx:w-3/4">
+      <div className="sticky top-0 z-10 mx-auto w-[calc(100%-2rem)] pb-2 pt-4">
         <SeatsGraph />
       </div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
@@ -118,17 +119,22 @@ const Seats = () => {
         <p className="text-center">{i("body.noParties")}</p>
       )}
       <CoalitionBySpectrumButtons />
-      <button
+      <div className="mt-4 flex sm:flex-row flex-col gap-4">
+        <button
         onClick={() => {
           setParties([]);
           setSelectedParties([]);
           setSelectedCountry(null);
         }}
-        className="mt-4 w-full rounded-lg border-2 border-gray-200 p-2 dark:border-gray-700"
+        className="w-full rounded-2xl border-2 border-zinc-200 transition-colors duration-300 p-2 dark:border-zinc-700  bg-white hover:bg-zinc-200 dark:bg-zinc-900 hover:dark:bg-zinc-700 flex-1"
       >
         {i("buttons.clear")}
       </button>
-      <JsonShareButton />
+      <JsonShareExportButton />
+      </div>
+      <div className="mt-4 flex flex-col gap-4">
+        <JsonShareImportButton />
+      </div>
       {selectedCountry && (
         <>
           <p className="mt-4 opacity-75">

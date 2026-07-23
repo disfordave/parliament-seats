@@ -27,20 +27,27 @@ export default function JsonShareButton() {
     <>
       <button
         onClick={() => {
-          const data = JSON.stringify(parties);
-          const blob = new Blob([data], { type: "text/json" });
+          const shouldExport = window.confirm(
+            "Are you sure you want to export the party data?",
+          );
+
+          if (!shouldExport) return;
+
+          const data = JSON.stringify(parties, null, 2);
+          const blob = new Blob([data], { type: "application/json" });
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
+
           a.href = url;
           a.download = "parties.json";
           a.click();
+
           URL.revokeObjectURL(url);
         }}
         className="line-clamp-1 w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white dark:bg-zinc-900"
         type="button"
         title="Export Parties"
         aria-label="Export Parties"
-        aria-disabled={false}
       >
         {i("buttons.exportParties")}
       </button>

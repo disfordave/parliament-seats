@@ -123,31 +123,38 @@ const Seats = () => {
       {parties.length <= 0 && !isEditMode && (
         <p className="text-center">{i("body.noParties")}</p>
       )}
-      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
-        {/* <p className="flex-1 text-sm opacity-75 ">
+
+      {/* <p className="flex-1 text-sm opacity-75 ">
           Simulation Controls
         </p> */}
+      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
         <CoalitionBySpectrumButtons />
-
-        {/* <p className="flex-1 text-sm opacity-75 mt-2">
+      </div>
+      {/* <p className="flex-1 text-sm opacity-75 mt-2">
           Data Management
         </p> */}
 
-        <div className="my-2 h-0.5 w-full rounded-full bg-white opacity-75 dark:bg-zinc-900" />
+      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
         <div className="xs:flex-row flex w-full flex-col gap-2">
-          <button
-            onClick={() => {
-              setParties([]);
-              setSelectedParties([]);
-              setSelectedCountry(null);
-            }}
-            className="w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white dark:bg-zinc-900"
-          >
-            {i("buttons.clear")}
-          </button>
+          <JsonShareImportButton />
           <JsonShareExportButton />
         </div>
-        <JsonShareImportButton />
+        <button
+          onClick={() => {
+            const shouldClear = window.confirm(
+              "Are you sure you want to clear all data?",
+            );
+
+            if (!shouldClear) return;
+
+            setParties([]);
+            setSelectedParties([]);
+            setSelectedCountry(null);
+          }}
+          className="w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 transition-colors duration-300 hover:bg-violet-600 hover:text-white dark:bg-zinc-900"
+        >
+          {i("buttons.clear")}
+        </button>
       </div>
     </div>
   );

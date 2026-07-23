@@ -84,7 +84,7 @@ const Seats = () => {
       <div className="relative mt-4 aspect-2/1 h-full w-full">
         <PieChart
           parties={parties}
-          selectedParties={selectedParties}
+          selectedParties={[...selectedParties]}
           isEditMode={isEditMode}
           sortBy={sortBy}
         />

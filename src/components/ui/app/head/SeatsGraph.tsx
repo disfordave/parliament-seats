@@ -58,12 +58,12 @@ export default function SeatsGraph() {
                 ""
               ) : // Tie-breaking majority
               majority.status === "tie-breaking majority" ? (
-                <span className="line-clamp-1 text-emerald-600 dark:text-emerald-400">
+                <span className="line-clamp-1 font-semibold text-emerald-600 dark:text-emerald-400">
                   {i("header.tieBreakingMajority")}
                 </span>
               ) : // Majority achieved
               majority.status === "majority" ? (
-                <span className="line-clamp-1 text-violet-600 dark:text-violet-600">
+                <span className="text-brand-primary dark:text-brand-primary-accessible-dark line-clamp-1 font-semibold">
                   {pluralize(
                     majority.margin,
                     i("header.seat"),

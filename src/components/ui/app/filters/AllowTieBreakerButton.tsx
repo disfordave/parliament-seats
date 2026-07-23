@@ -46,7 +46,7 @@ export default function AllowTieBreakerButton() {
               aria-checked={allowTieBreaker}
               className={`${
                 allowTieBreaker
-                  ? "bg-violet-600 dark:bg-violet-600"
+                  ? "bg-brand-primary dark:bg-brand-primary"
                   : "bg-zinc-200 dark:bg-zinc-700"
               } flex aspect-square size-6 items-center justify-center overflow-hidden rounded-full transition-colors`}
             >

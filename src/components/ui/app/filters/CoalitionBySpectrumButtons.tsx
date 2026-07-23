@@ -141,7 +141,7 @@ export default function CoalitionBySpectrumButtons() {
           <button
             key={buttonConfig.id}
             onClick={buttonConfig.onClick}
-            className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-violet-600 hover:text-white dark:bg-zinc-900 dark:hover:bg-violet-600`}
+            className={`hover:bg-brand-primary dark:hover:bg-brand-primary w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:text-white dark:bg-zinc-900`}
             type="button"
             title={buttonConfig.label}
             aria-label={buttonConfig.label}
@@ -190,7 +190,7 @@ export default function CoalitionBySpectrumButtons() {
             <button
               key={buttonConfig.id}
               onClick={buttonConfig.onClick}
-              className={`rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-violet-600 hover:text-white dark:bg-zinc-900 dark:hover:bg-violet-600 ${buttonConfig.id === "selectAll" || buttonConfig.id === "deselectAll" ? "w-full" : ""}`}
+              className={`hover:bg-brand-primary dark:hover:bg-brand-primary rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:text-white dark:bg-zinc-900 ${buttonConfig.id === "selectAll" || buttonConfig.id === "deselectAll" ? "w-full" : ""}`}
               type="button"
               title={buttonConfig.label}
               aria-label={buttonConfig.label}

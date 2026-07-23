@@ -67,7 +67,7 @@ export default function SwitchViewModeButton() {
             </svg>
           </div>
           <div
-            className={`h-full w-6 rounded-full bg-violet-600 transition-all ${
+            className={`bg-brand-primary h-full w-6 rounded-full transition-all ${
               isEditMode ? "translate-x-full rtl:-translate-x-full" : ""
             }`}
           ></div>

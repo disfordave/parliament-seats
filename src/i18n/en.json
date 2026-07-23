@@ -31,6 +31,7 @@
     "sampleDataUpdatedAt": "Sample data updated at"
   },
   "controls": {
+    "politicalSpectrum": "Political Spectrum",
     "selectAll": "Select All",
     "deselectAll": "Deselect All",
     "left": "Left",
@@ -44,8 +45,10 @@
     "rightWing": "Right-wing"
   },
   "buttons": {
+    "dataManagement": "Data Management",
     "clear": "Clear data",
-    "exportParties": "Export data"
+    "exportParties": "Export data",
+    "importParties": "Import data"
   },
   "spectrum": {
     "farLeft": "Far left",

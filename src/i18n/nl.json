@@ -31,6 +31,7 @@
     "sampleDataUpdatedAt": "Beispieldaten aktualisiert am"
   },
   "controls": {
+    "politicalSpectrum": "Politiek spectrum",
     "selectAll": "Alles selecteren",
     "deselectAll": "Alles deselecteren",
     "left": "Links",
@@ -44,8 +45,10 @@
     "rightWing": "Rechts (rechtervleugel)"
   },
   "buttons": {
+    "dataManagement": "Gegevensbeheer",
     "clear": "Daten wissen",
-    "exportParties": "Daten exporteren"
+    "exportParties": "Daten exporteren",
+    "importParties": "Daten importeren"
   },
   "spectrum": {
     "farLeft": "Uiterste links",

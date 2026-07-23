@@ -31,9 +31,7 @@ export default function Header() {
             <Logo className="size-12 shrink-0" />
             <div className="flex flex-col justify-start">
               <h1 className="text-2xl font-bold">Parliament Seats</h1>
-              <p className="text-sm leading-4 text-zinc-600 dark:text-zinc-500">
-                {i("subtitle")}
-              </p>
+              <p className="text-sm leading-4 opacity-75">{i("subtitle")}</p>
             </div>
           </div>
         </a>

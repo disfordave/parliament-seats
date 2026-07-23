@@ -48,7 +48,7 @@ export default function AllowTieBreakerButton() {
                 allowTieBreaker
                   ? "bg-violet-600 dark:bg-violet-600"
                   : "bg-zinc-200 dark:bg-zinc-700"
-              } flex aspect-square size-7 items-center justify-center overflow-hidden rounded-full transition-colors`}
+              } flex aspect-square size-6 items-center justify-center overflow-hidden rounded-full transition-colors`}
             >
               {allowTieBreaker ? (
                 <div className="flex h-full w-full items-center justify-center text-white">
@@ -56,7 +56,7 @@ export default function AllowTieBreakerButton() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="size-5"
+                    className="size-4.5"
                   >
                     <path
                       fillRule="evenodd"

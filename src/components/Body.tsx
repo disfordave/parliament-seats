@@ -127,15 +127,17 @@ const Seats = () => {
       {/* <p className="flex-1 text-sm opacity-75 ">
           Simulation Controls
         </p> */}
-      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
-        <CoalitionBySpectrumButtons />
-      </div>
+
+      <CoalitionBySpectrumButtons />
+
       {/* <p className="flex-1 text-sm opacity-75 mt-2">
           Data Management
         </p> */}
-
-      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
-        <div className="flex w-full flex-col gap-2 sm:flex-row">
+      <span className="mt-4 flex w-full items-center justify-start gap-2 text-sm font-semibold text-nowrap text-zinc-900 opacity-75 dark:text-white">
+        {i("buttons.dataManagement")}
+      </span>
+      <div className="mt-1 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
+        <div className="flex w-full flex-row flex-wrap gap-2">
           <JsonShareImportButton />
           <JsonShareExportButton />
         </div>

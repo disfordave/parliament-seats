@@ -168,7 +168,7 @@ export default function CountryListDropdown() {
                       {i("header.sampleCountries")}
                     </span>
                     <ul>
-                      {countries
+                      {[...countries]
                         .sort((a, b) => a.name.localeCompare(b.name))
                         .map((country) => (
                           <li

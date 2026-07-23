@@ -69,7 +69,7 @@ export default function LandscapeCountryListBanner() {
               {i("header.sampleCountries")}
             </span>
             <ul>
-              {countries
+              {[...countries]
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((country) => (
                   <li key={country.name} value={country.name} id={country.name}>

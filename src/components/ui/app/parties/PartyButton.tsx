@@ -213,7 +213,7 @@ export default function PartyButton({ party }: { party: Party }) {
                 dir="ltr"
                 id="position-range"
                 step={25}
-                className="w-full appearance-none rounded-full bg-zinc-200 dark:bg-zinc-700"
+                className="w-full appearance-none rounded-full bg-zinc-200 accent-zinc-500 dark:bg-zinc-700 dark:accent-zinc-300"
                 type="range"
                 min="-100"
                 max="100"

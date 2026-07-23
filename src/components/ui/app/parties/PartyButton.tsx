@@ -247,6 +247,7 @@ export default function PartyButton({ party }: { party: Party }) {
                 name="isIndependent"
                 value={party.isIndependent ? "1" : "0"}
                 checked={party.isIndependent}
+                className="accent-violet-600"
                 onChange={(e) => {
                   const newParty = {
                     ...party,

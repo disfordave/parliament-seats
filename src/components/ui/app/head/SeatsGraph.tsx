@@ -26,10 +26,10 @@ import {
   useSortBy,
   useIsEditMode,
 } from "@/lib/zustandStore";
-import { CaretDownIcon } from "@/components/icons/Icons";
 import { sort } from "@/utils/sort";
 import { getMajority } from "@/utils/getMajority";
 import { pluralize } from "@/utils/pluralize";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export default function SeatsGraph() {
   const { parties } = useParties();
@@ -87,10 +87,8 @@ export default function SeatsGraph() {
               majority.seatsForMajority
             } ${i("header.seatsForMajority")}`}
           >
-            <CaretDownIcon />
-            <p className="absolute left-5 rtl:right-5">
-              {majority.seatsForMajority}{" "}
-            </p>
+            <ChevronDownIcon className="size-5" />
+            <p className="absolute inset-s-5">{majority.seatsForMajority} </p>
           </div>
           <div className="flex flex-1 justify-end text-end">
             <p className="tabular-nums">

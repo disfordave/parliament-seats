@@ -25,8 +25,8 @@
 @theme {
   --breakpoint-xs: 375px;
   --breakpoint-sx: 475px;
-  --color-brand-primary: theme("colors.indigo.600");
-  --color-brand-primary-accessible-dark: theme("colors.indigo.400");
+  --color-brand-primary: theme("colors.slate.600");
+  --color-brand-primary-accessible-dark: theme("colors.slate.400");
 }
 
 /*
@@ -48,5 +48,5 @@
 }
 
 body {
-  @apply bg-white text-zinc-950 dark:bg-zinc-900 dark:text-white;
+  @apply bg-white text-slate-950 dark:bg-slate-900 dark:text-white;
 }

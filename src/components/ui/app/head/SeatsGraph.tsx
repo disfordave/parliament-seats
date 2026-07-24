@@ -49,7 +49,7 @@ export default function SeatsGraph() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 -mx-4 bg-white px-4 pt-[calc(env(safe-area-inset-top)+12px)] pb-4 transition-colors duration-300 dark:bg-zinc-900">
+      <div className="sticky top-0 z-50 -mx-4 bg-white px-4 pt-[calc(env(safe-area-inset-top)+12px)] pb-4 transition-colors duration-300 dark:bg-slate-900">
         <div className="flex items-center justify-between">
           <p className="flex-1">
             {
@@ -97,7 +97,7 @@ export default function SeatsGraph() {
           </div>
         </div>
         <div
-          className="relative flex h-4 overflow-hidden rounded-2xl bg-zinc-200 transition-all dark:bg-zinc-700"
+          className="relative flex h-4 overflow-hidden rounded-2xl bg-slate-200 transition-all dark:bg-slate-700"
           dir={sortBy === "position" ? "ltr" : ""}
         >
           {[...parties]

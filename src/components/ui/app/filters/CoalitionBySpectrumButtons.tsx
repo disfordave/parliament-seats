@@ -137,12 +137,12 @@ export default function CoalitionBySpectrumButtons() {
 
   return (
     <>
-      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
+      <div className="mt-4 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-slate-200 p-4 dark:bg-slate-700">
         {primaryButtonConfigurations.map((buttonConfig) => (
           <button
             key={buttonConfig.id}
             onClick={buttonConfig.onClick}
-            className={`hover:bg-brand-primary dark:hover:bg-brand-primary w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:text-white dark:bg-zinc-900`}
+            className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-slate-700 hover:text-white dark:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-950`}
             type="button"
             title={buttonConfig.label}
             aria-label={buttonConfig.label}
@@ -160,16 +160,16 @@ export default function CoalitionBySpectrumButtons() {
           </button>
         ))}
       </div>
-      <span className="mt-4 flex w-full items-center justify-start gap-2 text-sm font-semibold text-nowrap text-zinc-900 opacity-75 dark:text-white">
+      <span className="mt-4 flex w-full items-center justify-start gap-2 text-sm font-semibold text-nowrap text-slate-900 opacity-75 dark:text-white">
         {i("controls.politicalSpectrum")}
       </span>
-      <div className="mt-1 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
-        <div className="flex flex-wrap gap-2 overflow-auto bg-zinc-200 dark:bg-zinc-700">
+      <div className="mt-1 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-slate-200 p-4 dark:bg-slate-700">
+        <div className="flex flex-wrap gap-2 overflow-auto bg-slate-200 dark:bg-slate-700">
           {buttonConfigurations.map((buttonConfig) => (
             <button
               key={buttonConfig.id}
               onClick={buttonConfig.onClick}
-              className={`hover:bg-brand-primary dark:hover:bg-brand-primary rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:text-white dark:bg-zinc-900 ${buttonConfig.id === "selectAll" || buttonConfig.id === "deselectAll" ? "w-full" : ""}`}
+              className={`rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-slate-700 hover:text-white dark:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-950 ${buttonConfig.id === "selectAll" || buttonConfig.id === "deselectAll" ? "w-full" : ""}`}
               type="button"
               title={buttonConfig.label}
               aria-label={buttonConfig.label}

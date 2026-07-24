@@ -134,10 +134,10 @@ const Seats = () => {
       {/* <p className="flex-1 text-sm opacity-75 mt-2">
           Data Management
         </p> */}
-      <span className="mt-4 flex w-full items-center justify-start gap-2 text-sm font-semibold text-nowrap text-zinc-900 opacity-75 dark:text-white">
+      <span className="mt-4 flex w-full items-center justify-start gap-2 text-sm font-semibold text-nowrap text-slate-900 opacity-75 dark:text-white">
         {i("buttons.dataManagement")}
       </span>
-      <div className="mt-1 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700">
+      <div className="mt-1 flex flex-wrap gap-2 overflow-auto rounded-2xl bg-slate-200 p-4 dark:bg-slate-700">
         <div className="flex w-full flex-row flex-wrap gap-2">
           <JsonShareImportButton />
           <JsonShareExportButton />
@@ -154,7 +154,7 @@ const Seats = () => {
             setSelectedParties([]);
             setSelectedCountry(null);
           }}
-          className="w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 text-rose-600 transition-colors duration-300 hover:bg-rose-600 hover:text-white dark:bg-zinc-900 dark:text-rose-500"
+          className="w-full flex-1 rounded-full border-2 border-transparent bg-white py-1 text-rose-600 transition-colors duration-300 hover:bg-rose-600 hover:text-white dark:bg-slate-900 dark:text-rose-500"
         >
           <span className="line-clamp-1 flex items-center justify-center gap-1 text-nowrap">
             <TrashIcon className="size-5 shrink-0" />

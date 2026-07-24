@@ -26,7 +26,7 @@ import LandscapeCountryListBanner from "./components/ui/app/head/LandscapeCountr
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-zinc-950 transition-colors duration-300 dark:bg-zinc-900 dark:text-white">
+    <div className="min-h-screen bg-white text-slate-950 transition-colors duration-300 dark:bg-slate-900 dark:text-white">
       <div className="mx-auto max-w-7xl pt-[calc(env(safe-area-inset-top)+1rem)] pr-[calc(env(safe-area-inset-right)+1rem)] pb-[calc(env(safe-area-inset-bottom)+1rem)] pl-[calc(env(safe-area-inset-left)+1rem)]">
         <Header />
         <main className="grid grid-cols-1 gap-4 lg:grid-cols-[14.5fr_5.5fr]">

@@ -83,9 +83,9 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="relative flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
+      <div className="relative flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-slate-900">
         <div
-          className={`bg-brand-primary dark:bg-brand-primary absolute top-0 left-0 z-2 h-full w-1/3 rounded-full transition-transform duration-300 ${
+          className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-slate-700 transition-transform duration-300 dark:bg-slate-200 ${
             theme === themes[0].value
               ? "translate-x-0"
               : theme === themes[1].value
@@ -99,7 +99,9 @@ export default function ThemeButton() {
               onClick={() => setTheme(t.value as Theme)}
               title={t.label}
               className={`flex aspect-square size-full items-center justify-center rounded-full p-1.5 transition-colors duration-300 ${
-                t.value === theme ? "text-white" : "dark:text-white"
+                t.value === theme
+                  ? "text-white dark:text-slate-950"
+                  : "dark:text-white"
               }`}
             >
               {t.icon}

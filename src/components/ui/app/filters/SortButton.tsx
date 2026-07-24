@@ -51,9 +51,9 @@ export default function SortButton() {
 
   return (
     <>
-      <div className="relative order-3 flex w-full overflow-x-auto overflow-y-hidden rounded-full border-2 border-transparent bg-zinc-200 whitespace-nowrap md:order-2 md:w-2/5 dark:bg-zinc-700">
+      <div className="relative order-3 flex w-full overflow-x-auto overflow-y-hidden rounded-full border-2 border-transparent bg-slate-200 whitespace-nowrap md:order-2 md:w-2/5 dark:bg-slate-700">
         <div
-          className={`bg-brand-primary dark:bg-brand-primary absolute top-0 left-0 z-2 h-full w-1/3 rounded-full transition-transform duration-300 ${
+          className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-slate-700 transition-transform duration-300 dark:bg-slate-200 ${
             sortBy === sortButtonConfigs[0].sortByKey
               ? "translate-x-0"
               : sortBy === sortButtonConfigs[1].sortByKey
@@ -66,7 +66,9 @@ export default function SortButton() {
             key={config.id}
             onClick={() => setSortBy(config.sortByKey)}
             className={`${
-              sortBy === config.sortByKey ? "text-white" : ""
+              sortBy === config.sortByKey
+                ? "text-white dark:text-slate-950"
+                : ""
             } z-4 flex flex-1 items-center justify-center px-3 py-0.75 text-center text-sm transition-colors duration-300`}
             title={config.title}
           >

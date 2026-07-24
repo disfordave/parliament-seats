@@ -25,7 +25,7 @@ export default function Footer() {
   const { i } = useI18n();
   return (
     <>
-      <footer className={"mt-4 rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700"}>
+      <footer className={"mt-4 rounded-2xl bg-slate-200 p-4 dark:bg-slate-700"}>
         <div
           className={
             "flex w-full flex-col items-start justify-between gap-4 sm:flex-row sm:items-center"

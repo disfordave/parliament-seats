@@ -47,16 +47,16 @@ export default function AllowTieBreakerButton() {
               aria-checked={allowTieBreaker}
               className={`${
                 allowTieBreaker
-                  ? "bg-brand-primary dark:bg-brand-primary"
-                  : "bg-zinc-200 dark:bg-zinc-700"
+                  ? "bg-slate-700 dark:bg-slate-200"
+                  : "bg-slate-200 dark:bg-slate-700"
               } flex aspect-square size-6 items-center justify-center overflow-hidden rounded-full transition-colors`}
             >
               {allowTieBreaker ? (
-                <div className="flex h-full w-full items-center justify-center text-white">
+                <div className="flex h-full w-full items-center justify-center text-white dark:text-slate-950">
                   <CheckIcon className="size-4.5" />
                 </div>
               ) : (
-                <div className="flex h-full w-full items-center justify-center bg-zinc-200 text-white dark:bg-zinc-700 dark:text-zinc-950"></div>
+                <div className="flex h-full w-full items-center justify-center bg-slate-200 text-white dark:bg-slate-700 dark:text-slate-950"></div>
               )}
             </div>
           </span>

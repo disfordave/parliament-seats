@@ -36,17 +36,19 @@ export default function SwitchViewModeButton() {
         </span>
         <div
           onClick={() => setIsEditMode(!isEditMode)}
-          className={`relative box-content flex h-6 w-12 rounded-full border-2 border-transparent bg-zinc-200 dark:bg-zinc-700`}
+          className={`relative box-content flex h-6 w-12 rounded-full border-2 border-transparent bg-slate-200 dark:bg-slate-700`}
           title={isEditMode ? "Switch to View Mode" : "Switch to Edit Mode"}
         >
           <div className="absolute z-2 flex h-full w-full items-center justify-around transition-transform duration-300">
-            <EyeIcon className={`size-4 ${!isEditMode ? "text-white" : ""}`} />
+            <EyeIcon
+              className={`size-4 ${!isEditMode ? "text-white dark:text-slate-950" : ""}`}
+            />
             <AdjustmentsHorizontalIcon
-              className={`size-4 ${isEditMode ? "text-white" : ""}`}
+              className={`size-4 ${isEditMode ? "text-white dark:text-slate-950" : ""}`}
             />
           </div>
           <div
-            className={`bg-brand-primary h-full w-6 rounded-full transition-all ${
+            className={`h-full w-6 rounded-full bg-slate-700 transition-all dark:bg-slate-200 ${
               isEditMode ? "translate-x-full rtl:-translate-x-full" : ""
             }`}
           ></div>

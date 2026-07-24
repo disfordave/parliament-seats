@@ -45,7 +45,7 @@ export default function JsonShareButton() {
 
           URL.revokeObjectURL(url);
         }}
-        className={`hover:bg-brand-primary dark:hover:bg-brand-primary w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:text-white dark:bg-zinc-900`}
+        className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-slate-700 hover:text-white dark:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-950`}
         type="button"
         title="Export Parties"
         aria-label="Export Parties"

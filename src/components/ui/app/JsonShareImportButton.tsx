@@ -88,7 +88,7 @@ export default function JsonShareButton() {
     <>
       <label
         htmlFor="import-data"
-        className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-slate-700 hover:text-white dark:bg-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-950`}
+        className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-zinc-700 hover:text-white dark:bg-zinc-900 dark:hover:bg-zinc-200 dark:hover:text-zinc-950`}
       >
         <span className="line-clamp-1 flex items-center justify-center gap-1 text-nowrap">
           <ArrowDownTrayIcon className="size-5 shrink-0" />

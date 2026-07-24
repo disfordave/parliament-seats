@@ -18,9 +18,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { ChevronDownIcon } from "@/components/icons/Icons";
 import { locales } from "@/i18n/i18n";
 import { useI18n } from "@/lib/zustandStore";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
@@ -53,7 +53,7 @@ export default function LocaleSettingButton() {
       >
         <span className="text-start">{locale.toUpperCase()}</span>
         <ChevronDownIcon
-          className={`transition-transform duration-300 ${isOpen ? "" : "rotate-180"}`}
+          className={`size-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <AnimatePresence>

@@ -19,6 +19,7 @@
 */
 
 import { useParties, useSelectedParties, useI18n } from "@/lib/zustandStore";
+import { PlusCircleIcon, MinusCircleIcon } from "@heroicons/react/20/solid";
 
 interface ButtonConfig {
   id: string;
@@ -150,31 +151,9 @@ export default function CoalitionBySpectrumButtons() {
           >
             <span className="flex items-center justify-center gap-1">
               {buttonConfig.id === "selectAll" ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-5 shrink-0"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <PlusCircleIcon className="size-5 shrink-0" />
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-5 shrink-0"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <MinusCircleIcon className="size-5 shrink-0" />
               )}
               {buttonConfig.label}
             </span>

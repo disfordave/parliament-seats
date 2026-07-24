@@ -19,6 +19,7 @@
 */
 
 import { useParties } from "@/lib/zustandStore";
+import { PlusIcon } from "@heroicons/react/24/outline";
 
 export default function AddNewPartyButton() {
   const { parties, setParties } = useParties();
@@ -44,20 +45,7 @@ export default function AddNewPartyButton() {
         title="Add Party"
         aria-label="Add Party"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="m-auto size-2/3 stroke-2 text-zinc-950 dark:text-white"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 4.5v15m7.5-7.5h-15"
-          />
-        </svg>
+        <PlusIcon className="m-auto size-2/3 stroke-2 text-zinc-950 dark:text-white" />
       </button>
     </>
   );

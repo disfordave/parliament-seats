@@ -19,6 +19,7 @@
 */
 
 import { useAllowTieBreaker, useI18n } from "@/lib/zustandStore";
+import { CheckIcon } from "@heroicons/react/16/solid";
 
 export default function AllowTieBreakerButton() {
   const { allowTieBreaker, setAllowTieBreaker } = useAllowTieBreaker();
@@ -52,18 +53,7 @@ export default function AllowTieBreakerButton() {
             >
               {allowTieBreaker ? (
                 <div className="flex h-full w-full items-center justify-center text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className="size-4.5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="size-4.5" />
                 </div>
               ) : (
                 <div className="flex h-full w-full items-center justify-center bg-zinc-200 text-white dark:bg-zinc-700 dark:text-zinc-950"></div>

@@ -26,9 +26,9 @@ import {
 } from "@/lib/zustandStore";
 import { countries } from "@/data/countries";
 import { useEffect, useRef, useState } from "react";
-import { ChevronDownIcon } from "@/components/icons/Icons";
 import { Country } from "@/types";
 import { AnimatePresence, motion } from "motion/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function CountryListDropdown() {
   const { selectedCountry, setSelectedCountry } = useSelectedCountry();
@@ -115,7 +115,7 @@ export default function CountryListDropdown() {
             </>
           )}
           <ChevronDownIcon
-            className={`transition-transform duration-300 ${openCountryList ? "rotate-180" : ""}`}
+            className={`size-5 transition-transform duration-300 ${openCountryList ? "rotate-180" : ""}`}
           />
         </div>
       </button>

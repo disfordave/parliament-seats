@@ -32,6 +32,30 @@ import {
 } from "@/types";
 import { create } from "zustand";
 
+const supportedLocales = ["en", "fr", "de", "nl"] as const;
+
+function getBrowserLocale() {
+  if (typeof navigator === "undefined") return null;
+
+  const candidates = [navigator.language, ...navigator.languages].filter(
+    (value): value is string => typeof value === "string" && value.length > 0,
+  );
+
+  for (const candidate of candidates) {
+    const normalized = candidate.toLowerCase();
+    const exactMatch = supportedLocales.find((locale) => locale === normalized);
+
+    if (exactMatch) return exactMatch;
+
+    const baseLocale = normalized.split("-")[0];
+    const baseMatch = supportedLocales.find((locale) => locale === baseLocale);
+
+    if (baseMatch) return baseMatch;
+  }
+
+  return null;
+}
+
 const useDefaultCountryValue = create<DefaultCountryValueState>((set) => ({
   defaultCountryValue: null,
   setDefaultCountryValue: (by) => set(() => ({ defaultCountryValue: by })),
@@ -65,7 +89,7 @@ const useAllowTieBreaker = create<AllowTieBreakerState>((set) => ({
 const useI18n = create<I18nState>((set, get) => ({
   locale:
     typeof window !== "undefined"
-      ? (localStorage.getItem("locale") ?? defaultLocale)
+      ? (localStorage.getItem("locale") ?? getBrowserLocale() ?? defaultLocale)
       : defaultLocale,
   i: (key) => {
     const currentLocale = get().locale;

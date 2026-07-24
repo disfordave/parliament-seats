@@ -25,6 +25,9 @@ import nl from "./nl.json" with { type: "json" };
 
 export const defaultLocale = "en";
 export const locales = { en, fr, de, nl } as const;
+export const supportedLocales = Object.keys(
+  locales,
+) as (keyof typeof locales)[];
 export type Locale = keyof typeof locales;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

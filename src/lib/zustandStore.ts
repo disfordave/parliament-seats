@@ -19,7 +19,7 @@
 */
 
 import { countries } from "@/data/countries";
-import { defaultLocale, translate } from "@/i18n/i18n";
+import { defaultLocale, translate, supportedLocales } from "@/i18n/i18n";
 import {
   DefaultCountryValueState,
   PartiesState,
@@ -31,8 +31,6 @@ import {
   I18nState,
 } from "@/types";
 import { create } from "zustand";
-
-const supportedLocales = ["en", "fr", "de", "nl"] as const;
 
 function getBrowserLocale() {
   if (typeof navigator === "undefined") return null;

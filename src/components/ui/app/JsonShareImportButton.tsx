@@ -26,12 +26,19 @@ import {
   useI18n,
 } from "@/lib/zustandStore";
 import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
+import { useRef } from "react";
 
 export default function JsonShareButton() {
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
   const { setSelectedCountry } = useSelectedCountry();
   const { i } = useI18n();
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -82,17 +89,18 @@ export default function JsonShareButton() {
 
   return (
     <>
-      <label
-        htmlFor="import-data"
+      <button
+        type="button"
+        onClick={handleImportClick}
         className={`w-full flex-1 rounded-full border-2 border-transparent bg-white px-3 py-1 text-nowrap transition-colors hover:bg-zinc-700 hover:text-white dark:bg-zinc-900 dark:hover:bg-zinc-200 dark:hover:text-zinc-950`}
       >
         <span className="line-clamp-1 flex items-center justify-center gap-1 text-nowrap">
           <ArrowDownTrayIcon className="size-5 shrink-0" />
           {i("buttons.importParties")}
         </span>
-      </label>
+      </button>
       <input
-        id="import-data"
+        ref={fileInputRef}
         type="file"
         accept=".json,application/json"
         className="sr-only"

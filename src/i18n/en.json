@@ -50,6 +50,12 @@
     "exportParties": "Export data",
     "importParties": "Import data"
   },
+  "dialogs": {
+    "clearDataConfirm": "Are you sure you want to clear all data?",
+    "exportDataConfirm": "Are you sure you want to export the party data?",
+    "invalidImportFormat": "The uploaded file has an incorrect format. Please upload a valid JSON file.",
+    "invalidImportParse": "Failed to parse the JSON file. Please ensure it's in the correct format."
+  },
   "spectrum": {
     "farLeft": "Far left",
     "leftWing": "Left-wing",

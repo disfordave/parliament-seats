@@ -28,9 +28,7 @@ export default function JsonShareButton() {
     <>
       <button
         onClick={() => {
-          const shouldExport = window.confirm(
-            "Are you sure you want to export the party data?",
-          );
+          const shouldExport = window.confirm(i("dialogs.exportDataConfirm"));
 
           if (!shouldExport) return;
 

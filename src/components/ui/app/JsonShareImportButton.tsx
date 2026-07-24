@@ -62,9 +62,7 @@ export default function JsonShareButton() {
           );
 
         if (!isValid) {
-          alert(
-            "The uploaded file has an incorrect format. Please upload a valid JSON file.",
-          );
+          alert(i("dialogs.invalidImportFormat"));
           return;
         }
 
@@ -73,9 +71,7 @@ export default function JsonShareButton() {
         setSelectedCountry(null);
       } catch (error) {
         console.error("Error parsing JSON file:", error);
-        alert(
-          "Failed to parse the JSON file. Please ensure it's in the correct format.",
-        );
+        alert(i("dialogs.invalidImportParse"));
       } finally {
         event.target.value = "";
       }

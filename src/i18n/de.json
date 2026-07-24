@@ -50,6 +50,12 @@
     "exportParties": "Daten exportieren",
     "importParties": "Daten importieren"
   },
+  "dialogs": {
+    "clearDataConfirm": "Möchten Sie wirklich alle Daten löschen?",
+    "exportDataConfirm": "Möchten Sie die Parteidaten wirklich exportieren?",
+    "invalidImportFormat": "Die hochgeladene Datei hat ein ungültiges Format. Bitte laden Sie eine gültige JSON-Datei hoch.",
+    "invalidImportParse": "Die JSON-Datei konnte nicht analysiert werden. Bitte stellen Sie sicher, dass sie das richtige Format hat."
+  },
   "spectrum": {
     "farLeft": "Äußerste Linke",
     "leftWing": "Linke",

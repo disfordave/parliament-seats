@@ -50,6 +50,12 @@
     "exportParties": "Exporter les données",
     "importParties": "Importer les données"
   },
+  "dialogs": {
+    "clearDataConfirm": "Voulez-vous vraiment effacer toutes les données ?",
+    "exportDataConfirm": "Voulez-vous vraiment exporter les données des partis ?",
+    "invalidImportFormat": "Le fichier importé a un format incorrect. Veuillez téléverser un fichier JSON valide.",
+    "invalidImportParse": "Impossible d'analyser le fichier JSON. Veuillez vérifier qu'il est dans le bon format."
+  },
   "spectrum": {
     "farLeft": "Extrême gauche",
     "leftWing": "Gauche",

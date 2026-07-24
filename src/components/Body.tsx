@@ -144,9 +144,7 @@ const Seats = () => {
         </div>
         <button
           onClick={() => {
-            const shouldClear = window.confirm(
-              "Are you sure you want to clear all data?",
-            );
+            const shouldClear = window.confirm(i("dialogs.clearDataConfirm"));
 
             if (!shouldClear) return;
 

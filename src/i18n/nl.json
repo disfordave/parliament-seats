@@ -50,6 +50,12 @@
     "exportParties": "Daten exporteren",
     "importParties": "Daten importeren"
   },
+  "dialogs": {
+    "clearDataConfirm": "Weet je zeker dat je alle gegevens wilt wissen?",
+    "exportDataConfirm": "Weet je zeker dat je de partijgegevens wilt exporteren?",
+    "invalidImportFormat": "Het geüploade bestand heeft een onjuist formaat. Upload een geldig JSON-bestand.",
+    "invalidImportParse": "Het JSON-bestand kon niet worden geparseerd. Controleer of het het juiste formaat heeft."
+  },
   "spectrum": {
     "farLeft": "Uiterste links",
     "leftWing": "Links",

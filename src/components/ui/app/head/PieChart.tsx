@@ -18,6 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import { pieChartDarkColor, pieChartLightColor } from "@/components/colors";
 import {
   IsEditModeState,
   PartiesState,
@@ -73,7 +74,7 @@ export default function PieChart({
             value:
               parties.reduce((acc, party) => acc + party.seats, 0) -
               selectedParties.reduce((acc, party) => acc + party.seats, 0),
-            color: isDarkMode ? "#3f3f46" : "#e4e4e7",
+            color: isDarkMode ? pieChartDarkColor : pieChartLightColor,
           },
         ]}
         padAngle={0}

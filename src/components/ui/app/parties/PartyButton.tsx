@@ -39,7 +39,7 @@ export default function PartyButton({ party }: { party: Party }) {
   const { selectedParties, setSelectedParties } = useSelectedParties();
 
   const selected = selectedParties.some((p) => p.id === party.id);
-  //   const colour = party.isIndependent ? "#6B7280" : party.colour;
+  //   const colour = party.isIndependent ? "#62748e" : party.colour;
   const colour = party.colour;
   const partyName = party.isIndependent
     ? party.shortName.length > 0

@@ -18,6 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import { neutralColor } from "@/components/colors";
 import { useParties } from "@/lib/zustandStore";
 import { PlusIcon } from "@heroicons/react/24/outline";
 
@@ -34,7 +35,7 @@ export default function AddNewPartyButton() {
               name: "",
               shortName: "",
               seats: 0,
-              colour: "#6B7280",
+              colour: neutralColor,
               position: 0,
               isIndependent: false,
             },

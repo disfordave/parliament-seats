@@ -53,7 +53,7 @@ export default function LocaleSettingButton() {
       >
         <span className="text-start">{locale.toUpperCase()}</span>
         <ChevronDownIcon
-          className={`size-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          className={`size-5 transition-transform duration-300 ${isOpen ? "" : "rotate-180"}`}
         />
       </button>
       <AnimatePresence>

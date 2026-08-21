@@ -23,7 +23,6 @@ import { LocaleSettingButton, ThemeButton } from "@/components/ui/settings/";
 
 export default function Footer() {
   const { i } = useI18n();
-  const a = "a"
   return (
     <>
       <footer className={"mt-4 rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700"}>

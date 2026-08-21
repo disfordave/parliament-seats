@@ -1292,7 +1292,7 @@ export const countries: Country[] = [
       {
         id: "mt-lab",
         name: "Partit Laburista",
-        shortName: "PAC",
+        shortName: "PL",
         seats: 42,
         colour: "#EE3224",
         position: -50,
@@ -1301,7 +1301,7 @@ export const countries: Country[] = [
       {
         id: "mt-nat",
         name: "Partit Nazzjonalista",
-        shortName: "UAT",
+        shortName: "PN",
         seats: 37,
         colour: "#5087B2",
         position: 50,

@@ -53,6 +53,18 @@
       content="Visualize parliamentary seat distributions and test coalition majorities."
     />
     <meta name="twitter:image" content="https://parl.hsw.is/og-image.jpg" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          var d =
+            t === "dark" ||
+            (t !== "light" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", d);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

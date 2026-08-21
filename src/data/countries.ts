@@ -20,6 +20,8 @@
 
 import { Country } from "@/types";
 
+let unused = "Hello!"
+
 export const countries: Country[] = [
   {
     name: "European Union",
@@ -1280,6 +1282,31 @@ export const countries: Country[] = [
         seats: 1,
         colour: "#000000",
         position: -50,
+        isIndependent: false,
+      },
+    ],
+  },
+  {
+    name: "Malta",
+    emoji: "🇲🇹",
+    updateDate: "2026-08-21",
+    parties: [
+      {
+        id: "mt-lab",
+        name: "Partit Laburista",
+        shortName: "PAC",
+        seats: 42,
+        colour: "#EE3224",
+        position: -50,
+        isIndependent: false,
+      },
+      {
+        id: "mt-nat",
+        name: "Partit Nazzjonalista",
+        shortName: "UAT",
+        seats: 37,
+        colour: "#5087B2",
+        position: 50,
         isIndependent: false,
       },
     ],

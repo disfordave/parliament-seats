@@ -1284,4 +1284,29 @@ export const countries: Country[] = [
       },
     ],
   },
+  {
+    name: "Malta",
+    emoji: "🇲🇹",
+    updateDate: "2026-08-21",
+    parties: [
+      {
+        id: "mt-lab",
+        name: "Partit Laburista",
+        shortName: "PAC",
+        seats: 42,
+        colour: "#EE3224",
+        position: -50,
+        isIndependent: false,
+      },
+      {
+        id: "mt-nat",
+        name: "Partit Nazzjonalista",
+        shortName: "UAT",
+        seats: 37,
+        colour: "#5087B2",
+        position: 50,
+        isIndependent: false,
+      },
+    ],
+  },
 ];

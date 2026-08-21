@@ -20,8 +20,6 @@
 
 import { Country } from "@/types";
 
-let unused = "Hello!"
-
 export const countries: Country[] = [
   {
     name: "European Union",

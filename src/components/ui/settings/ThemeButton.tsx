@@ -83,7 +83,7 @@ export default function ThemeButton() {
 
   return (
     <>
-      <div className="relative flex h-full items-center justify-center gap-0.5 rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
+      <div className="relative flex h-full items-center justify-center rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
         <div
           className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-zinc-700 transition-transform duration-300 dark:bg-zinc-200 ${
             theme === themes[0].value

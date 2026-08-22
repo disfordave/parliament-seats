@@ -1,4 +1,4 @@
-name: Deploy parliament-seats to Pages
+name: Deploy to Pages
 
 on:
   # Runs on pushes targeting the default branch

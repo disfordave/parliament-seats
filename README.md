@@ -2,6 +2,10 @@
 
 ![Parliament Seats Mockup](docs/images/parliament-seats-mockup.jpg)
 
+[![CI](https://github.com/disfordave/parliament-seats/actions/workflows/ci.yml/badge.svg)](https://github.com/disfordave/parliament-seats/actions/workflows/ci.yml)
+[![Deploy to Pages](https://github.com/disfordave/parliament-seats/actions/workflows/deploy.yml/badge.svg)](https://github.com/disfordave/parliament-seats/actions/workflows/deploy.yml)
+![Licence](https://img.shields.io/badge/Licence-AGPL--3.0--or--later-blue)
+
 🌐 **Live Demo:** [https://parl.hsw.is](https://parl.hsw.is)
 
 Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.

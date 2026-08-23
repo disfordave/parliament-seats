@@ -18,97 +18,53 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/zustandStore";
 import {
   ComputerDesktopIcon,
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/20/solid";
-
-type Theme = "light" | "dark" | "auto";
+import { ThemeToggle } from "themeflip";
 
 export default function ThemeButton() {
   const { i } = useI18n();
-  const [theme, setTheme] = useState<Theme>(
-    (localStorage.theme as Theme) || "auto",
-  );
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const applyTheme = () => {
-      const effectiveTheme =
-        theme === "auto" ? (mediaQuery.matches ? "dark" : "light") : theme;
-
-      document.documentElement.classList.toggle(
-        "dark",
-        effectiveTheme === "dark",
-      );
-    };
-
-    applyTheme();
-
-    if (theme === "auto") {
-      mediaQuery.addEventListener("change", applyTheme);
-      return () => mediaQuery.removeEventListener("change", applyTheme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    if (theme === "auto") {
-      localStorage.removeItem("theme");
-    } else {
-      localStorage.theme = theme;
-    }
-  }, [theme]);
-
-  const themes = [
-    {
-      value: "auto",
-      label: i("appearance.auto"),
-      icon: <ComputerDesktopIcon className="size-5" />,
-    },
-    {
-      value: "light",
-      label: i("appearance.light"),
-      icon: <SunIcon className="size-5" />,
-    },
-    {
-      value: "dark",
-      label: i("appearance.dark"),
-      icon: <MoonIcon className="size-5" />,
-    },
-  ];
 
   return (
     <>
-      <div className="relative flex h-full items-center justify-center rounded-full border-2 border-transparent bg-white dark:bg-zinc-900">
-        <div
-          className={`absolute top-0 left-0 z-2 h-full w-1/3 rounded-full bg-zinc-700 transition-transform duration-300 dark:bg-zinc-200 ${
-            theme === themes[0].value
-              ? "translate-x-0"
-              : theme === themes[1].value
-                ? "translate-x-full"
-                : "translate-x-[200%]"
-          }`}
-        ></div>
-        {themes.map((t) => (
-          <div className="z-4" key={t.value}>
-            <button
-              onClick={() => setTheme(t.value as Theme)}
-              title={t.label}
-              className={`flex aspect-square size-full items-center justify-center rounded-full p-1.5 transition-colors duration-300 ${
-                t.value === theme
-                  ? "text-white dark:text-zinc-950"
-                  : "dark:text-white"
-              }`}
-            >
-              {t.icon}
-            </button>
-          </div>
-        ))}
-      </div>
+      <ThemeToggle
+        addDarkClass
+        className="relative flex h-full items-center justify-center rounded-full border-2 border-transparent bg-white dark:bg-zinc-900"
+        indicatorClassName="
+    absolute top-0 left-0 z-0 h-full w-1/3
+    rounded-full bg-zinc-700
+    transition-transform duration-300
+    dark:bg-zinc-200
+    data-[theme=auto]:translate-x-0
+    data-[theme=light]:translate-x-full
+    data-[theme=dark]:translate-x-[200%]
+  "
+        buttonClassName="
+    relative z-10 flex aspect-square size-full
+    items-center justify-center rounded-full p-1.5
+    transition-colors duration-300
+    
+  "
+        activeButtonClassName="
+    text-white dark:text-zinc-950
+  "
+        auto={{
+          label: i("appearance.auto"),
+          icon: <ComputerDesktopIcon className="size-5" />,
+        }}
+        light={{
+          label: i("appearance.light"),
+          icon: <SunIcon className="size-5" />,
+        }}
+        dark={{
+          label: i("appearance.dark"),
+          icon: <MoonIcon className="size-5" />,
+        }}
+      />
     </>
   );
 }

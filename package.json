@@ -20,7 +20,7 @@
     "motion": "^13.1.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "themeflip": "^0.1.5",
+    "themeflip": "^0.2.0",
     "zustand": "^5.0.8"
   },
   "devDependencies": {

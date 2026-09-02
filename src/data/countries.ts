@@ -919,6 +919,15 @@ export const countries: Country[] = [
         position: -75,
         isIndependent: false,
       },
+      // {
+      //   id: "ca-independents",
+      //   name: "Independents",
+      //   shortName: "Independents",
+      //   seats: 1,
+      //   colour: "#71717a",
+      //   position: 0,
+      //   isIndependent: true,
+      // },
     ],
   },
   {

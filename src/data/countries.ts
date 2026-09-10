@@ -877,7 +877,7 @@ export const countries: Country[] = [
       {
         id: "ca-liberal",
         name: "Liberal Party of Canada/Parti libéral du Canada",
-        shortName: "Liberal",
+        shortName: "LPC/PLC",
         seats: 173,
         colour: "#EA6D6A",
         position: -50,
@@ -886,7 +886,7 @@ export const countries: Country[] = [
       {
         id: "ca-conservative",
         name: "Conservative Party of Canada/Parti conservateur du Canada",
-        shortName: "Conservative",
+        shortName: "CPC/PCC",
         seats: 138,
         colour: "#6495ED",
         position: 50,
@@ -913,7 +913,7 @@ export const countries: Country[] = [
       {
         id: "ca-green",
         name: "Green Party of Canada/Parti vert du Canada",
-        shortName: "Green/Verts",
+        shortName: "GPC/PVC",
         seats: 1,
         colour: "#99C955",
         position: -75,

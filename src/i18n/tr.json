@@ -1,0 +1,76 @@
+{
+  "locale": "tr",
+  "parliament": "Parlamento",
+  "subtitle": "Parlamento sandalye dağılımı aracı",
+  "appearance": {
+    "light": "Açık",
+    "dark": "Koyu",
+    "auto": "Otomatik"
+  },
+  "header": {
+    "countries": "Ülkeler",
+    "custom": "Özel",
+    "sampleCountries": "Örnek ülkeler",
+    "majorityWithCount": "{count} sandalyelik çoğunluk",
+    "seatsForMajority": "Salt çoğunluk için {count} sandalye",
+    "seat": "sandalye",
+    "seats": "sandalye",
+    "left": "kaldı",
+    "majority": "çoğunluk",
+    "seatsLeft": "sandalye kaldı",
+    "tieBreakingMajority": "Belirleyici oyla çoğunluk"
+  },
+  "body": {
+    "allowTieBreaker": "Belirleyici oya izin ver",
+    "name": "Ad",
+    "position": "Konum",
+    "seats": "Sandalye",
+    "view": "Görünüm",
+    "edit": "Düzenle",
+    "noParties": "Kullanılabilir parti yok",
+    "sampleDataUpdatedAt": "Örnek veri güncellemesi"
+  },
+  "controls": {
+    "politicalSpectrum": "Siyasi Yelpaze",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Tümünü Kaldır",
+    "left": "Sol",
+    "right": "Sağ",
+    "leftWithoutFarLeft": "Sol (aşırı sol hariç)",
+    "rightWithoutFarRight": "Sağ (aşırı sağ hariç)",
+    "centre": "Merkez",
+    "grandCentre": "Büyük koalisyon (merkez)",
+    "grandWithoutExtremes": "Büyük koalisyon (uçlar hariç)",
+    "leftWing": "Sol kanat",
+    "rightWing": "Sağ kanat"
+  },
+  "buttons": {
+    "dataManagement": "Veri Yönetimi",
+    "clear": "Verileri temizle",
+    "exportParties": "Verileri dışa aktar",
+    "importParties": "Verileri içe aktar"
+  },
+  "dialogs": {
+    "clearDataConfirm": "Tüm verileri temizlemek istediğinizden emin misiniz?",
+    "exportDataConfirm": "Parti verilerini dışa aktarmak istediğinizden emin misiniz?",
+    "invalidImportFormat": "Yüklenen dosyanın biçimi hatalı. Lütfen geçerli bir JSON dosyası yükleyin.",
+    "invalidImportParse": "JSON dosyası ayrıştırılamadı. Lütfen dosyanın doğru biçimde olduğundan emin olun."
+  },
+  "spectrum": {
+    "farLeft": "Aşırı sol",
+    "leftWing": "Sol kanat",
+    "centreLeft": "Merkez sol",
+    "leanLeft": "Sola yakın",
+    "centre": "Merkez",
+    "leanRight": "Sağa yakın",
+    "centreRight": "Merkez sağ",
+    "rightWing": "Sağ kanat",
+    "farRight": "Aşırı sağ",
+    "independent": "Bağımsız"
+  },
+  "footer": {
+    "feelFree": "Bir sorununuz veya öneriniz varsa",
+    "onGitHub": "GitHub'da",
+    "ifYouHave": "çekinmeden bir issue açın."
+  }
+}

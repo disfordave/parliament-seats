@@ -64,6 +64,7 @@ Includes sample parliamentary structures such as:
 - Canada (House of Commons / Chambre des communes)
 - France (Assemblée nationale)
 - New Zealand (House of Representatives)
+- Turkey (Türkiye Büyük Millet Meclisi)
 
 Users can also create custom parliament configurations.
 
@@ -107,6 +108,7 @@ The application currently supports:
 - German (Deutsch)
 - French (Français)
 - Dutch (Nederlands)
+- Turkish (Türkçe)
 
 Language can be changed using the `?lang=` URL parameter.
 

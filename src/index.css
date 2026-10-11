@@ -25,6 +25,9 @@
 @theme {
   --breakpoint-xs: 375px;
   --breakpoint-sx: 475px;
+  --font-sans:
+    "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 :root {

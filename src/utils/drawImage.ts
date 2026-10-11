@@ -266,11 +266,11 @@ function drawHalfPie(
 
   // Coalition seats in the middle, shrunk to fit inside the hole
   const totalText = content.selectedTotal.toString();
-  let numberSize = radius * 0.26;
+  let numberSize = radius * 0.2;
   setFont(context, 700, numberSize, fontFamily);
   const numberWidth = context.measureText(totalText).width;
-  if (numberWidth > innerRadius * 1.4) {
-    numberSize *= (innerRadius * 1.4) / numberWidth;
+  if (numberWidth > innerRadius * 1.2) {
+    numberSize *= (innerRadius * 1.2) / numberWidth;
     setFont(context, 700, numberSize, fontFamily);
   }
   context.textAlign = "center";

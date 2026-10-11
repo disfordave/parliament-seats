@@ -67,6 +67,8 @@ export default function ExportImagePanel() {
   const [format, setFormat] = useState<ImageFormat>("square");
   const [isCopied, setIsCopied] = useState(false);
   const [logo, setLogo] = useState<HTMLImageElement | null>(null);
+  // Bumped when fonts finish loading, which redraws the preview
+  const [, setFontLoadCount] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // The same logo as the favicon, for the image's footer
@@ -157,6 +159,30 @@ export default function ExportImagePanel() {
     ),
     footer: window.location.host,
   };
+  const imageText = [
+    content.title,
+    content.subtitle,
+    content.statusText,
+    content.majorityText,
+    ...content.parties.map(({ name, shortName }) => name + shortName),
+  ].join(" ");
+
+  // Canvas text only uses fonts that have loaded, so the image is redrawn once
+  // the app font has every letter it needs, such as Turkish ones
+  useEffect(() => {
+    let isCancelled = false;
+    const handleLoaded = () => {
+      if (!isCancelled) setFontLoadCount((count) => count + 1);
+    };
+
+    document.fonts
+      .load(`16px ${getComputedStyle(document.body).fontFamily}`, imageText)
+      .then(handleLoaded, handleLoaded);
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [imageText]);
 
   // Redraws the preview, which is also the image that gets saved
   useEffect(() => {

@@ -1,7 +1,7 @@
 {
   "locale": "tr",
   "parliament": "Parlamento",
-  "subtitle": "Parlamento sandalye dağılımı aracı",
+  "subtitle": "Koalisyon hesaplayıcı & meclis grafikleri",
   "appearance": {
     "light": "Açık",
     "dark": "Koyu",

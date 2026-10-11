@@ -1,7 +1,7 @@
 {
   "locale": "en",
   "parliament": "Parliament",
-  "subtitle": "A Parliamentary Seat Distribution Tool",
+  "subtitle": "Coalition calculator & parliament chart maker",
   "appearance": {
     "light": "Light",
     "dark": "Dark",

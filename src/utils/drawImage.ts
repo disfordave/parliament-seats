@@ -61,7 +61,9 @@ export interface ImageStyle {
   logo: CanvasImageSource | null;
 }
 
+// Kept in English in every language, like the name itself
 const brandName = "Parliament Seats";
+const brandCredit = "by HSW.is";
 
 export interface ArcSegment {
   colour: string;
@@ -266,11 +268,11 @@ function drawHalfPie(
 
   // Coalition seats in the middle, shrunk to fit inside the hole
   const totalText = content.selectedTotal.toString();
-  let numberSize = radius * 0.26;
+  let numberSize = radius * 0.2;
   setFont(context, 700, numberSize, fontFamily);
   const numberWidth = context.measureText(totalText).width;
-  if (numberWidth > innerRadius * 1.4) {
-    numberSize *= (innerRadius * 1.4) / numberWidth;
+  if (numberWidth > innerRadius * 1.2) {
+    numberSize *= (innerRadius * 1.2) / numberWidth;
     setFont(context, 700, numberSize, fontFamily);
   }
   context.textAlign = "center";
@@ -503,7 +505,10 @@ export function drawImage(
   context.textBaseline = "middle";
   setFont(context, 600, footerSize, fontFamily);
   context.fillStyle = palette.text;
-  context.fillText(brandName, brandX, footerY);
+  context.fillText(brandName, brandX, footerY - footerSize * 0.45);
+  setFont(context, 400, footerSize * 0.75, fontFamily);
+  context.fillStyle = palette.muted;
+  context.fillText(brandCredit, brandX, footerY + footerSize * 0.5);
   setFont(context, 400, footerSize, fontFamily);
   context.textAlign = "right";
   context.fillStyle = palette.muted;

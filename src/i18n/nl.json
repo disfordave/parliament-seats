@@ -1,7 +1,7 @@
 {
   "locale": "nl",
   "parliament": "Parlement",
-  "subtitle": "Een hulpmiddel voor de verdeling van parlementaire zetels",
+  "subtitle": "Coalitiecalculator & grafieken van de zetelverdeling",
   "appearance": {
     "light": "Licht",
     "dark": "Donker",

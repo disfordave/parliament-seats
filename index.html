@@ -23,6 +23,15 @@
     <meta name="apple-mobile-web-app-title" content="Parliament" />
     <meta name="application-name" content="Parliament Seats" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- One file holds every weight of the Latin letters, so the text can
+      start in the right font instead of swapping in later -->
+    <link
+      rel="preload"
+      href="/node_modules/@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <title>
       Coalition Calculator & Parliament Chart Maker | Parliament Seats

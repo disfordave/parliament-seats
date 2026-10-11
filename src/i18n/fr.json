@@ -1,7 +1,7 @@
 {
   "locale": "fr",
   "parliament": "Parlement",
-  "subtitle": "Un outil de distribution des sièges parlementaires",
+  "subtitle": "Calculateur de coalitions & graphiques parlementaires",
   "appearance": {
     "light": "Clair",
     "dark": "Sombre",

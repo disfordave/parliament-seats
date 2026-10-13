@@ -49,8 +49,9 @@ export default function PartyButton({ party }: { party: Party }) {
 
   const shortDesc = `${partyName} (${party.seats})`;
   const { i } = useI18n();
+  const PartyCard = isEditMode ? "div" : "button";
   return (
-    <button
+    <PartyCard
       onClick={() => {
         if (isEditMode) return;
         if (selected) {
@@ -380,6 +381,6 @@ export default function PartyButton({ party }: { party: Party }) {
         // </span>
         <></>
       )}
-    </button>
+    </PartyCard>
   );
 }

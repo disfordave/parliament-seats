@@ -19,7 +19,12 @@
 */
 
 import { countries } from "@/data/countries";
-import { defaultLocale, translate, supportedLocales } from "@/i18n/i18n";
+import {
+  defaultLocale,
+  translate,
+  supportedLocales,
+  getPathLocale,
+} from "@/i18n/i18n";
 import {
   DefaultCountryValueState,
   PartiesState,
@@ -95,9 +100,14 @@ const useMajorityThreshold = create<MajorityThresholdState>((set) => ({
 }));
 
 const useI18n = create<I18nState>((set, get) => ({
+  // A language's own page, like /de/, overrides the saved language without
+  // replacing it
   locale:
     typeof window !== "undefined"
-      ? (localStorage.getItem("locale") ?? getBrowserLocale() ?? defaultLocale)
+      ? (getPathLocale(window.location.pathname, import.meta.env.BASE_URL) ??
+        localStorage.getItem("locale") ??
+        getBrowserLocale() ??
+        defaultLocale)
       : defaultLocale,
   i: (key) => {
     const currentLocale = get().locale;

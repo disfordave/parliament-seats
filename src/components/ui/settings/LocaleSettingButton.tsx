@@ -18,14 +18,14 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { locales } from "@/i18n/i18n";
+import { getLocaleUrl, locales, localesByName } from "@/i18n/i18n";
 import { useI18n } from "@/lib/zustandStore";
 import { ChevronDownIcon, LanguageIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 export default function LocaleSettingButton() {
-  const { locale, setLocale } = useI18n();
+  const { locale, setLocale, i } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -57,7 +57,7 @@ export default function LocaleSettingButton() {
       >
         <span className="line-clamp-1 flex items-center justify-center gap-1 text-nowrap">
           <LanguageIcon className="size-5 shrink-0" />
-          {locale.toUpperCase()}
+          <span lang={locale}>{i("languageName")}</span>
           <ChevronDownIcon
             className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "" : "rotate-180"}`}
           />
@@ -76,10 +76,10 @@ export default function LocaleSettingButton() {
               exit={{ opacity: 0, translateY: 2 }}
               ref={dropdownRef}
               tabIndex={-1}
-              className="absolute bottom-full z-100 mb-2 w-full overflow-hidden rounded-2xl border-2 border-zinc-200 bg-white shadow-xl outline-hidden dark:border-zinc-700 dark:bg-zinc-900"
+              className="absolute bottom-full z-100 mb-2 w-full min-w-max overflow-hidden rounded-2xl border-2 border-zinc-200 bg-white shadow-xl outline-hidden dark:border-zinc-700 dark:bg-zinc-900"
             >
               <ul>
-                {Object.keys(locales).map((loc) => (
+                {localesByName.map((loc) => (
                   <li
                     key={loc}
                     className={`transition-colors duration-300 ${
@@ -91,12 +91,23 @@ export default function LocaleSettingButton() {
                     <button
                       onClick={() => {
                         setLocale(loc);
+                        // Moves to that language's page, so a reload keeps it
+                        window.history.replaceState(
+                          window.history.state,
+                          "",
+                          getLocaleUrl(
+                            window.location.href,
+                            loc,
+                            import.meta.env.BASE_URL,
+                          ),
+                        );
                         setIsOpen(false);
                       }}
                       className="flex w-full items-center gap-2 p-2 text-start"
                       type="button"
+                      lang={loc}
                     >
-                      {loc.toUpperCase()}
+                      {locales[loc].languageName}
                     </button>
                   </li>
                 ))}

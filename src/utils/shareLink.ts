@@ -66,6 +66,12 @@ export async function decodeShareData(data: string) {
   }
 }
 
+// Links go to the root page rather than a language's page like /de/, so they
+// open in the reader's language unless the data includes one
+export function getAppUrl() {
+  return new URL(import.meta.env.BASE_URL, window.location.href).toString();
+}
+
 export async function createShareLink(country: CountryData, baseUrl: string) {
   const url = new URL(baseUrl);
   url.search = "";

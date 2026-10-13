@@ -1,5 +1,6 @@
 {
   "locale": "fr",
+  "languageName": "Français",
   "parliament": "Parlement",
   "subtitle": "Calculateur de coalitions & graphiques parlementaires",
   "appearance": {
@@ -129,5 +130,42 @@
     "openFullVersion": "Ouvrir dans Parliament Seats",
     "invalidData": "Ce graphique n'a pas pu être chargé.",
     "reset": "Réinitialiser"
+  },
+  "seo": {
+    "title": "Calculateur de coalitions et de majorité | Parliament Seats",
+    "description": "Calculateur gratuit de coalitions et de majorité pour l'Assemblée nationale, le Parlement européen, la Chambre belge et plus. Partagez en lien ou en image.",
+    "socialTitle": "Parliament Seats – Calculateur de coalitions & graphiques parlementaires",
+    "socialDescription": "Formez des coalitions et vérifiez les majorités à l'Assemblée nationale, au Parlement européen, à la Chambre des communes du Canada et ailleurs. Partagez-les en lien, image ou intégration.",
+    "imageAlt": "Parliament Seats sur une tablette et un téléphone, avec le graphique d'une coalition dans un parlement fictif",
+    "intro": "Parliament Seats est un outil gratuit pour explorer la répartition des sièges dans un parlement et vérifier si une coalition atteint la majorité.",
+    "featuresTitle": "Fonctionnalités",
+    "features": [
+      "Calculateur de coalitions avec majorité simple, des trois cinquièmes, des deux tiers, des trois quarts ou personnalisée, ainsi que minorité de blocage et bris d'égalité facultatif",
+      "Sièges selon les voix avec les méthodes D'Hondt, Sainte-Laguë et des plus forts restes, et un seuil électoral facultatif",
+      "Hémicycle et barre des sièges",
+      "Coalitions selon le spectre politique, de l'extrême gauche à l'extrême droite",
+      "Parlements personnalisés avec vos propres partis, sièges, couleurs, nom et date",
+      "Liens de partage, import et export JSON, images PNG pour les réseaux sociaux et intégrations pour les sites web",
+      "Disponible en anglais, allemand, français, néerlandais, turc et espagnol"
+    ],
+    "parliamentsTitle": "Parlements disponibles",
+    "parliaments": [
+      "Union européenne (Parlement européen)",
+      "Afrique du Sud (National Assembly)",
+      "Allemagne (Bundestag)",
+      "Australie (House of Representatives et Senate)",
+      "Autriche (Nationalrat)",
+      "Belgique (Chambre / Kamer)",
+      "Canada (Chambre des communes / House of Commons)",
+      "Espagne (Congreso de los Diputados)",
+      "France (Assemblée nationale)",
+      "Malte (House of Representatives)",
+      "Nouvelle-Zélande (House of Representatives)",
+      "Pays-Bas (Tweede Kamer)",
+      "Royaume-Uni (House of Commons)",
+      "Turquie (Türkiye Büyük Millet Meclisi)"
+    ],
+    "noJavaScript": "Cette application nécessite JavaScript. Veuillez activer JavaScript dans les paramètres de votre navigateur et recharger la page.",
+    "sourceCode": "Code source sur GitHub"
   }
 }

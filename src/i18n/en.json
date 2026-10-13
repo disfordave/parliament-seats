@@ -1,5 +1,6 @@
 {
   "locale": "en",
+  "languageName": "English",
   "parliament": "Parliament",
   "subtitle": "Coalition calculator & parliament chart maker",
   "appearance": {
@@ -129,5 +130,42 @@
     "openFullVersion": "Open in Parliament Seats",
     "invalidData": "This chart could not be loaded.",
     "reset": "Reset"
+  },
+  "seo": {
+    "title": "Coalition Calculator & Parliament Chart Maker | Parliament Seats",
+    "description": "Free coalition and majority calculator for the EU, Germany, the UK, Spain, Canada, France and more. Build a coalition, then share it as a link, image or embed.",
+    "socialTitle": "Parliament Seats – Coalition Calculator & Parliament Chart Maker",
+    "socialDescription": "Build coalitions and check majorities in the European Parliament, the Bundestag, the House of Commons and more. Share them as links, images or embeds.",
+    "imageAlt": "Parliament Seats on a tablet and a phone, showing a coalition chart for a made-up parliament",
+    "intro": "Parliament Seats is a free tool for exploring how the seats in a parliament are shared out, and checking whether a coalition reaches a majority.",
+    "featuresTitle": "Features",
+    "features": [
+      "Coalition calculator with simple, three-fifths, two-thirds, three-quarters, and custom majorities, plus blocking minorities and an optional tie breaker",
+      "Seats from votes with the D'Hondt, Sainte-Laguë, and largest remainder methods, and an optional electoral threshold",
+      "Half-pie parliament chart and seat bar",
+      "Coalitions by political spectrum, from far left to far right",
+      "Custom parliaments with your own parties, seats, colours, name, and date",
+      "Share links, JSON import and export, PNG images for social media, and embeds for websites",
+      "Available in English, German, French, Dutch, Turkish, and Spanish"
+    ],
+    "parliamentsTitle": "Supported parliaments",
+    "parliaments": [
+      "European Union (European Parliament)",
+      "Australia (House of Representatives and Senate)",
+      "Austria (Nationalrat)",
+      "Belgium (Kamer / Chambre)",
+      "Canada (House of Commons / Chambre des communes)",
+      "France (Assemblée nationale)",
+      "Germany (Bundestag)",
+      "Malta (House of Representatives)",
+      "Netherlands (Tweede Kamer)",
+      "New Zealand (House of Representatives)",
+      "South Africa (National Assembly)",
+      "Spain (Congreso de los Diputados)",
+      "Turkey (Türkiye Büyük Millet Meclisi)",
+      "United Kingdom (House of Commons)"
+    ],
+    "noJavaScript": "This application needs JavaScript. Please enable JavaScript in your browser settings and reload the page.",
+    "sourceCode": "Source code on GitHub"
   }
 }

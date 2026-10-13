@@ -40,7 +40,11 @@ import {
 } from "@/lib/zustandStore";
 import { CountryData } from "@/types";
 import { getCountryTitle } from "@/utils/countryTitle";
-import { createShareLink, embedHeightMessage } from "@/utils/shareLink";
+import {
+  createShareLink,
+  embedHeightMessage,
+  getAppUrl,
+} from "@/utils/shareLink";
 import { sort } from "@/utils/sort";
 
 interface ButtonConfig {
@@ -107,7 +111,7 @@ export default function Embed({
         sortBy: true,
         locale: false,
       }),
-      window.location.href,
+      getAppUrl(),
     ).then((link) => {
       if (!isCancelled) setFullVersionLink(link);
     });

@@ -19,18 +19,27 @@
 */
 
 import "./App.css";
+import { useEffect } from "react";
 import Body from "@/components/Body";
 import Embed from "@/components/Embed";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LandscapeCountryListBanner from "./components/ui/app/head/LandscapeCountryListBanner";
 import { useUrlData } from "@/lib/useUrlData";
+import { useI18n } from "@/lib/zustandStore";
 
 // Other sites show only the chart, in an iframe pointing at ?embed
 const isEmbed = new URLSearchParams(window.location.search).has("embed");
 
 function App() {
   const { sharedCountry, isShareLinkInvalid } = useUrlData(isEmbed);
+  const { locale, i } = useI18n();
+
+  // Keeps the page's language and title in step with the chosen language
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.title = i("seo.title");
+  }, [locale, i]);
 
   if (isEmbed) {
     return (

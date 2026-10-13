@@ -208,6 +208,39 @@ export default function PartyButton({ party }: { party: Party }) {
           party.seats
         )}
       </span>
+      {isEditMode && (
+        <label className="flex w-full items-center gap-2">
+          <input
+            name="votes"
+            type="number"
+            inputMode="decimal"
+            className="w-full min-w-0 border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
+            min={0}
+            step="any"
+            value={party.votes ?? ""}
+            onChange={(e) => {
+              const votes = parseFloat(e.target.value);
+              const newParty = {
+                ...party,
+                votes: votes >= 0 ? votes : undefined,
+              };
+              setParties(
+                parties.map((p) => (p.id === party.id ? newParty : p)),
+              );
+              if (selected) {
+                setSelectedParties(
+                  selectedParties.map((p) =>
+                    p.id === party.id ? newParty : p,
+                  ),
+                );
+              }
+            }}
+          />
+          <span className="shrink-0 text-sm opacity-75">
+            {i("allocation.votes")}
+          </span>
+        </label>
+      )}
       {isEditMode ? (
         <>
           <div className="flex w-full">
@@ -270,6 +303,35 @@ export default function PartyButton({ party }: { party: Party }) {
                 }}
               />
               <span className="select-none">{i("spectrum.independent")}</span>
+            </label>
+          </div>
+          <div>
+            <label className="flex items-center gap-1">
+              <input
+                type="checkbox"
+                name="isThresholdExempt"
+                checked={party.isThresholdExempt === true}
+                className="accent-zinc-700 dark:accent-zinc-200"
+                onChange={(e) => {
+                  const newParty = {
+                    ...party,
+                    isThresholdExempt: e.target.checked,
+                  };
+                  setParties(
+                    parties.map((p) => (p.id === party.id ? newParty : p)),
+                  );
+                  if (selected) {
+                    setSelectedParties(
+                      selectedParties.map((p) =>
+                        p.id === party.id ? newParty : p,
+                      ),
+                    );
+                  }
+                }}
+              />
+              <span className="select-none">
+                {i("allocation.thresholdExempt")}
+              </span>
             </label>
           </div>
           <div className="flex w-full items-center justify-evenly gap-2">

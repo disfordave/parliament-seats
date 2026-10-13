@@ -345,6 +345,8 @@ export const countries: Country[] = [
         colour: "#00277E",
         position: 0,
         isIndependent: false,
+        // National minority parties are exempt from the 5% threshold
+        isThresholdExempt: true,
       },
       {
         id: "de-independents",

@@ -41,6 +41,20 @@
     "twoThirds": "Majorité des deux tiers",
     "threeQuarters": "Majorité des trois quarts"
   },
+  "allocation": {
+    "title": "Sièges selon les voix",
+    "votes": "Voix ou %",
+    "totalSeats": "Nombre de sièges",
+    "method": "Méthode",
+    "threshold": "Seuil électoral",
+    "totalVotes": "Total des voix ou %",
+    "thresholdExempt": "Exempté du seuil",
+    "hint": "Saisissez les voix ou le pourcentage de chaque parti, puis calculez les sièges. Le seuil tient compte de toutes les voix, y compris celles des partis non listés.",
+    "calculate": "Calculer les sièges",
+    "dHondt": "D'Hondt",
+    "sainteLague": "Sainte-Laguë",
+    "largestRemainder": "Plus forts restes"
+  },
   "controls": {
     "politicalSpectrum": "Spectre politique",
     "selectAll": "Sélectionner tout",

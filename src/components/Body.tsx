@@ -39,6 +39,7 @@ import {
   SeatsGraph,
   CountryListDropdown,
   CountryInfoEditor,
+  SeatAllocationEditor,
   JsonShareExportButton,
   JsonShareImportButton,
   PieChart,
@@ -77,7 +78,12 @@ const Seats = () => {
         <SortButton />
         <SwitchViewModeButton />
       </div>
-      {isEditMode && <CountryInfoEditor />}
+      {isEditMode && (
+        <>
+          <CountryInfoEditor />
+          <SeatAllocationEditor />
+        </>
+      )}
       <>
         <ul
           className={`xs:grid-cols-2 grid grid-cols-1 gap-4 transition-all sm:grid-cols-3 sm:gap-4 md:grid-cols-4`}

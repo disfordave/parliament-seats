@@ -63,6 +63,19 @@ test("round-trips exported countries", () => {
   expect(parseCountry(stringifyCountry(emptyCountry))).toEqual(emptyCountry);
 });
 
+test("round-trips party votes", () => {
+  const withVotes = {
+    ...country,
+    parties: [
+      { ...partyA, votes: 120000 },
+      { ...partyB, votes: 14.5, isThresholdExempt: true },
+    ],
+    selectedParties: [{ ...partyB, votes: 14.5, isThresholdExempt: true }],
+  };
+
+  expect(parseCountry(stringifyCountry(withVotes))).toEqual(withVotes);
+});
+
 test("exports the selected parties as ids", () => {
   expect(JSON.parse(stringifyCountry(country)).selectedPartyIds).toEqual(["b"]);
 });
@@ -189,6 +202,12 @@ test("returns null for JSON that is not a country or a list of parties", () => {
   expect(parseCountry(JSON.stringify([{ ...partyA, seats: "20" }]))).toBeNull();
   expect(
     parseCountry(JSON.stringify([{ ...partyA, isIndependent: "no" }])),
+  ).toBeNull();
+  expect(
+    parseCountry(JSON.stringify([{ ...partyA, votes: "12000" }])),
+  ).toBeNull();
+  expect(
+    parseCountry(JSON.stringify([{ ...partyA, isThresholdExempt: 1 }])),
   ).toBeNull();
   expect(
     parseCountry(JSON.stringify({ ...country, parties: [partyA, null] })),

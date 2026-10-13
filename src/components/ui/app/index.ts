@@ -22,6 +22,7 @@ export { default as CountryListDropdown } from "./head/CountryListDropdown";
 export { default as SeatsGraph } from "./head/SeatsGraph";
 export { default as PieChart } from "./head/PieChart";
 export { default as CountryInfoEditor } from "./head/CountryInfoEditor";
+export { default as SeatAllocationEditor } from "./head/SeatAllocationEditor";
 
 export { default as MajorityThresholdButton } from "./filters/MajorityThresholdButton";
 export { default as SortButton } from "./filters/SortButton";

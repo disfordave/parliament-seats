@@ -41,6 +41,20 @@
     "twoThirds": "Üçte iki çoğunluk",
     "threeQuarters": "Dörtte üç çoğunluk"
   },
+  "allocation": {
+    "title": "Oylardan sandalye",
+    "votes": "Oy veya %",
+    "totalSeats": "Toplam sandalye",
+    "method": "Yöntem",
+    "threshold": "Seçim barajı",
+    "totalVotes": "Toplam oy veya %",
+    "thresholdExempt": "Barajdan muaf",
+    "hint": "Her partinin oy sayısını veya oy oranını girin, ardından sandalyeleri hesaplayın. Baraj, listede olmayan partiler dahil tüm oylara göre hesaplanır.",
+    "calculate": "Sandalyeleri hesapla",
+    "dHondt": "D'Hondt",
+    "sainteLague": "Sainte-Laguë",
+    "largestRemainder": "En büyük kalan"
+  },
   "controls": {
     "politicalSpectrum": "Siyasi Yelpaze",
     "selectAll": "Tümünü Seç",

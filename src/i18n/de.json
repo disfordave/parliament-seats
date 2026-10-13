@@ -41,6 +41,20 @@
     "twoThirds": "Zweidrittelmehrheit",
     "threeQuarters": "Dreiviertelmehrheit"
   },
+  "allocation": {
+    "title": "Sitze aus Stimmen",
+    "votes": "Stimmen oder %",
+    "totalSeats": "Sitze insgesamt",
+    "method": "Verfahren",
+    "threshold": "Sperrklausel",
+    "totalVotes": "Gesamtstimmen oder %",
+    "thresholdExempt": "Von Sperrklausel befreit",
+    "hint": "Geben Sie die Stimmen oder den Stimmenanteil jeder Partei ein und berechnen Sie dann die Sitze. Die Sperrklausel bezieht sich auf alle Stimmen, auch die nicht aufgeführter Parteien.",
+    "calculate": "Sitze berechnen",
+    "dHondt": "D'Hondt",
+    "sainteLague": "Sainte-Laguë",
+    "largestRemainder": "Hare-Niemeyer"
+  },
   "controls": {
     "politicalSpectrum": "Politische Spektrum",
     "selectAll": "Alle auswählen",

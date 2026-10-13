@@ -61,8 +61,8 @@ export default function PartyButton({ party }: { party: Party }) {
         }
       }}
       className={`${
-        isEditMode ? "" : "cursor-pointer"
-      } party-button flex w-full items-center gap-2 overflow-hidden rounded-2xl border-2 bg-white p-2 shadow-lg transition-all duration-300 dark:bg-zinc-900`}
+        isEditMode ? "items-start" : "cursor-pointer items-center"
+      } party-button flex w-full gap-2 overflow-hidden rounded-2xl border-2 bg-white p-2 shadow-lg transition-all duration-300 dark:bg-zinc-900`}
       style={{
         borderColor: selected ? colour : "var(--border-colour)", // dark mode #374151
         flexDirection: isEditMode ? "column" : "row",
@@ -245,7 +245,7 @@ export default function PartyButton({ party }: { party: Party }) {
       {isEditMode ? (
         <>
           <div className="flex w-full">
-            <label className="flex w-full flex-col items-center gap-2">
+            <label className="flex w-full flex-col items-center gap-1">
               <input
                 name="position"
                 dir="ltr"
@@ -278,62 +278,64 @@ export default function PartyButton({ party }: { party: Party }) {
               </span>
             </label>
           </div>
-          <div>
-            <label className="flex items-center gap-1">
-              <input
-                type="checkbox"
-                name="isIndependent"
-                value={party.isIndependent ? "1" : "0"}
-                checked={party.isIndependent}
-                className="accent-zinc-700 dark:accent-zinc-200"
-                onChange={(e) => {
-                  const newParty = {
-                    ...party,
-                    isIndependent: e.target.checked,
-                  };
-                  setParties(
-                    parties.map((p) => (p.id === party.id ? newParty : p)),
-                  );
-                  if (selected) {
-                    setSelectedParties(
-                      selectedParties.map((p) =>
-                        p.id === party.id ? newParty : p,
-                      ),
+          <div className="flex w-full flex-col items-start gap-1 rounded-xl border border-zinc-200 px-2 py-1 dark:border-zinc-700">
+            <div>
+              <label className="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="isIndependent"
+                  value={party.isIndependent ? "1" : "0"}
+                  checked={party.isIndependent}
+                  className="accent-zinc-700 dark:accent-zinc-200"
+                  onChange={(e) => {
+                    const newParty = {
+                      ...party,
+                      isIndependent: e.target.checked,
+                    };
+                    setParties(
+                      parties.map((p) => (p.id === party.id ? newParty : p)),
                     );
-                  }
-                }}
-              />
-              <span className="select-none">{i("spectrum.independent")}</span>
-            </label>
-          </div>
-          <div>
-            <label className="flex items-center gap-1">
-              <input
-                type="checkbox"
-                name="isThresholdExempt"
-                checked={party.isThresholdExempt === true}
-                className="accent-zinc-700 dark:accent-zinc-200"
-                onChange={(e) => {
-                  const newParty = {
-                    ...party,
-                    isThresholdExempt: e.target.checked,
-                  };
-                  setParties(
-                    parties.map((p) => (p.id === party.id ? newParty : p)),
-                  );
-                  if (selected) {
-                    setSelectedParties(
-                      selectedParties.map((p) =>
-                        p.id === party.id ? newParty : p,
-                      ),
+                    if (selected) {
+                      setSelectedParties(
+                        selectedParties.map((p) =>
+                          p.id === party.id ? newParty : p,
+                        ),
+                      );
+                    }
+                  }}
+                />
+                <span className="select-none">{i("spectrum.independent")}</span>
+              </label>
+            </div>
+            <div>
+              <label className="flex items-center gap-1">
+                <input
+                  type="checkbox"
+                  name="isThresholdExempt"
+                  checked={party.isThresholdExempt === true}
+                  className="accent-zinc-700 dark:accent-zinc-200"
+                  onChange={(e) => {
+                    const newParty = {
+                      ...party,
+                      isThresholdExempt: e.target.checked,
+                    };
+                    setParties(
+                      parties.map((p) => (p.id === party.id ? newParty : p)),
                     );
-                  }
-                }}
-              />
-              <span className="select-none">
-                {i("allocation.thresholdExempt")}
-              </span>
-            </label>
+                    if (selected) {
+                      setSelectedParties(
+                        selectedParties.map((p) =>
+                          p.id === party.id ? newParty : p,
+                        ),
+                      );
+                    }
+                  }}
+                />
+                <span className="select-none">
+                  {i("allocation.thresholdExempt")}
+                </span>
+              </label>
+            </div>
           </div>
           <div className="flex w-full items-center justify-evenly gap-2">
             <button

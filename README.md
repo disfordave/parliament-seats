@@ -65,6 +65,7 @@ Includes sample parliamentary structures such as:
 - France (Assemblée nationale)
 - Malta (House of Representatives)
 - New Zealand (House of Representatives)
+- Spain (Congreso de los Diputados)
 - Turkey (Türkiye Büyük Millet Meclisi)
 
 Users can also create custom parliament configurations.
@@ -137,8 +138,11 @@ The application currently supports:
 - French (Français)
 - Dutch (Nederlands)
 - Turkish (Türkçe)
+- Spanish (Español)
 
-Language can be changed using the `?lang=` URL parameter.
+Each language has its own page, such as `/de/` or `/es/`, with English at the root. These pages carry their own title, description, social cards and `hreflang` links, so search engines can list each language, and the build adds them all to `sitemap.xml`. The page and social card text for each language lives in the `seo` section of its file in `src/i18n/`.
+
+The root page uses the language chosen before, or else the browser's language. The `?lang=` URL parameter also changes the language. Share links and embeds point at the root page, so they open in the reader's language unless the shared data includes one.
 
 ---
 

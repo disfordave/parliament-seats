@@ -1,5 +1,6 @@
 {
   "locale": "tr",
+  "languageName": "Türkçe",
   "parliament": "Parlamento",
   "subtitle": "Koalisyon hesaplayıcı & meclis grafikleri",
   "appearance": {
@@ -129,5 +130,42 @@
     "openFullVersion": "Parliament Seats'te aç",
     "invalidData": "Bu grafik yüklenemedi.",
     "reset": "Sıfırla"
+  },
+  "seo": {
+    "title": "Koalisyon ve Çoğunluk Hesaplama | Parliament Seats",
+    "description": "TBMM, Avrupa Parlamentosu ve diğer meclisler için ücretsiz koalisyon ve çoğunluk hesaplayıcı. Koalisyon kurun, bağlantı veya görsel olarak paylaşın.",
+    "socialTitle": "Parliament Seats – Koalisyon hesaplayıcı & meclis grafikleri",
+    "socialDescription": "TBMM, Avrupa Parlamentosu, Bundestag ve diğer meclislerde koalisyon kurun ve çoğunluğu kontrol edin. Bağlantı, görsel veya yerleştirme kodu olarak paylaşın.",
+    "imageAlt": "Bir tablet ve bir telefonda Parliament Seats: hayali bir meclis için koalisyon grafiği",
+    "intro": "Parliament Seats, bir meclisteki sandalyelerin nasıl dağıldığını incelemenizi ve bir koalisyonun çoğunluğa ulaşıp ulaşmadığını kontrol etmenizi sağlayan ücretsiz bir araçtır.",
+    "featuresTitle": "Özellikler",
+    "features": [
+      "Basit, beşte üç, üçte iki, dörtte üç ve özel çoğunluklarla koalisyon hesaplayıcı; ayrıca engelleyici azınlık ve isteğe bağlı belirleyici oy",
+      "D'Hondt, Sainte-Laguë ve en büyük kalan yöntemleriyle oylardan sandalye hesaplama ve isteğe bağlı seçim barajı",
+      "Yarım daire meclis grafiği ve sandalye çubuğu",
+      "Aşırı soldan aşırı sağa, siyasi yelpazeye göre koalisyonlar",
+      "Kendi partileriniz, sandalyeleriniz, renkleriniz, adınız ve tarihinizle özel meclisler",
+      "Paylaşım bağlantıları, JSON içe ve dışa aktarma, sosyal medya için PNG görseller ve web siteleri için yerleştirme kodu",
+      "İngilizce, Almanca, Fransızca, Felemenkçe, Türkçe ve İspanyolca olarak kullanılabilir"
+    ],
+    "parliamentsTitle": "Desteklenen meclisler",
+    "parliaments": [
+      "Avrupa Birliği (Avrupa Parlamentosu)",
+      "Almanya (Bundestag)",
+      "Avustralya (House of Representatives ve Senate)",
+      "Avusturya (Nationalrat)",
+      "Belçika (Kamer / Chambre)",
+      "Birleşik Krallık (House of Commons)",
+      "Fransa (Assemblée nationale)",
+      "Güney Afrika (National Assembly)",
+      "Hollanda (Tweede Kamer)",
+      "İspanya (Congreso de los Diputados)",
+      "Kanada (House of Commons / Chambre des communes)",
+      "Malta (House of Representatives)",
+      "Türkiye (Türkiye Büyük Millet Meclisi)",
+      "Yeni Zelanda (House of Representatives)"
+    ],
+    "noJavaScript": "Bu uygulama JavaScript gerektirir. Lütfen tarayıcı ayarlarınızdan JavaScript'i etkinleştirin ve sayfayı yeniden yükleyin.",
+    "sourceCode": "GitHub'da kaynak kodu"
   }
 }

@@ -1,5 +1,6 @@
 {
   "locale": "nl",
+  "languageName": "Nederlands",
   "parliament": "Parlement",
   "subtitle": "Coalitiecalculator & grafieken van de zetelverdeling",
   "appearance": {
@@ -129,5 +130,42 @@
     "openFullVersion": "Openen in Parliament Seats",
     "invalidData": "Deze grafiek kon niet worden geladen.",
     "reset": "Herstellen"
+  },
+  "seo": {
+    "title": "Coalitiecalculator & zetelverdeling | Parliament Seats",
+    "description": "Gratis coalitiecalculator voor de Tweede Kamer, de Belgische Kamer, het Europees Parlement en meer. Stel een coalitie samen en deel die als link of afbeelding.",
+    "socialTitle": "Parliament Seats – Coalitiecalculator & grafieken van de zetelverdeling",
+    "socialDescription": "Stel coalities samen en bekijk of ze een meerderheid halen in de Tweede Kamer, de Belgische Kamer, het Europees Parlement en meer. Deel ze als link, afbeelding of embed.",
+    "imageAlt": "Parliament Seats op een tablet en een telefoon, met een coalitiegrafiek voor een verzonnen parlement",
+    "intro": "Parliament Seats is een gratis tool om te zien hoe de zetels in een parlement verdeeld zijn en of een coalitie een meerderheid haalt.",
+    "featuresTitle": "Functies",
+    "features": [
+      "Coalitiecalculator met gewone, drievijfde-, tweederde-, driekwart- en aangepaste meerderheid, plus blokkerende minderheid en een optionele beslissende stem",
+      "Zetels uit stemmen volgens D'Hondt, Sainte-Laguë of grootste overschot, met een optionele kiesdrempel",
+      "Halve-cirkelgrafiek van het parlement en zetelbalk",
+      "Coalities op basis van het politieke spectrum, van uiterst links tot uiterst rechts",
+      "Eigen parlementen met je eigen partijen, zetels, kleuren, naam en datum",
+      "Deellinks, JSON-import en -export, PNG-afbeeldingen voor sociale media en embeds voor websites",
+      "Beschikbaar in het Engels, Duits, Frans, Nederlands, Turks en Spaans"
+    ],
+    "parliamentsTitle": "Beschikbare parlementen",
+    "parliaments": [
+      "Europese Unie (Europees Parlement)",
+      "Australië (House of Representatives en Senate)",
+      "België (Kamer / Chambre)",
+      "Canada (House of Commons / Chambre des communes)",
+      "Duitsland (Bundestag)",
+      "Frankrijk (Assemblée nationale)",
+      "Malta (House of Representatives)",
+      "Nederland (Tweede Kamer)",
+      "Nieuw-Zeeland (House of Representatives)",
+      "Oostenrijk (Nationalrat)",
+      "Spanje (Congreso de los Diputados)",
+      "Turkije (Türkiye Büyük Millet Meclisi)",
+      "Verenigd Koninkrijk (House of Commons)",
+      "Zuid-Afrika (National Assembly)"
+    ],
+    "noJavaScript": "Deze applicatie heeft JavaScript nodig. Schakel JavaScript in via de instellingen van je browser en laad de pagina opnieuw.",
+    "sourceCode": "Broncode op GitHub"
   }
 }

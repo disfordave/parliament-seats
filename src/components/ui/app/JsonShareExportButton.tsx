@@ -26,6 +26,7 @@ import {
   createEmbedCode,
   createEmbedLink,
   createShareLink,
+  getAppUrl,
 } from "@/utils/shareLink";
 import ExportImagePanel from "./ExportImagePanel";
 import {
@@ -158,10 +159,7 @@ export default function JsonShareExportButton() {
       onClick: () =>
         handleCopy(
           "link",
-          createShareLink(
-            exportCountryData(includeOptions),
-            window.location.href,
-          ),
+          createShareLink(exportCountryData(includeOptions), getAppUrl()),
         ),
     },
     {
@@ -172,7 +170,7 @@ export default function JsonShareExportButton() {
         const country = exportCountryData(includeOptions);
         handleCopy(
           "embed",
-          createEmbedLink(country, window.location.href).then((embedLink) =>
+          createEmbedLink(country, getAppUrl()).then((embedLink) =>
             createEmbedCode(embedLink, country),
           ),
         );

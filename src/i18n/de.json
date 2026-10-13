@@ -1,5 +1,6 @@
 {
   "locale": "de",
+  "languageName": "Deutsch",
   "parliament": "Parlament",
   "subtitle": "Koalitionsrechner & Grafiken zur Sitzverteilung",
   "appearance": {
@@ -129,5 +130,42 @@
     "openFullVersion": "In Parliament Seats öffnen",
     "invalidData": "Dieses Diagramm konnte nicht geladen werden.",
     "reset": "Zurücksetzen"
+  },
+  "seo": {
+    "title": "Koalitionsrechner & Sitzverteilung | Parliament Seats",
+    "description": "Kostenloser Koalitionsrechner für Bundestag, Nationalrat, Europaparlament und mehr. Koalition bilden, Mehrheit prüfen und als Link, Bild oder Einbettung teilen.",
+    "socialTitle": "Parliament Seats – Koalitionsrechner & Grafiken zur Sitzverteilung",
+    "socialDescription": "Koalitionen bilden und Mehrheiten prüfen – im Bundestag, im Nationalrat, im Europäischen Parlament und mehr. Als Link, Bild oder Einbettung teilen.",
+    "imageAlt": "Parliament Seats auf einem Tablet und einem Smartphone, mit dem Koalitionsdiagramm eines fiktiven Parlaments",
+    "intro": "Parliament Seats ist ein kostenloses Werkzeug, mit dem Sie sehen, wie die Sitze in einem Parlament verteilt sind, und prüfen, ob eine Koalition eine Mehrheit erreicht.",
+    "featuresTitle": "Funktionen",
+    "features": [
+      "Koalitionsrechner mit einfacher, Dreifünftel-, Zweidrittel-, Dreiviertel- und eigener Mehrheit, dazu Sperrminorität und optionalem Stichentscheid",
+      "Sitze aus Stimmen nach D'Hondt, Sainte-Laguë und Hare-Niemeyer, mit optionaler Sperrklausel",
+      "Halbkreisdiagramm des Parlaments und Sitzbalken",
+      "Koalitionen nach politischem Spektrum, von äußerst links bis äußerst rechts",
+      "Eigene Parlamente mit eigenen Parteien, Sitzen, Farben, Namen und Datum",
+      "Links zum Teilen, JSON-Import und -Export, PNG-Bilder für soziale Medien und Einbettungen für Websites",
+      "Verfügbar auf Englisch, Deutsch, Französisch, Niederländisch, Türkisch und Spanisch"
+    ],
+    "parliamentsTitle": "Unterstützte Parlamente",
+    "parliaments": [
+      "Europäische Union (Europäisches Parlament)",
+      "Australien (House of Representatives und Senate)",
+      "Belgien (Kamer / Chambre)",
+      "Deutschland (Bundestag)",
+      "Frankreich (Assemblée nationale)",
+      "Kanada (House of Commons / Chambre des communes)",
+      "Malta (House of Representatives)",
+      "Neuseeland (House of Representatives)",
+      "Niederlande (Tweede Kamer)",
+      "Österreich (Nationalrat)",
+      "Spanien (Congreso de los Diputados)",
+      "Südafrika (National Assembly)",
+      "Türkei (Türkiye Büyük Millet Meclisi)",
+      "Vereinigtes Königreich (House of Commons)"
+    ],
+    "noJavaScript": "Diese Anwendung benötigt JavaScript. Bitte aktivieren Sie JavaScript in den Browsereinstellungen und laden Sie die Seite neu.",
+    "sourceCode": "Quellcode auf GitHub"
   }
 }

@@ -23,13 +23,43 @@ import fr from "./fr.json" with { type: "json" };
 import de from "./de.json" with { type: "json" };
 import nl from "./nl.json" with { type: "json" };
 import tr from "./tr.json" with { type: "json" };
+import es from "./es.json" with { type: "json" };
+
+// Imported with relative paths, since the Vite config uses this file too
 
 export const defaultLocale = "en";
-export const locales = { en, fr, de, nl, tr } as const;
+export const locales = { en, fr, de, nl, tr, es } as const;
 export const supportedLocales = Object.keys(
   locales,
 ) as (keyof typeof locales)[];
 export type Locale = keyof typeof locales;
+
+// The languages in A–Z order of their own names, for menus and links
+export const localesByName = [...supportedLocales].sort((a, b) =>
+  locales[a].languageName.localeCompare(locales[b].languageName, "en"),
+);
+
+// The default language has the root page, and the others /<locale>/
+export function getLocalePath(locale: Locale, base = "/") {
+  return locale === defaultLocale ? base : `${base}${locale}/`;
+}
+
+// The language that a page like /de/ is for, or null for the root page
+export function getPathLocale(pathname: string, base = "/") {
+  if (!pathname.startsWith(base)) return null;
+  const segment = pathname.slice(base.length).split("/")[0];
+  return supportedLocales.find((locale) => locale === segment) ?? null;
+}
+
+// The same address on another language's page, dropping a ?lang= that would
+// override it
+export function getLocaleUrl(href: string, locale: Locale, base = "/") {
+  const url = new URL(href);
+  url.pathname = getLocalePath(locale, base);
+  // Deleting always rewrites the query, which would turn ?embed into ?embed=
+  if (url.searchParams.has("lang")) url.searchParams.delete("lang");
+  return url.toString();
+}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function locate(obj: any, path: string) {

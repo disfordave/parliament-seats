@@ -19,73 +19,74 @@
 */
 
 import { useEffect, useState } from "react";
-import { countries } from "@/data/countries";
+import { parliaments } from "@/data/parliaments";
 import { supportedLocales } from "@/i18n/i18n";
 import {
   useParties,
   useSelectedParties,
-  useSelectedCountry,
+  useSelectedParliament,
   useI18n,
-  importCountryData,
+  importParliamentData,
 } from "@/lib/zustandStore";
-import { CountryData } from "@/types";
+import { ParliamentData } from "@/types";
 import { decodeShareData, getShareData } from "@/utils/shareLink";
 
-// Loads the sample country, shared data, and language that the URL asks for,
+// Loads the sample parliament, shared data, and language that the URL asks for,
 // and returns the shared data and whether a share link could not be read
 export function useUrlData(isEmbed: boolean) {
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
-  const { setSelectedCountry } = useSelectedCountry();
+  const { setSelectedParliament } = useSelectedParliament();
   const { i, setLocale } = useI18n();
-  const [sharedCountry, setSharedCountry] = useState<CountryData | null>(null);
+  const [sharedParliament, setSharedParliament] =
+    useState<ParliamentData | null>(null);
   const [isShareLinkInvalid, setIsShareLinkInvalid] = useState(false);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(document.location.search);
     // ?country= is kept so older links still work
-    const countryName =
+    const parliamentName =
       queryParams.get("parliament") ?? queryParams.get("country");
     const lang = queryParams.get("lang");
     let isCancelled = false;
 
-    const loadCountry = () => {
-      const country =
-        countries.find((country) => country.name === countryName) ??
-        countries.find((country) => country.name === "European Union");
-      if (country) {
-        setSelectedCountry(country);
-        setParties(country.parties);
-        setSelectedParties(country.parties);
+    const loadParliament = () => {
+      const parliament =
+        parliaments.find((parliament) => parliament.name === parliamentName) ??
+        parliaments.find((parliament) => parliament.name === "European Union");
+      if (parliament) {
+        setSelectedParliament(parliament);
+        setParties(parliament.parties);
+        setSelectedParties(parliament.parties);
       }
     };
 
-    const loadSharedCountry = async (data: string) => {
-      const decodedCountry = await decodeShareData(data);
+    const loadSharedParliament = async (data: string) => {
+      const decodedParliament = await decodeShareData(data);
       if (isCancelled) return;
 
-      setSharedCountry(decodedCountry);
-      setIsShareLinkInvalid(!decodedCountry);
-      if (decodedCountry) {
-        importCountryData(decodedCountry);
+      setSharedParliament(decodedParliament);
+      setIsShareLinkInvalid(!decodedParliament);
+      if (decodedParliament) {
+        importParliamentData(decodedParliament);
       } else if (!isEmbed) {
         // Embeds show a message instead, since iframes block alerts
         alert(i("dialogs.invalidShareLink"));
-        loadCountry();
+        loadParliament();
       }
     };
 
     // Pasting a share link into an open tab only changes the hash
     const handleHashChange = () => {
       const data = getShareData(document.location.hash);
-      if (data) loadSharedCountry(data);
+      if (data) loadSharedParliament(data);
     };
 
     const data = getShareData(document.location.hash);
     if (data) {
-      loadSharedCountry(data);
+      loadSharedParliament(data);
     } else {
-      loadCountry();
+      loadParliament();
     }
 
     if (lang && supportedLocales.some((locale) => locale === lang)) {
@@ -102,9 +103,9 @@ export function useUrlData(isEmbed: boolean) {
     isEmbed,
     setLocale,
     setParties,
-    setSelectedCountry,
+    setSelectedParliament,
     setSelectedParties,
   ]);
 
-  return { sharedCountry, isShareLinkInvalid };
+  return { sharedParliament, isShareLinkInvalid };
 }

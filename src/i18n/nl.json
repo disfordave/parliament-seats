@@ -9,9 +9,9 @@
     "auto": "Automatisch"
   },
   "header": {
-    "countries": "Parlementen",
+    "parliaments": "Parlementen",
     "custom": "Aangepast",
-    "sampleCountries": "Voorbeeldparlementen",
+    "sampleParliaments": "Voorbeeldparlementen",
     "majorityWithCount": "Meerderheid met {count} zetels",
     "seatsForMajority": "{count} zetels voor de meerderheid",
     "seat": "Zetel",
@@ -34,7 +34,7 @@
     "noParties": "Geen partijen beschikbaar",
     "pasteDataPlaceholder": "Plak hier de geëxporteerde gegevens",
     "sampleDataUpdatedAt": "Voorbeelddata bijgewerkt op",
-    "countryName": "Naam van het parlement",
+    "parliamentName": "Titel",
     "dataUpdatedAt": "Data bijgewerkt op"
   },
   "majority": {

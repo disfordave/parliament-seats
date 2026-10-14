@@ -18,7 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { countries } from "@/data/countries";
+import { parliaments } from "@/data/parliaments";
 import {
   defaultLocale,
   translate,
@@ -26,17 +26,17 @@ import {
   getPathLocale,
 } from "@/i18n/i18n";
 import {
-  DefaultCountryValueState,
+  DefaultParliamentValueState,
   PartiesState,
   IsEditModeState,
   SortByState,
   AllowTieBreakerState,
   MajorityThresholdState,
   SelectedPartiesState,
-  SelectedCountryState,
+  SelectedParliamentState,
   I18nState,
   CustomInfoState,
-  CountryData,
+  ParliamentData,
   IncludeOptions,
 } from "@/types";
 import { simpleMajority } from "@/utils/getMajority";
@@ -64,10 +64,13 @@ function getBrowserLocale() {
   return null;
 }
 
-const useDefaultCountryValue = create<DefaultCountryValueState>((set) => ({
-  defaultCountryValue: null,
-  setDefaultCountryValue: (by) => set(() => ({ defaultCountryValue: by })),
-}));
+const useDefaultParliamentValue = create<DefaultParliamentValueState>(
+  (set) => ({
+    defaultParliamentValue: null,
+    setDefaultParliamentValue: (by) =>
+      set(() => ({ defaultParliamentValue: by })),
+  }),
+);
 
 const useParties = create<PartiesState>((set) => ({
   parties: [],
@@ -121,10 +124,11 @@ const useI18n = create<I18nState>((set, get) => ({
   },
 }));
 
-const useSelectedCountry = create<SelectedCountryState>((set) => ({
-  selectedCountry: countries.find((c) => c.name === "European Union") ?? null,
-  setSelectedCountry: (by) => {
-    set(() => ({ selectedCountry: by }));
+const useSelectedParliament = create<SelectedParliamentState>((set) => ({
+  selectedParliament:
+    parliaments.find((c) => c.name === "European Union") ?? null,
+  setSelectedParliament: (by) => {
+    set(() => ({ selectedParliament: by }));
   },
 }));
 
@@ -134,7 +138,7 @@ const useCustomInfo = create<CustomInfoState>((set) => ({
 }));
 
 // Loads imported or shared data, and keeps the settings it leaves out
-function importCountryData({
+function importParliamentData({
   name,
   updateDate,
   parties,
@@ -143,10 +147,10 @@ function importCountryData({
   allowTieBreaker,
   sortBy,
   locale,
-}: CountryData) {
+}: ParliamentData) {
   useParties.getState().setParties(parties);
   useSelectedParties.getState().setSelectedParties(selectedParties);
-  useSelectedCountry.getState().setSelectedCountry(null);
+  useSelectedParliament.getState().setSelectedParliament(null);
   useCustomInfo.getState().setCustomInfo({ name, updateDate });
 
   if (majorityThreshold) {
@@ -160,16 +164,16 @@ function importCountryData({
 }
 
 // Collects the current data, and leaves out the settings that are not included
-function exportCountryData(include: IncludeOptions): CountryData {
+function exportParliamentData(include: IncludeOptions): ParliamentData {
   const { parties } = useParties.getState();
   const { selectedParties } = useSelectedParties.getState();
-  const { selectedCountry } = useSelectedCountry.getState();
+  const { selectedParliament } = useSelectedParliament.getState();
   const { customInfo } = useCustomInfo.getState();
   const { majorityThreshold } = useMajorityThreshold.getState();
   const { allowTieBreaker } = useAllowTieBreaker.getState();
   const { sortBy } = useSortBy.getState();
   const { locale } = useI18n.getState();
-  const { name, updateDate } = selectedCountry ?? customInfo;
+  const { name, updateDate } = selectedParliament ?? customInfo;
 
   return {
     name,
@@ -186,7 +190,7 @@ function exportCountryData(include: IncludeOptions): CountryData {
 }
 
 export {
-  useDefaultCountryValue,
+  useDefaultParliamentValue,
   useParties,
   useSelectedParties,
   useIsEditMode,
@@ -194,8 +198,8 @@ export {
   useAllowTieBreaker,
   useMajorityThreshold,
   useI18n,
-  useSelectedCountry,
+  useSelectedParliament,
   useCustomInfo,
-  importCountryData,
-  exportCountryData,
+  importParliamentData,
+  exportParliamentData,
 };

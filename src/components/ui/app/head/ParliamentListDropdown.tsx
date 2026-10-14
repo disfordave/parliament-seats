@@ -21,54 +21,54 @@
 import {
   useSelectedParties,
   useParties,
-  useSelectedCountry,
+  useSelectedParliament,
   useI18n,
   useCustomInfo,
 } from "@/lib/zustandStore";
-import { countries } from "@/data/countries";
+import { parliaments } from "@/data/parliaments";
 import { useEffect, useRef, useState } from "react";
-import { Country } from "@/types";
+import { Parliament } from "@/types";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-export default function CountryListDropdown() {
-  const { selectedCountry, setSelectedCountry } = useSelectedCountry();
+export default function ParliamentListDropdown() {
+  const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
   const { customInfo, setCustomInfo } = useCustomInfo();
   const { i } = useI18n();
-  const [openCountryList, setOpenCountryList] = useState<boolean>(false);
+  const [openParliamentList, setOpenParliamentList] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const itemRefs = useRef<Record<string, HTMLLIElement | null>>({});
 
   useEffect(() => {
-    if (openCountryList && dropdownRef.current) {
+    if (openParliamentList && dropdownRef.current) {
       dropdownRef.current.focus();
     }
-  }, [openCountryList]);
+  }, [openParliamentList]);
 
-  function select(country: Country) {
-    setSelectedCountry(country);
-    const findCountry = countries.find((c) => c.name === country.name);
-    if (findCountry) {
-      setParties(findCountry.parties);
-      setSelectedParties(findCountry.parties);
+  function select(parliament: Parliament) {
+    setSelectedParliament(parliament);
+    const findParliament = parliaments.find((c) => c.name === parliament.name);
+    if (findParliament) {
+      setParties(findParliament.parties);
+      setSelectedParties(findParliament.parties);
     } else {
-      setSelectedCountry(null);
+      setSelectedParliament(null);
       setParties([]);
       setSelectedParties([]);
     }
-    setOpenCountryList(false);
+    setOpenParliamentList(false);
   }
 
   useEffect(() => {
     if (
-      openCountryList &&
-      selectedCountry &&
-      itemRefs.current[selectedCountry.name]
+      openParliamentList &&
+      selectedParliament &&
+      itemRefs.current[selectedParliament.name]
     ) {
-      const itemRef = itemRefs.current[selectedCountry.name];
+      const itemRef = itemRefs.current[selectedParliament.name];
       if (itemRef) {
         itemRef.scrollIntoView({
           block: "nearest",
@@ -76,37 +76,37 @@ export default function CountryListDropdown() {
         });
       }
     }
-  }, [openCountryList, selectedCountry]);
+  }, [openParliamentList, selectedParliament]);
 
   return (
     <div
       tabIndex={0}
       onBlur={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget)) {
-          setOpenCountryList(false);
+          setOpenParliamentList(false);
         }
       }}
     >
       <button
         onClick={() => {
-          setOpenCountryList(!openCountryList);
+          setOpenParliamentList(!openParliamentList);
         }}
         className={`w-full rounded-2xl border-2 border-zinc-200 p-2 pe-1 transition-colors duration-300 dark:border-zinc-700 ${
-          openCountryList
+          openParliamentList
             ? "bg-zinc-200 dark:bg-zinc-700"
             : "bg-white dark:bg-zinc-900"
         }`}
       >
         <div className="flex items-center justify-between gap-1">
-          {selectedCountry ? (
+          {selectedParliament ? (
             <div className="flex flex-col items-start gap-0 text-start">
               <div className="flex gap-1">
-                <span>{selectedCountry.name}</span>
-                <span>{selectedCountry.emoji}</span>
+                <span>{selectedParliament.name}</span>
+                <span>{selectedParliament.emoji}</span>
               </div>
               <p className="text-xs opacity-75">
                 {i("body.sampleDataUpdatedAt")}:{" "}
-                {new Date(selectedCountry.updateDate).toLocaleDateString(
+                {new Date(selectedParliament.updateDate).toLocaleDateString(
                   i("locale"),
                   { timeZone: "UTC" },
                 )}
@@ -127,13 +127,13 @@ export default function CountryListDropdown() {
             </div>
           )}
           <ChevronDownIcon
-            className={`size-5 transition-transform duration-300 ${openCountryList ? "rotate-180" : ""}`}
+            className={`size-5 transition-transform duration-300 ${openParliamentList ? "rotate-180" : ""}`}
           />
         </div>
       </button>
       <div className="relative">
         <AnimatePresence>
-          {openCountryList && (
+          {openParliamentList && (
             <>
               <motion.div
                 key="modal"
@@ -155,27 +155,27 @@ export default function CountryListDropdown() {
                       <li>
                         <button
                           onClick={() => {
-                            if (selectedCountry) {
-                              setSelectedCountry(null);
+                            if (selectedParliament) {
+                              setSelectedParliament(null);
                               setParties([]);
                               setSelectedParties([]);
                               setCustomInfo({ name: "", updateDate: "" });
                             }
-                            setOpenCountryList(false);
+                            setOpenParliamentList(false);
                           }}
                           className={`flex w-full flex-col items-start p-2 text-start transition-colors duration-300 ${
-                            !selectedCountry
+                            !selectedParliament
                               ? "bg-zinc-200 dark:bg-zinc-700"
                               : "hover:bg-zinc-200 dark:hover:bg-zinc-700"
                           }`}
                         >
                           <div className="flex gap-1">
                             <span>
-                              {(!selectedCountry && customInfo.name) ||
+                              {(!selectedParliament && customInfo.name) ||
                                 i("header.custom")}
                             </span>
                           </div>
-                          {!selectedCountry && customInfo.updateDate && (
+                          {!selectedParliament && customInfo.updateDate && (
                             <p className="text-xs opacity-75">
                               {i("body.dataUpdatedAt")}:{" "}
                               {new Date(
@@ -191,39 +191,39 @@ export default function CountryListDropdown() {
                   </li>
                   <li>
                     <span className="px-2 py-1 text-sm opacity-75">
-                      {i("header.sampleCountries")}
+                      {i("header.sampleParliaments")}
                     </span>
                     <ul>
-                      {[...countries]
+                      {[...parliaments]
                         .sort((a, b) => a.name.localeCompare(b.name))
-                        .map((country) => (
+                        .map((parliament) => (
                           <li
-                            key={country.name}
-                            value={country.name}
-                            id={country.name}
+                            key={parliament.name}
+                            value={parliament.name}
+                            id={parliament.name}
                             ref={(el) => {
-                              if (el) itemRefs.current[country.name] = el;
+                              if (el) itemRefs.current[parliament.name] = el;
                             }}
                           >
                             <button
                               onClick={() => {
-                                select(country);
+                                select(parliament);
                               }}
                               className={`flex w-full flex-col items-start p-2 text-start transition-colors duration-300 ${
-                                selectedCountry === country
+                                selectedParliament === parliament
                                   ? "bg-zinc-200 dark:bg-zinc-700"
                                   : "hover:bg-zinc-200 dark:hover:bg-zinc-700"
                               }`}
                             >
                               <div className="flex gap-1">
-                                <span>{country.name}</span>
-                                <span>{country.emoji}</span>
+                                <span>{parliament.name}</span>
+                                <span>{parliament.emoji}</span>
                               </div>
-                              {/* {selectedCountry === country && ( */}
+                              {/* {selectedParliament === parliament && ( */}
                               <p className="text-xs opacity-75">
                                 {i("body.sampleDataUpdatedAt")}:{" "}
                                 {new Date(
-                                  country.updateDate,
+                                  parliament.updateDate,
                                 ).toLocaleDateString(i("locale"), {
                                   timeZone: "UTC",
                                 })}

@@ -18,9 +18,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { Country } from "@/types";
+import { Parliament } from "@/types";
 
-export const countries: Country[] = [
+export const parliaments: Parliament[] = [
   {
     name: "European Union",
     emoji: "🇪🇺",

@@ -18,11 +18,11 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { Country, CountryInfo, MajorityThreshold, Party } from "@/types";
+import { Parliament, ParliamentInfo, MajorityThreshold, Party } from "@/types";
 
-interface DefaultCountryValueState {
-  defaultCountryValue: string | null;
-  setDefaultCountryValue: (by: string) => void;
+interface DefaultParliamentValueState {
+  defaultParliamentValue: string | null;
+  setDefaultParliamentValue: (by: string) => void;
 }
 
 interface PartiesState {
@@ -61,18 +61,18 @@ interface I18nState {
   setLocale: (by: string) => void;
 }
 
-interface SelectedCountryState {
-  selectedCountry: Country | null;
-  setSelectedCountry: (by: Country | null) => void;
+interface SelectedParliamentState {
+  selectedParliament: Parliament | null;
+  setSelectedParliament: (by: Parliament | null) => void;
 }
 
 interface CustomInfoState {
-  customInfo: CountryInfo;
-  setCustomInfo: (by: CountryInfo) => void;
+  customInfo: ParliamentInfo;
+  setCustomInfo: (by: ParliamentInfo) => void;
 }
 
 export type {
-  DefaultCountryValueState,
+  DefaultParliamentValueState,
   PartiesState,
   SelectedPartiesState,
   IsEditModeState,
@@ -80,6 +80,6 @@ export type {
   AllowTieBreakerState,
   MajorityThresholdState,
   I18nState,
-  SelectedCountryState,
+  SelectedParliamentState,
   CustomInfoState,
 };

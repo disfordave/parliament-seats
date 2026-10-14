@@ -18,8 +18,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { useI18n, importCountryData } from "@/lib/zustandStore";
-import { parseCountry } from "@/utils/parseCountry";
+import { useI18n, importParliamentData } from "@/lib/zustandStore";
+import { parseParliament } from "@/utils/parseParliament";
 import {
   ArrowDownTrayIcon,
   ChevronDownIcon,
@@ -45,10 +45,10 @@ export default function JsonShareImportButton() {
 
   // Throws when the data is not JSON, and returns whether it was imported
   const importParties = (data: string) => {
-    const parsedCountry = parseCountry(data);
-    if (!parsedCountry) return false;
+    const parsedParliament = parseParliament(data);
+    if (!parsedParliament) return false;
 
-    importCountryData(parsedCountry);
+    importParliamentData(parsedParliament);
     return true;
   };
 

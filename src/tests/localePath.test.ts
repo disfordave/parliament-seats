@@ -47,8 +47,8 @@ test("leaves the root page and unknown paths to the saved language", () => {
 
 test("moves to another language's page and keeps the rest of the address", () => {
   expect(
-    getLocaleUrl("https://parl.hsw.is/?country=Spain#data=abc", "es"),
-  ).toBe("https://parl.hsw.is/es/?country=Spain#data=abc");
+    getLocaleUrl("https://parl.hsw.is/?parliament=Spain#data=abc", "es"),
+  ).toBe("https://parl.hsw.is/es/?parliament=Spain#data=abc");
   expect(getLocaleUrl("https://parl.hsw.is/de/", "en")).toBe(
     "https://parl.hsw.is/",
   );
@@ -56,8 +56,8 @@ test("moves to another language's page and keeps the rest of the address", () =>
 
 test("drops a ?lang= that would override the page's language", () => {
   expect(
-    getLocaleUrl("https://parl.hsw.is/?lang=de&country=Germany", "fr"),
-  ).toBe("https://parl.hsw.is/fr/?country=Germany");
+    getLocaleUrl("https://parl.hsw.is/?lang=de&parliament=Germany", "fr"),
+  ).toBe("https://parl.hsw.is/fr/?parliament=Germany");
   expect(getLocaleUrl("https://parl.hsw.is/?lang=de", "fr")).toBe(
     "https://parl.hsw.is/fr/",
   );

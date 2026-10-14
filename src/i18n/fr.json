@@ -10,9 +10,9 @@
   },
   "seats": "Sièges",
   "header": {
-    "countries": "Parlements",
+    "parliaments": "Parlements",
     "custom": "Personnalisé",
-    "sampleCountries": "Exemples de parlements",
+    "sampleParliaments": "Exemples de parlements",
     "seatsForMajority": "{count} sièges pour la majorité",
     "seat": "siège",
     "seats": "sièges",
@@ -34,7 +34,7 @@
     "noParties": "Aucun parti disponible",
     "pasteDataPlaceholder": "Collez les données exportées ici",
     "sampleDataUpdatedAt": "Données d'exemple mises à jour le",
-    "countryName": "Nom du parlement",
+    "parliamentName": "Titre",
     "dataUpdatedAt": "Données mises à jour le"
   },
   "majority": {

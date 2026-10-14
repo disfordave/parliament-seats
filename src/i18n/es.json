@@ -10,9 +10,9 @@
   },
   "seats": "Escaños",
   "header": {
-    "countries": "Parlamentos",
+    "parliaments": "Parlamentos",
     "custom": "Personalizado",
-    "sampleCountries": "Parlamentos de ejemplo",
+    "sampleParliaments": "Parlamentos de ejemplo",
     "seatsForMajority": "{count} escaños para la mayoría",
     "seat": "escaño",
     "seats": "escaños",
@@ -34,7 +34,7 @@
     "noParties": "No hay partidos disponibles",
     "pasteDataPlaceholder": "Pega aquí los datos exportados",
     "sampleDataUpdatedAt": "Datos de ejemplo actualizados el",
-    "countryName": "Nombre del parlamento",
+    "parliamentName": "Título",
     "dataUpdatedAt": "Datos actualizados el"
   },
   "majority": {

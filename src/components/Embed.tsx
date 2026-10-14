@@ -30,16 +30,16 @@ import { Logo } from "@/components/icons/Logo";
 import {
   useParties,
   useSelectedParties,
-  useSelectedCountry,
+  useSelectedParliament,
   useCustomInfo,
   useMajorityThreshold,
   useAllowTieBreaker,
   useSortBy,
   useI18n,
-  exportCountryData,
+  exportParliamentData,
 } from "@/lib/zustandStore";
-import { CountryData } from "@/types";
-import { getCountryTitle } from "@/utils/countryTitle";
+import { ParliamentData } from "@/types";
+import { getParliamentTitle } from "@/utils/parliamentTitle";
 import {
   createShareLink,
   embedHeightMessage,
@@ -55,15 +55,15 @@ interface ButtonConfig {
 }
 
 export default function Embed({
-  sharedCountry,
+  sharedParliament,
   isShareLinkInvalid,
 }: {
-  sharedCountry: CountryData | null;
+  sharedParliament: ParliamentData | null;
   isShareLinkInvalid: boolean;
 }) {
   const { parties } = useParties();
   const { selectedParties, setSelectedParties } = useSelectedParties();
-  const { selectedCountry } = useSelectedCountry();
+  const { selectedParliament } = useSelectedParliament();
   const { customInfo } = useCustomInfo();
   const { majorityThreshold } = useMajorityThreshold();
   const { allowTieBreaker } = useAllowTieBreaker();
@@ -71,7 +71,11 @@ export default function Embed({
   const { i } = useI18n();
   const [fullVersionLink, setFullVersionLink] = useState<string>();
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const { title, subtitle } = getCountryTitle(selectedCountry, customInfo, i);
+  const { title, subtitle } = getParliamentTitle(
+    selectedParliament,
+    customInfo,
+    i,
+  );
 
   const buttonConfigurations: ButtonConfig[] = [
     {
@@ -90,7 +94,7 @@ export default function Embed({
 
   // Goes back to the coalition the embed came with, unless that was everyone,
   // which Select All already does
-  const embeddedParties = sharedCountry?.selectedParties;
+  const embeddedParties = sharedParliament?.selectedParties;
   if (embeddedParties && embeddedParties.length < parties.length) {
     buttonConfigurations.push({
       id: "reset",
@@ -105,7 +109,7 @@ export default function Embed({
     let isCancelled = false;
 
     createShareLink(
-      exportCountryData({
+      exportParliamentData({
         selectedParties: true,
         majorityThreshold: true,
         sortBy: true,
@@ -122,7 +126,7 @@ export default function Embed({
   }, [
     parties,
     selectedParties,
-    selectedCountry,
+    selectedParliament,
     customInfo,
     majorityThreshold,
     allowTieBreaker,

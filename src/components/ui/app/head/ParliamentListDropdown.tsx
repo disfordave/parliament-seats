@@ -102,7 +102,6 @@ export default function ParliamentListDropdown() {
             <div className="flex flex-col items-start gap-0 text-start">
               <div className="flex gap-1">
                 <span>{selectedParliament.name}</span>
-                <span>{selectedParliament.emoji}</span>
               </div>
               <p className="text-xs opacity-75">
                 {i("body.sampleDataUpdatedAt")}:{" "}
@@ -217,7 +216,6 @@ export default function ParliamentListDropdown() {
                             >
                               <div className="flex gap-1">
                                 <span>{parliament.name}</span>
-                                <span>{parliament.emoji}</span>
                               </div>
                               {/* {selectedParliament === parliament && ( */}
                               <p className="text-xs opacity-75">

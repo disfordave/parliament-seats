@@ -26,8 +26,7 @@ export function getParliamentTitle(
   customInfo: ParliamentInfo,
   i: (key: string) => string,
 ) {
-  const { name, updateDate } = selectedParliament ?? customInfo;
-  const title = [name, selectedParliament?.emoji].filter(Boolean).join(" ");
+  const { name: title, updateDate } = selectedParliament ?? customInfo;
   const dateLabel = selectedParliament
     ? i("body.sampleDataUpdatedAt")
     : i("body.dataUpdatedAt");

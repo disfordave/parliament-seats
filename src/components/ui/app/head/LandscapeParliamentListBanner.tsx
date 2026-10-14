@@ -119,7 +119,6 @@ export default function LandscapeParliamentListBanner() {
                     >
                       <div className="line-clamp-1 flex gap-1">
                         <span>{parliament.name}</span>
-                        <span>{parliament.emoji}</span>
                       </div>
                       {/* {selectedParliament === parliament && ( */}
                       <p className="text-xs opacity-75">

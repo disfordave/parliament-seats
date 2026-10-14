@@ -23,7 +23,6 @@ import { Parliament } from "@/types";
 export const parliaments: Parliament[] = [
   {
     name: "European Union",
-    emoji: "🇪🇺",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -111,7 +110,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Netherlands",
-    emoji: "🇳🇱",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -271,7 +269,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Germany",
-    emoji: "🇩🇪",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -361,7 +358,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Belgium",
-    emoji: "🇧🇪",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -485,7 +481,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "United Kingdom",
-    emoji: "🇬🇧",
     updateDate: "2026-08-20",
     parties: [
       {
@@ -645,7 +640,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Austria",
-    emoji: "🇦🇹",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -697,7 +691,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Australia (House)",
-    emoji: "🇦🇺",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -785,7 +778,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Australia (Senate)",
-    emoji: "🇦🇺",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -873,7 +865,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Canada",
-    emoji: "🇨🇦",
     updateDate: "2026-09-02",
     parties: [
       {
@@ -934,7 +925,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "New Zealand",
-    emoji: "🇳🇿",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -1004,7 +994,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "France",
-    emoji: "🇫🇷",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -1119,7 +1108,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "South Africa",
-    emoji: "🇿🇦",
     updateDate: "2026-07-21",
     parties: [
       {
@@ -1288,7 +1276,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Malta",
-    emoji: "🇲🇹",
     updateDate: "2026-08-21",
     parties: [
       {
@@ -1313,7 +1300,6 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Turkey",
-    emoji: "🇹🇷",
     updateDate: "2026-09-15",
     parties: [
       {
@@ -1466,7 +1452,6 @@ export const parliaments: Parliament[] = [
     // The Congreso as it stood when the Cortes were dissolved on 5 October
     // 2026, ahead of the general election on 29 November
     name: "Spain",
-    emoji: "🇪🇸",
     updateDate: "2026-10-14",
     parties: [
       {

@@ -24,7 +24,6 @@ import { SortByState } from "./zustand";
 
 export interface Parliament {
   name: string;
-  emoji?: string;
   parties: Party[];
   updateDate: string;
 }

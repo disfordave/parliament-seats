@@ -122,9 +122,10 @@
     "independent": "Independiente"
   },
   "footer": {
-    "feelFree": "No dudes en abrir una incidencia",
-    "onGitHub": "en GitHub",
-    "ifYouHave": "si tienes algún problema o sugerencia."
+    "sourceCode": "Código fuente",
+    "issues": "Incidencias y sugerencias",
+    "licence": "Licencia",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "embed": {
     "openFullVersion": "Abrir en Parliament Seats",

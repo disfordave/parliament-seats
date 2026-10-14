@@ -122,9 +122,10 @@
     "independent": "Bağımsız"
   },
   "footer": {
-    "feelFree": "Bir sorununuz veya öneriniz varsa",
-    "onGitHub": "GitHub'da",
-    "ifYouHave": "çekinmeden bir issue açın."
+    "sourceCode": "Kaynak kodu",
+    "issues": "Sorunlar ve öneriler",
+    "licence": "Lisans",
+    "newTab": "(yeni sekmede açılır)"
   },
   "embed": {
     "openFullVersion": "Parliament Seats'te aç",

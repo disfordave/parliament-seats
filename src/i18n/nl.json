@@ -122,9 +122,10 @@
     "independent": "Onafhankelijk"
   },
   "footer": {
-    "feelFree": "Voel je vrij om een issue te openen",
-    "onGitHub": "op GitHub",
-    "ifYouHave": "als u problemen of suggesties heeft."
+    "sourceCode": "Broncode",
+    "issues": "Problemen en suggesties",
+    "licence": "Licentie",
+    "newTab": "(opent in een nieuw tabblad)"
   },
   "embed": {
     "openFullVersion": "Openen in Parliament Seats",

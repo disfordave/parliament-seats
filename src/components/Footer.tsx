@@ -18,11 +18,53 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import type { ReactNode } from "react";
 import { useI18n } from "@/lib/zustandStore";
 import { LocaleSettingButton, ThemeButton } from "@/components/ui/settings/";
 
+// Opens in a new tab so the current parliament isn't lost, and says so to
+// screen readers
+function ExternalLink({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: ReactNode;
+}) {
+  const { i } = useI18n();
+  return (
+    <a
+      className={`underline hover:no-underline ${className ?? ""}`}
+      href={href}
+      rel={"noreferrer noopener"}
+      target={"_blank"}
+    >
+      {children}
+      <span className={"sr-only"}> {i("footer.newTab")}</span>
+    </a>
+  );
+}
+
 export default function Footer() {
   const { i } = useI18n();
+
+  const links = [
+    {
+      href: "https://github.com/disfordave/parliament-seats",
+      label: i("footer.sourceCode"),
+    },
+    {
+      href: "https://github.com/disfordave/parliament-seats/issues",
+      label: i("footer.issues"),
+    },
+    {
+      href: "https://github.com/disfordave/parliament-seats/blob/main/LICENSE",
+      label: i("footer.licence"),
+    },
+  ];
+
   return (
     <>
       <footer className={"mt-4 rounded-2xl bg-zinc-200 p-4 dark:bg-zinc-700"}>
@@ -34,27 +76,23 @@ export default function Footer() {
           <div className={"flex-1 text-start"}>
             <p>
               &copy; 2024-{new Date().getFullYear()}{" "}
-              <a
-                className={"underline hover:no-underline"}
-                href={"https://hsw.is"}
-                rel={"noreferrer noopener"}
-                target={"_blank"}
-              >
-                HSW.is
-              </a>{" "}
+              <ExternalLink href={"https://hsw.is"}>HSW.is</ExternalLink>
             </p>
-            <p className={"text-sm opacity-75"}>
-              {i("footer.feelFree")}{" "}
-              <a
-                className={"underline hover:no-underline"}
-                href={"https://git.hsw.is/parliament-seats"}
-                rel={"noreferrer noopener"}
-                target={"_blank"}
-              >
-                {i("footer.onGitHub")}
-              </a>{" "}
-              {i("footer.ifYouHave")}
-            </p>
+            {/* Without list-style, VoiceOver only announces a list with the role */}
+            <ul
+              className={
+                "flex flex-wrap gap-x-2.5 gap-y-0.5 text-sm opacity-75"
+              }
+              role={"list"}
+            >
+              {links.map((link) => (
+                <li key={link.href}>
+                  <ExternalLink className={"text-nowrap"} href={link.href}>
+                    {link.label}
+                  </ExternalLink>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <ThemeButton />

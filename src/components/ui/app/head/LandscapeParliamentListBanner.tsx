@@ -27,6 +27,7 @@ import {
   useCustomInfo,
 } from "@/lib/zustandStore";
 import { Parliament } from "@/types";
+import { getParliamentName } from "@/utils/parliamentTitle";
 
 export default function LandscapeParliamentListBanner() {
   const { i } = useI18n();
@@ -85,7 +86,12 @@ export default function LandscapeParliamentListBanner() {
             </span>
             <ul>
               {[...parliaments]
-                .sort((a, b) => a.name.localeCompare(b.name))
+                .sort((a, b) =>
+                  getParliamentName(a, i).localeCompare(
+                    getParliamentName(b, i),
+                    i("locale"),
+                  ),
+                )
                 .map((parliament) => (
                   <li
                     key={parliament.name}
@@ -118,7 +124,7 @@ export default function LandscapeParliamentListBanner() {
                       }`}
                     >
                       <div className="line-clamp-1 flex gap-1">
-                        <span>{parliament.name}</span>
+                        <span>{getParliamentName(parliament, i)}</span>
                       </div>
                       {/* {selectedParliament === parliament && ( */}
                       <p className="text-xs opacity-75">

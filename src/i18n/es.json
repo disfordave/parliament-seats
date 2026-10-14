@@ -146,6 +146,23 @@
     "invalidData": "No se ha podido cargar este gráfico.",
     "reset": "Restablecer"
   },
+  "parliamentNames": {
+    "European Union": "Unión Europea",
+    "Netherlands": "Países Bajos",
+    "Germany": "Alemania",
+    "Belgium": "Bélgica",
+    "United Kingdom": "Reino Unido",
+    "Austria": "Austria",
+    "Australia (House)": "Australia (House)",
+    "Australia (Senate)": "Australia (Senate)",
+    "Canada": "Canadá",
+    "New Zealand": "Nueva Zelanda",
+    "France": "Francia",
+    "South Africa": "Sudáfrica",
+    "Malta": "Malta",
+    "Turkey": "Turquía",
+    "Spain": "España"
+  },
   "seo": {
     "title": "Calculadora de pactos y coaliciones | Parliament Seats",
     "description": "Calculadora de pactos gratuita para el Congreso, el Parlamento Europeo y más: comprueba mayorías, reparte escaños con D'Hondt y comparte tu coalición.",

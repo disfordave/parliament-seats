@@ -146,6 +146,23 @@
     "invalidData": "Bu grafik yüklenemedi.",
     "reset": "Sıfırla"
   },
+  "parliamentNames": {
+    "European Union": "Avrupa Birliği",
+    "Netherlands": "Hollanda",
+    "Germany": "Almanya",
+    "Belgium": "Belçika",
+    "United Kingdom": "Birleşik Krallık",
+    "Austria": "Avusturya",
+    "Australia (House)": "Avustralya (House)",
+    "Australia (Senate)": "Avustralya (Senate)",
+    "Canada": "Kanada",
+    "New Zealand": "Yeni Zelanda",
+    "France": "Fransa",
+    "South Africa": "Güney Afrika",
+    "Malta": "Malta",
+    "Turkey": "Türkiye",
+    "Spain": "İspanya"
+  },
   "seo": {
     "title": "Koalisyon ve çoğunluk hesaplama | Parliament Seats",
     "description": "TBMM, Avrupa Parlamentosu ve diğer meclisler için ücretsiz koalisyon ve çoğunluk hesaplayıcı. Koalisyon kurun, bağlantı veya görsel olarak paylaşın.",

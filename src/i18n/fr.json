@@ -146,6 +146,23 @@
     "invalidData": "Ce graphique n'a pas pu être chargé.",
     "reset": "Réinitialiser"
   },
+  "parliamentNames": {
+    "European Union": "Union européenne",
+    "Netherlands": "Pays-Bas",
+    "Germany": "Allemagne",
+    "Belgium": "Belgique",
+    "United Kingdom": "Royaume-Uni",
+    "Austria": "Autriche",
+    "Australia (House)": "Australie (House)",
+    "Australia (Senate)": "Australie (Senate)",
+    "Canada": "Canada",
+    "New Zealand": "Nouvelle-Zélande",
+    "France": "France",
+    "South Africa": "Afrique du Sud",
+    "Malta": "Malte",
+    "Turkey": "Turquie",
+    "Spain": "Espagne"
+  },
   "seo": {
     "title": "Calculateur de coalitions et de majorité | Parliament Seats",
     "description": "Calculateur gratuit de coalitions et de majorité pour l'Assemblée nationale, le Parlement européen, la Chambre belge et plus. Partagez en lien ou en image.",

@@ -146,6 +146,23 @@
     "invalidData": "Dieses Diagramm konnte nicht geladen werden.",
     "reset": "Zurücksetzen"
   },
+  "parliamentNames": {
+    "European Union": "Europäische Union",
+    "Netherlands": "Niederlande",
+    "Germany": "Deutschland",
+    "Belgium": "Belgien",
+    "United Kingdom": "Vereinigtes Königreich",
+    "Austria": "Österreich",
+    "Australia (House)": "Australien (House)",
+    "Australia (Senate)": "Australien (Senate)",
+    "Canada": "Kanada",
+    "New Zealand": "Neuseeland",
+    "France": "Frankreich",
+    "South Africa": "Südafrika",
+    "Malta": "Malta",
+    "Turkey": "Türkei",
+    "Spain": "Spanien"
+  },
   "seo": {
     "title": "Koalitionsrechner & Sitzverteilung | Parliament Seats",
     "description": "Kostenloser Koalitionsrechner für Bundestag, Nationalrat, Europaparlament und mehr. Koalition bilden, Mehrheit prüfen und als Link, Bild oder Einbettung teilen.",

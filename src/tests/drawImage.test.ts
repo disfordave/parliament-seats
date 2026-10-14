@@ -85,4 +85,7 @@ test("image file names come from the title", () => {
     "parliament-seats-vertical.png",
   );
   expect(getImageFileName("🌊", "square")).toBe("parliament-seats-square.png");
+  expect(getImageFileName("İspanya", "square", "tr-TR")).toBe(
+    "ispanya-square.png",
+  );
 });

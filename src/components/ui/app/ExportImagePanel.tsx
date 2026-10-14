@@ -204,7 +204,7 @@ export default function ExportImagePanel() {
 
     const a = document.createElement("a");
     a.href = canvasRef.current.toDataURL("image/png");
-    a.download = getImageFileName(title, format);
+    a.download = getImageFileName(title, format, i("locale"));
     a.click();
   };
 

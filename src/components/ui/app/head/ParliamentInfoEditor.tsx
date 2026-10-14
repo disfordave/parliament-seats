@@ -24,12 +24,16 @@ import {
   useSelectedParliament,
 } from "@/lib/zustandStore";
 import { ParliamentInfo } from "@/types";
+import { getParliamentName } from "@/utils/parliamentTitle";
 
 export default function ParliamentInfoEditor() {
   const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { customInfo, setCustomInfo } = useCustomInfo();
   const { i } = useI18n();
-  const { name, updateDate } = selectedParliament ?? customInfo;
+  const { updateDate } = selectedParliament ?? customInfo;
+  const name = selectedParliament
+    ? getParliamentName(selectedParliament, i)
+    : customInfo.name;
 
   // Editing a sample parliament turns it into custom data
   const updateInfo = (info: Partial<ParliamentInfo>) => {

@@ -29,6 +29,8 @@
     "seats": "Sièges",
     "view": "Voir",
     "edit": "Modifier",
+    "switchToView": "Passer en mode affichage",
+    "switchToEdit": "Passer en mode modification",
     "noParties": "Aucun parti disponible",
     "pasteDataPlaceholder": "Collez les données exportées ici",
     "sampleDataUpdatedAt": "Données d'exemple mises à jour le",
@@ -120,6 +122,17 @@
     "rightWing": "Droite",
     "farRight": "Extrême droite",
     "independent": "Indépendant"
+  },
+  "party": {
+    "add": "Ajouter un parti",
+    "remove": "Supprimer le parti",
+    "select": "Sélectionner le parti",
+    "deselect": "Désélectionner le parti",
+    "selectNamed": "Sélectionner {party}",
+    "deselectNamed": "Désélectionner {party}",
+    "colour": "Couleur du parti",
+    "name": "Nom du parti",
+    "shortName": "Nom court"
   },
   "footer": {
     "sourceCode": "Code source",

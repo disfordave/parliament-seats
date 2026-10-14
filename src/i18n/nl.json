@@ -29,6 +29,8 @@
     "seats": "Zetels",
     "view": "Bekijken",
     "edit": "Bewerken",
+    "switchToView": "Overschakelen naar weergavemodus",
+    "switchToEdit": "Overschakelen naar bewerkingsmodus",
     "noParties": "Geen partijen beschikbaar",
     "pasteDataPlaceholder": "Plak hier de geëxporteerde gegevens",
     "sampleDataUpdatedAt": "Voorbeelddata bijgewerkt op",
@@ -120,6 +122,17 @@
     "rightWing": "Rechts",
     "farRight": "Uiterste rechts",
     "independent": "Onafhankelijk"
+  },
+  "party": {
+    "add": "Partij toevoegen",
+    "remove": "Partij verwijderen",
+    "select": "Partij selecteren",
+    "deselect": "Partij deselecteren",
+    "selectNamed": "{party} selecteren",
+    "deselectNamed": "{party} deselecteren",
+    "colour": "Partijkleur",
+    "name": "Partijnaam",
+    "shortName": "Korte naam"
   },
   "footer": {
     "sourceCode": "Broncode",

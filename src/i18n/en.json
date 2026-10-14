@@ -1,5 +1,5 @@
 {
-  "locale": "en",
+  "locale": "en-GB",
   "languageName": "English",
   "parliament": "Parliament",
   "subtitle": "Coalition calculator & parliament chart maker",
@@ -29,6 +29,8 @@
     "seats": "Seats",
     "view": "View",
     "edit": "Edit",
+    "switchToView": "Switch to view mode",
+    "switchToEdit": "Switch to edit mode",
     "noParties": "No parties available",
     "pasteDataPlaceholder": "Paste exported data here",
     "sampleDataUpdatedAt": "Sample data updated at",
@@ -57,9 +59,9 @@
     "largestRemainder": "Largest remainder"
   },
   "controls": {
-    "politicalSpectrum": "Political Spectrum",
-    "selectAll": "Select All",
-    "deselectAll": "Deselect All",
+    "politicalSpectrum": "Political spectrum",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
     "left": "Left",
     "right": "Right",
     "leftWithoutFarLeft": "Left (without far-left)",
@@ -71,7 +73,7 @@
     "rightWing": "Right-wing"
   },
   "buttons": {
-    "dataManagement": "Data Management",
+    "dataManagement": "Data management",
     "clear": "Clear data",
     "exportParties": "Export data",
     "importParties": "Import data",
@@ -121,6 +123,17 @@
     "farRight": "Far right",
     "independent": "Independent"
   },
+  "party": {
+    "add": "Add party",
+    "remove": "Remove party",
+    "select": "Select party",
+    "deselect": "Deselect party",
+    "selectNamed": "Select {party}",
+    "deselectNamed": "Deselect {party}",
+    "colour": "Party colour",
+    "name": "Party name",
+    "shortName": "Short name"
+  },
   "footer": {
     "sourceCode": "Source code",
     "issues": "Issues & suggestions",
@@ -133,9 +146,9 @@
     "reset": "Reset"
   },
   "seo": {
-    "title": "Coalition Calculator & Parliament Chart Maker | Parliament Seats",
+    "title": "Coalition calculator & parliament chart maker | Parliament Seats",
     "description": "Free coalition and majority calculator for the EU, Germany, the UK, Spain, Canada, France and more. Build a coalition, then share it as a link, image or embed.",
-    "socialTitle": "Parliament Seats – Coalition Calculator & Parliament Chart Maker",
+    "socialTitle": "Parliament Seats – Coalition calculator & parliament chart maker",
     "socialDescription": "Build coalitions and check majorities in the European Parliament, the Bundestag, the House of Commons and more. Share them as links, images or embeds.",
     "imageAlt": "Parliament Seats on a tablet and a phone, showing a coalition chart for a made-up parliament",
     "intro": "Parliament Seats is a free tool for exploring how the seats in a parliament are shared out, and checking whether a coalition reaches a majority.",

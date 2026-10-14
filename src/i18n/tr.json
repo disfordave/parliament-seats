@@ -29,6 +29,8 @@
     "seats": "Sandalye",
     "view": "Görünüm",
     "edit": "Düzenle",
+    "switchToView": "Görünüm moduna geç",
+    "switchToEdit": "Düzenleme moduna geç",
     "noParties": "Kullanılabilir parti yok",
     "pasteDataPlaceholder": "Dışa aktarılan verileri buraya yapıştırın",
     "sampleDataUpdatedAt": "Örnek veri güncellemesi",
@@ -57,9 +59,9 @@
     "largestRemainder": "En büyük kalan"
   },
   "controls": {
-    "politicalSpectrum": "Siyasi Yelpaze",
-    "selectAll": "Tümünü Seç",
-    "deselectAll": "Tümünü Kaldır",
+    "politicalSpectrum": "Siyasi yelpaze",
+    "selectAll": "Tümünü seç",
+    "deselectAll": "Tümünün seçimini kaldır",
     "left": "Sol",
     "right": "Sağ",
     "leftWithoutFarLeft": "Sol (aşırı sol hariç)",
@@ -71,7 +73,7 @@
     "rightWing": "Sağ kanat"
   },
   "buttons": {
-    "dataManagement": "Veri Yönetimi",
+    "dataManagement": "Veri yönetimi",
     "clear": "Verileri temizle",
     "exportParties": "Verileri dışa aktar",
     "importParties": "Verileri içe aktar",
@@ -121,6 +123,17 @@
     "farRight": "Aşırı sağ",
     "independent": "Bağımsız"
   },
+  "party": {
+    "add": "Parti ekle",
+    "remove": "Partiyi kaldır",
+    "select": "Partiyi seç",
+    "deselect": "Parti seçimini kaldır",
+    "selectNamed": "Seç: {party}",
+    "deselectNamed": "Seçimi kaldır: {party}",
+    "colour": "Parti rengi",
+    "name": "Parti adı",
+    "shortName": "Kısa ad"
+  },
   "footer": {
     "sourceCode": "Kaynak kodu",
     "issues": "Sorunlar ve öneriler",
@@ -133,7 +146,7 @@
     "reset": "Sıfırla"
   },
   "seo": {
-    "title": "Koalisyon ve Çoğunluk Hesaplama | Parliament Seats",
+    "title": "Koalisyon ve çoğunluk hesaplama | Parliament Seats",
     "description": "TBMM, Avrupa Parlamentosu ve diğer meclisler için ücretsiz koalisyon ve çoğunluk hesaplayıcı. Koalisyon kurun, bağlantı veya görsel olarak paylaşın.",
     "socialTitle": "Parliament Seats – Koalisyon hesaplayıcı & meclis grafikleri",
     "socialDescription": "TBMM, Avrupa Parlamentosu, Bundestag ve diğer meclislerde koalisyon kurun ve çoğunluğu kontrol edin. Bağlantı, görsel veya yerleştirme kodu olarak paylaşın.",

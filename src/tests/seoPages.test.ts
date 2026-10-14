@@ -90,7 +90,7 @@ test("escapes the text and keeps the structured data valid", () => {
   )?.[1];
 
   expect(page).toContain(
-    "<title>Coalition Calculator &amp; Parliament Chart Maker | Parliament Seats</title>",
+    "<title>Coalition calculator &amp; parliament chart maker | Parliament Seats</title>",
   );
   expect(JSON.parse(json ?? "")["@graph"][1].description).toBe(
     locales.en.seo.description,

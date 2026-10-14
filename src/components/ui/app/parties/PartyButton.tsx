@@ -38,17 +38,18 @@ export default function PartyButton({ party }: { party: Party }) {
   const { parties, setParties } = useParties();
   const { selectedParties, setSelectedParties } = useSelectedParties();
 
+  const { i } = useI18n();
+
   const selected = selectedParties.some((p) => p.id === party.id);
   //   const colour = party.isIndependent ? "#62748e" : party.colour;
   const colour = party.colour;
   const partyName = party.isIndependent
     ? party.shortName.length > 0
       ? party.shortName + " (I)"
-      : "Independent"
+      : i("spectrum.independent")
     : party.shortName;
 
   const shortDesc = `${partyName} (${party.seats})`;
-  const { i } = useI18n();
   const PartyCard = isEditMode ? "div" : "button";
   return (
     <PartyCard
@@ -70,10 +71,12 @@ export default function PartyButton({ party }: { party: Party }) {
       title={
         isEditMode
           ? ""
-          : selected
-            ? `Deselect ${shortDesc}`
-            : `Select ${shortDesc}`
+          : i(selected ? "party.deselectNamed" : "party.selectNamed").replace(
+              "{party}",
+              shortDesc,
+            )
       }
+      aria-pressed={isEditMode ? undefined : selected}
       // disabled={isEditMode}
     >
       <div
@@ -85,8 +88,8 @@ export default function PartyButton({ party }: { party: Party }) {
           <input
             name="partyColour"
             type="color"
-            title="Party Colour"
-            aria-label="Party Colour"
+            title={i("party.colour")}
+            aria-label={i("party.colour")}
             className="absolute w-full cursor-pointer opacity-0"
             value={colour}
             onChange={(e) => {
@@ -118,7 +121,7 @@ export default function PartyButton({ party }: { party: Party }) {
           <input
             name="partyName"
             type="text"
-            placeholder="Party Name"
+            placeholder={i("party.name")}
             className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
             value={party.name}
             onChange={(e) => {
@@ -145,7 +148,7 @@ export default function PartyButton({ party }: { party: Party }) {
           <input
             name="partyShortName"
             type="text"
-            placeholder="Party Short Name"
+            placeholder={i("party.shortName")}
             className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
             value={party.shortName}
             onChange={(e) => {
@@ -172,7 +175,7 @@ export default function PartyButton({ party }: { party: Party }) {
           <input
             name="seats"
             type="number"
-            placeholder="Seats"
+            placeholder={i("body.seats")}
             className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
             min={0}
             max={99999}
@@ -352,8 +355,8 @@ export default function PartyButton({ party }: { party: Party }) {
               }}
               className={`transition-opacity hover:opacity-75`}
               type="button"
-              title={selected ? "Deselect party" : "Select party"}
-              aria-label={selected ? "Deselect party" : "Select party"}
+              title={i(selected ? "party.deselect" : "party.select")}
+              aria-label={i(selected ? "party.deselect" : "party.select")}
             >
               {selected ? (
                 <MinusCircleIcon className="size-6 shrink-0" />
@@ -372,8 +375,8 @@ export default function PartyButton({ party }: { party: Party }) {
               }}
               type="button"
               className={`transition-opacity hover:opacity-75`}
-              title="Remove party"
-              aria-label="Remove party"
+              title={i("party.remove")}
+              aria-label={i("party.remove")}
             >
               <TrashIcon className="size-6 shrink-0" />
             </button>

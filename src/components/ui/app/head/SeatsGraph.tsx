@@ -130,7 +130,7 @@ export default function SeatsGraph() {
                   party.isIndependent
                     ? party.shortName.length > 0
                       ? party.shortName + " (I)"
-                      : "Independent"
+                      : i("spectrum.independent")
                     : party.shortName
                 } (${party.seats})`}
                 style={{

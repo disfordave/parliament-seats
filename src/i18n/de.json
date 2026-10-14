@@ -29,6 +29,8 @@
     "seats": "Sitze",
     "view": "Ansehen",
     "edit": "Bearbeiten",
+    "switchToView": "In den Ansichtsmodus wechseln",
+    "switchToEdit": "In den Bearbeitungsmodus wechseln",
     "noParties": "Keine Parteien verfügbar",
     "pasteDataPlaceholder": "Exportierte Daten hier einfügen",
     "sampleDataUpdatedAt": "Beispieldaten aktualisiert am",
@@ -57,7 +59,7 @@
     "largestRemainder": "Hare-Niemeyer"
   },
   "controls": {
-    "politicalSpectrum": "Politische Spektrum",
+    "politicalSpectrum": "Politisches Spektrum",
     "selectAll": "Alle auswählen",
     "deselectAll": "Alle abwählen",
     "left": "Links",
@@ -120,6 +122,17 @@
     "rightWing": "Rechte",
     "farRight": "Äußerste Rechte",
     "independent": "Unabhängig"
+  },
+  "party": {
+    "add": "Partei hinzufügen",
+    "remove": "Partei entfernen",
+    "select": "Partei auswählen",
+    "deselect": "Partei abwählen",
+    "selectNamed": "{party} auswählen",
+    "deselectNamed": "{party} abwählen",
+    "colour": "Parteifarbe",
+    "name": "Parteiname",
+    "shortName": "Kurzname"
   },
   "footer": {
     "sourceCode": "Quellcode",

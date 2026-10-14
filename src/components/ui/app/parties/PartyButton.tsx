@@ -278,7 +278,7 @@ export default function PartyButton({ party }: { party: Party }) {
               </span>
             </label>
           </div>
-          <div className="flex w-full flex-col items-start gap-1 rounded-xl border border-zinc-200 px-2 py-1 dark:border-zinc-700">
+          <div className="flex w-full flex-col items-start gap-1 rounded-xl border border-zinc-200 p-2 dark:border-zinc-700">
             <div>
               <label className="flex items-center gap-1">
                 <input
@@ -304,7 +304,9 @@ export default function PartyButton({ party }: { party: Party }) {
                     }
                   }}
                 />
-                <span className="select-none">{i("spectrum.independent")}</span>
+                <span className="text-sm leading-tight select-none">
+                  {i("spectrum.independent")}
+                </span>
               </label>
             </div>
             <div>
@@ -331,7 +333,7 @@ export default function PartyButton({ party }: { party: Party }) {
                     }
                   }}
                 />
-                <span className="select-none">
+                <span className="text-sm leading-tight select-none">
                   {i("allocation.thresholdExempt")}
                 </span>
               </label>

@@ -9,9 +9,9 @@
     "auto": "Automatisch"
   },
   "header": {
-    "countries": "Länder",
+    "countries": "Parlamente",
     "custom": "Benutzerdefiniert",
-    "sampleCountries": "Beispielländer",
+    "sampleCountries": "Beispielparlamente",
     "majorityWithCount": "Mehrheit mit {count} Sitzen",
     "seatsForMajority": "{count} Sitze für die Mehrheit",
     "seat": "Sitz",
@@ -34,7 +34,7 @@
     "noParties": "Keine Parteien verfügbar",
     "pasteDataPlaceholder": "Exportierte Daten hier einfügen",
     "sampleDataUpdatedAt": "Beispieldaten aktualisiert am",
-    "countryName": "Land/Region",
+    "countryName": "Parlamentsname",
     "dataUpdatedAt": "Daten aktualisiert am"
   },
   "majority": {

@@ -43,7 +43,9 @@ export function useUrlData(isEmbed: boolean) {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(document.location.search);
-    const countryName = queryParams.get("country");
+    // ?country= is kept so older links still work
+    const countryName =
+      queryParams.get("parliament") ?? queryParams.get("country");
     const lang = queryParams.get("lang");
     let isCancelled = false;
 

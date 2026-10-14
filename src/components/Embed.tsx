@@ -68,13 +68,14 @@ export default function Embed({
   const { majorityThreshold } = useMajorityThreshold();
   const { allowTieBreaker } = useAllowTieBreaker();
   const { sortBy } = useSortBy();
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const [fullVersionLink, setFullVersionLink] = useState<string>();
   const rootRef = useRef<HTMLDivElement | null>(null);
   const { title, subtitle } = getParliamentTitle(
     selectedParliament,
     customInfo,
     i,
+    locale,
   );
 
   const buttonConfigurations: ButtonConfig[] = [

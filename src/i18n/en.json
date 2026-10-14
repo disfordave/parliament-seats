@@ -148,23 +148,6 @@
     "invalidData": "This chart could not be loaded.",
     "reset": "Reset"
   },
-  "parliamentNames": {
-    "European Union": "European Union",
-    "Netherlands": "Netherlands",
-    "Germany": "Germany",
-    "Belgium": "Belgium",
-    "United Kingdom": "United Kingdom",
-    "Austria": "Austria",
-    "Australia (House)": "Australia (House)",
-    "Australia (Senate)": "Australia (Senate)",
-    "Canada": "Canada",
-    "New Zealand": "New Zealand",
-    "France": "France",
-    "South Africa": "South Africa",
-    "Malta": "Malta",
-    "Turkey": "Turkey",
-    "Spain": "Spain"
-  },
   "seo": {
     "title": "Coalition calculator & parliament chart maker | Parliament Seats",
     "description": "Free coalition and majority calculator for the EU, Germany, the UK, Spain, Canada, France and more. Build a coalition, then share it as a link, image or embed.",

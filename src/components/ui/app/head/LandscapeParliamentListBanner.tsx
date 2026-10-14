@@ -30,7 +30,7 @@ import { Parliament } from "@/types";
 import { getParliamentName } from "@/utils/parliamentTitle";
 
 export default function LandscapeParliamentListBanner() {
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
@@ -87,8 +87,8 @@ export default function LandscapeParliamentListBanner() {
             <ul>
               {[...parliaments]
                 .sort((a, b) =>
-                  getParliamentName(a, i).localeCompare(
-                    getParliamentName(b, i),
+                  getParliamentName(a, locale).localeCompare(
+                    getParliamentName(b, locale),
                     i("locale"),
                   ),
                 )
@@ -124,7 +124,7 @@ export default function LandscapeParliamentListBanner() {
                       }`}
                     >
                       <div className="line-clamp-1 flex gap-1">
-                        <span>{getParliamentName(parliament, i)}</span>
+                        <span>{getParliamentName(parliament, locale)}</span>
                       </div>
                       {/* {selectedParliament === parliament && ( */}
                       <p className="text-xs opacity-75">

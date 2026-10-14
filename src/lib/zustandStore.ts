@@ -173,11 +173,11 @@ function exportParliamentData(include: IncludeOptions): ParliamentData {
   const { majorityThreshold } = useMajorityThreshold.getState();
   const { allowTieBreaker } = useAllowTieBreaker.getState();
   const { sortBy } = useSortBy.getState();
-  const { locale, i } = useI18n.getState();
+  const { locale } = useI18n.getState();
   const { updateDate } = selectedParliament ?? customInfo;
   // A sample is exported with the name it shows in the current language
   const name = selectedParliament
-    ? getParliamentName(selectedParliament, i)
+    ? getParliamentName(selectedParliament, locale)
     : customInfo.name;
 
   return {

@@ -29,10 +29,10 @@ import { getParliamentName } from "@/utils/parliamentTitle";
 export default function ParliamentInfoEditor() {
   const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { customInfo, setCustomInfo } = useCustomInfo();
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const { updateDate } = selectedParliament ?? customInfo;
   const name = selectedParliament
-    ? getParliamentName(selectedParliament, i)
+    ? getParliamentName(selectedParliament, locale)
     : customInfo.name;
 
   // Editing a sample parliament turns it into custom data

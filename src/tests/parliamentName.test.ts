@@ -17,15 +17,10 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-
 import { expect, test } from "vitest";
 import { parliaments } from "@/data/parliaments";
-import { locales, supportedLocales, translate } from "@/i18n/i18n";
-import { Parliament } from "@/types";
+import { translate } from "@/i18n/i18n";
 import { getParliamentName, getParliamentTitle } from "@/utils/parliamentTitle";
-
-const inLanguage = (locale: string) => (id: string) =>
-  translate({ locale, id });
 
 const sample = (name: string) => {
   const parliament = parliaments.find((p) => p.name === name);
@@ -33,38 +28,22 @@ const sample = (name: string) => {
   return parliament;
 };
 
-test("every language names every sample parliament, and only those", () => {
-  const names = parliaments.map((p) => p.name).sort();
-  for (const locale of supportedLocales) {
-    expect(Object.keys(locales[locale].parliamentNames).sort()).toEqual(names);
-  }
-});
-
 test("sample names follow the language", () => {
-  expect(getParliamentName(sample("Germany"), inLanguage("de"))).toBe(
-    "Deutschland",
-  );
-  expect(getParliamentName(sample("Spain"), inLanguage("tr"))).toBe("İspanya");
-  expect(getParliamentName(sample("Germany"), inLanguage("en"))).toBe(
-    "Germany",
-  );
+  expect(getParliamentName(sample("Germany"), "de")).toBe("Deutschland");
+  expect(getParliamentName(sample("Spain"), "tr")).toBe("İspanya");
+  expect(getParliamentName(sample("Turkey"), "tr")).toBe("Türkiye");
 });
 
-test("falls back to the English name when a language has none", () => {
-  const atlantis: Parliament = {
-    name: "Atlantis",
-    parties: [],
-    updateDate: "",
-  };
-  expect(getParliamentName(atlantis, inLanguage("de"))).toBe("Atlantis");
+test("uses the English name in English and in unknown languages", () => {
+  expect(getParliamentName(sample("Germany"), "en")).toBe("Germany");
+  expect(getParliamentName(sample("Germany"), "xx")).toBe("Germany");
 });
 
 test("titles use the sample's name in the language, and custom names as typed", () => {
+  const fr = (id: string) => translate({ locale: "fr", id });
   const custom = { name: "Res Publica", updateDate: "" };
-  expect(
-    getParliamentTitle(sample("Germany"), custom, inLanguage("fr")).title,
-  ).toBe("Allemagne");
-  expect(getParliamentTitle(null, custom, inLanguage("fr")).title).toBe(
-    "Res Publica",
+  expect(getParliamentTitle(sample("Germany"), custom, fr, "fr").title).toBe(
+    "Allemagne",
   );
+  expect(getParliamentTitle(null, custom, fr, "fr").title).toBe("Res Publica");
 });

@@ -37,7 +37,7 @@ export default function ParliamentListDropdown() {
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
   const { customInfo, setCustomInfo } = useCustomInfo();
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const [openParliamentList, setOpenParliamentList] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -102,7 +102,7 @@ export default function ParliamentListDropdown() {
           {selectedParliament ? (
             <div className="flex flex-col items-start gap-0 text-start">
               <div className="flex gap-1">
-                <span>{getParliamentName(selectedParliament, i)}</span>
+                <span>{getParliamentName(selectedParliament, locale)}</span>
               </div>
               <p className="text-xs opacity-75">
                 {i("body.sampleDataUpdatedAt")}:{" "}
@@ -196,8 +196,8 @@ export default function ParliamentListDropdown() {
                     <ul>
                       {[...parliaments]
                         .sort((a, b) =>
-                          getParliamentName(a, i).localeCompare(
-                            getParliamentName(b, i),
+                          getParliamentName(a, locale).localeCompare(
+                            getParliamentName(b, locale),
                             i("locale"),
                           ),
                         )
@@ -221,7 +221,9 @@ export default function ParliamentListDropdown() {
                               }`}
                             >
                               <div className="flex gap-1">
-                                <span>{getParliamentName(parliament, i)}</span>
+                                <span>
+                                  {getParliamentName(parliament, locale)}
+                                </span>
                               </div>
                               {/* {selectedParliament === parliament && ( */}
                               <p className="text-xs opacity-75">

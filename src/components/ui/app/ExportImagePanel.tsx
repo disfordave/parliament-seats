@@ -63,7 +63,7 @@ export default function ExportImagePanel() {
   const { majorityThreshold } = useMajorityThreshold();
   const { allowTieBreaker } = useAllowTieBreaker();
   const { sortBy } = useSortBy();
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const [format, setFormat] = useState<ImageFormat>("square");
   const [isCopied, setIsCopied] = useState(false);
   const [logo, setLogo] = useState<HTMLImageElement | null>(null);
@@ -133,6 +133,7 @@ export default function ExportImagePanel() {
     selectedParliament,
     customInfo,
     i,
+    locale,
   );
   const content: ImageContent = {
     title,

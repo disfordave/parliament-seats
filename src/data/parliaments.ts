@@ -23,6 +23,13 @@ import { Parliament } from "@/types";
 export const parliaments: Parliament[] = [
   {
     name: "European Union",
+    localizedNames: {
+      de: "Europäische Union",
+      es: "Unión Europea",
+      fr: "Union européenne",
+      nl: "Europese Unie",
+      tr: "Avrupa Birliği",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -110,6 +117,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Netherlands",
+    localizedNames: {
+      de: "Niederlande",
+      es: "Países Bajos",
+      fr: "Pays-Bas",
+      nl: "Nederland",
+      tr: "Hollanda",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -269,6 +283,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Germany",
+    localizedNames: {
+      de: "Deutschland",
+      es: "Alemania",
+      fr: "Allemagne",
+      nl: "Duitsland",
+      tr: "Almanya",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -358,6 +379,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Belgium",
+    localizedNames: {
+      de: "Belgien",
+      es: "Bélgica",
+      fr: "Belgique",
+      nl: "België",
+      tr: "Belçika",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -481,6 +509,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "United Kingdom",
+    localizedNames: {
+      de: "Vereinigtes Königreich",
+      es: "Reino Unido",
+      fr: "Royaume-Uni",
+      nl: "Verenigd Koninkrijk",
+      tr: "Birleşik Krallık",
+    },
     updateDate: "2026-08-20",
     parties: [
       {
@@ -640,6 +675,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Austria",
+    localizedNames: {
+      de: "Österreich",
+      es: "Austria",
+      fr: "Autriche",
+      nl: "Oostenrijk",
+      tr: "Avusturya",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -691,6 +733,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Australia (House)",
+    localizedNames: {
+      de: "Australien (House)",
+      es: "Australia (House)",
+      fr: "Australie (House)",
+      nl: "Australië (House)",
+      tr: "Avustralya (House)",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -778,6 +827,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Australia (Senate)",
+    localizedNames: {
+      de: "Australien (Senate)",
+      es: "Australia (Senate)",
+      fr: "Australie (Senate)",
+      nl: "Australië (Senate)",
+      tr: "Avustralya (Senate)",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -865,6 +921,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Canada",
+    localizedNames: {
+      de: "Kanada",
+      es: "Canadá",
+      fr: "Canada",
+      nl: "Canada",
+      tr: "Kanada",
+    },
     updateDate: "2026-09-02",
     parties: [
       {
@@ -925,6 +988,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "New Zealand",
+    localizedNames: {
+      de: "Neuseeland",
+      es: "Nueva Zelanda",
+      fr: "Nouvelle-Zélande",
+      nl: "Nieuw-Zeeland",
+      tr: "Yeni Zelanda",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -994,6 +1064,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "France",
+    localizedNames: {
+      de: "Frankreich",
+      es: "Francia",
+      fr: "France",
+      nl: "Frankrijk",
+      tr: "Fransa",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -1108,6 +1185,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "South Africa",
+    localizedNames: {
+      de: "Südafrika",
+      es: "Sudáfrica",
+      fr: "Afrique du Sud",
+      nl: "Zuid-Afrika",
+      tr: "Güney Afrika",
+    },
     updateDate: "2026-07-21",
     parties: [
       {
@@ -1276,6 +1360,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Malta",
+    localizedNames: {
+      de: "Malta",
+      es: "Malta",
+      fr: "Malte",
+      nl: "Malta",
+      tr: "Malta",
+    },
     updateDate: "2026-08-21",
     parties: [
       {
@@ -1300,6 +1391,13 @@ export const parliaments: Parliament[] = [
   },
   {
     name: "Turkey",
+    localizedNames: {
+      de: "Türkei",
+      es: "Turquía",
+      fr: "Turquie",
+      nl: "Turkije",
+      tr: "Türkiye",
+    },
     updateDate: "2026-09-15",
     parties: [
       {
@@ -1452,6 +1550,13 @@ export const parliaments: Parliament[] = [
     // The Congreso as it stood when the Cortes were dissolved on 5 October
     // 2026, ahead of the general election on 29 November
     name: "Spain",
+    localizedNames: {
+      de: "Spanien",
+      es: "España",
+      fr: "Espagne",
+      nl: "Spanje",
+      tr: "İspanya",
+    },
     updateDate: "2026-10-14",
     parties: [
       {

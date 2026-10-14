@@ -148,23 +148,6 @@
     "invalidData": "Deze grafiek kon niet worden geladen.",
     "reset": "Herstellen"
   },
-  "parliamentNames": {
-    "European Union": "Europese Unie",
-    "Netherlands": "Nederland",
-    "Germany": "Duitsland",
-    "Belgium": "België",
-    "United Kingdom": "Verenigd Koninkrijk",
-    "Austria": "Oostenrijk",
-    "Australia (House)": "Australië (House)",
-    "Australia (Senate)": "Australië (Senate)",
-    "Canada": "Canada",
-    "New Zealand": "Nieuw-Zeeland",
-    "France": "Frankrijk",
-    "South Africa": "Zuid-Afrika",
-    "Malta": "Malta",
-    "Turkey": "Turkije",
-    "Spain": "Spanje"
-  },
   "seo": {
     "title": "Coalitiecalculator & zetelverdeling | Parliament Seats",
     "description": "Gratis coalitiecalculator voor de Tweede Kamer, de Belgische Kamer, het Europees Parlement en meer. Stel een coalitie samen en deel die als link of afbeelding.",

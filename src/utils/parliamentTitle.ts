@@ -20,16 +20,11 @@
 
 import { Parliament, ParliamentInfo } from "@/types";
 
-// A sample's name in the current language. The English name in the data stays
-// its identifier, for links and for languages that have no name for it
-export function getParliamentName(
-  parliament: Parliament,
-  i: (key: string) => string,
-) {
-  const key = `parliamentNames.${parliament.name}`;
-  const name = i(key);
-  // i() gives back the key when there is no translation
-  return name === key ? parliament.name : name;
+// A sample's name in a language, or its English name in English and in a
+// language the app does not have
+export function getParliamentName(parliament: Parliament, locale: string) {
+  const names: Partial<Record<string, string>> = parliament.localizedNames;
+  return names[locale] ?? parliament.name;
 }
 
 // The name and date line shown above a chart
@@ -37,9 +32,10 @@ export function getParliamentTitle(
   selectedParliament: Parliament | null,
   customInfo: ParliamentInfo,
   i: (key: string) => string,
+  locale: string,
 ) {
   const title = selectedParliament
-    ? getParliamentName(selectedParliament, i)
+    ? getParliamentName(selectedParliament, locale)
     : customInfo.name;
   const { updateDate } = selectedParliament ?? customInfo;
   const dateLabel = selectedParliament

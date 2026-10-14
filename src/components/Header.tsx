@@ -25,7 +25,11 @@ export default function Header() {
   const { i } = useI18n();
   return (
     <>
-      <header className={"flex flex-wrap items-center justify-between gap-4 cursor-default"}>
+      <header
+        className={
+          "flex cursor-default flex-wrap items-center justify-between gap-4"
+        }
+      >
         <div className={"flex items-center gap-2"}>
           <Logo className="size-12 shrink-0" />
           <div className="flex flex-col justify-start">

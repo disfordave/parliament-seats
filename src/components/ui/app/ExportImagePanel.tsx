@@ -37,7 +37,7 @@ import {
   drawImage,
   getImageFileName,
 } from "@/utils/drawImage";
-import { getMajority } from "@/utils/getMajority";
+import { getMajority, getSeatsNeededText } from "@/utils/getMajority";
 import { pluralize } from "@/utils/pluralize";
 import { sort } from "@/utils/sort";
 import {
@@ -157,9 +157,11 @@ export default function ExportImagePanel() {
     isMajority:
       majority.status === "majority" ||
       majority.status === "tie-breaking majority",
-    majorityText: i("header.seatsForMajority").replace(
-      "{count}",
-      majority.seatsForMajority.toString(),
+    majorityText: getSeatsNeededText(
+      total,
+      majorityThreshold,
+      allowTieBreaker,
+      i,
     ),
     footer: window.location.host,
   };

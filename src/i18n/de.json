@@ -14,6 +14,8 @@
     "sampleParliaments": "Beispielparlamente",
     "majorityWithCount": "Mehrheit mit {count} Sitzen",
     "seatsForMajority": "{count} Sitze für die Mehrheit",
+    "seatsForThreshold": "{count} Sitze für die Schwelle von {threshold}",
+    "seatsForTieBreakingMajority": "{count} Sitze für die Mehrheit mit Stichentscheid",
     "seat": "Sitz",
     "seats": "Sitze",
     "left": "verbleibend",

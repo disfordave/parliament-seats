@@ -28,7 +28,7 @@ import {
   useIsEditMode,
 } from "@/lib/zustandStore";
 import { sort } from "@/utils/sort";
-import { getMajority } from "@/utils/getMajority";
+import { getMajority, getSeatsNeededText } from "@/utils/getMajority";
 import { pluralize } from "@/utils/pluralize";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
@@ -96,9 +96,11 @@ export default function SeatsGraph() {
           </p>
           <div
             className="relative flex items-center justify-center"
-            title={i("header.seatsForMajority").replace(
-              "{count}",
-              majority.seatsForMajority.toString(),
+            title={getSeatsNeededText(
+              total,
+              majorityThreshold,
+              allowTieBreaker,
+              i,
             )}
           >
             <ChevronDownIcon className="size-5" />

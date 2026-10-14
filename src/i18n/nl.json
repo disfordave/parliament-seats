@@ -14,6 +14,8 @@
     "sampleParliaments": "Voorbeeldparlementen",
     "majorityWithCount": "Meerderheid met {count} zetels",
     "seatsForMajority": "{count} zetels voor de meerderheid",
+    "seatsForThreshold": "{count} zetels voor de drempel van {threshold}",
+    "seatsForTieBreakingMajority": "{count} zetels voor de meerderheid met beslissende stem",
     "seat": "Zetel",
     "seats": "Zetels",
     "left": "resterend",

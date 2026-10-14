@@ -14,6 +14,8 @@
     "custom": "Personalizado",
     "sampleParliaments": "Parlamentos de ejemplo",
     "seatsForMajority": "{count} escaños para la mayoría",
+    "seatsForThreshold": "{count} escaños para el umbral de {threshold}",
+    "seatsForTieBreakingMajority": "{count} escaños para la mayoría con voto de calidad",
     "seat": "escaño",
     "seats": "escaños",
     "left": "restantes",

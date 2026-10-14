@@ -19,7 +19,13 @@
 */
 
 import { expect, test } from "vitest";
-import { getMajority } from "@/utils/getMajority";
+import { locales, supportedLocales, translate } from "@/i18n/i18n";
+import {
+  formatThreshold,
+  getMajority,
+  getSeatsNeededText,
+  presetThresholds,
+} from "@/utils/getMajority";
 
 test("calculates majority correctly without tie-breaker", () => {
   expect(getMajority(100, 51)).toEqual({
@@ -150,4 +156,72 @@ test("custom percentages", () => {
     status: "majority",
     margin: 1,
   });
+});
+
+test("formats preset thresholds as fractions and others as percentages", () => {
+  expect(formatThreshold({ numerator: 1, denominator: 3 })).toBe("1/3");
+  expect(formatThreshold({ numerator: 1, denominator: 2 })).toBe("1/2");
+  expect(formatThreshold({ numerator: 2, denominator: 3 })).toBe("2/3");
+  // A preset typed in as a percentage still reads as its fraction
+  expect(formatThreshold({ numerator: 5000, denominator: 10000 })).toBe("1/2");
+  expect(formatThreshold({ numerator: 4500, denominator: 10000 })).toBe("45%");
+  expect(formatThreshold({ numerator: 3333, denominator: 10000 })).toBe(
+    "33.33%",
+  );
+  expect(formatThreshold({ numerator: 2, denominator: 5 })).toBe("40%");
+});
+
+const en = (id: string) => translate({ locale: "en", id });
+const half = { numerator: 1, denominator: 2 };
+
+test("says majority only for one half, and names other thresholds", () => {
+  const tr = (id: string) => translate({ locale: "tr", id });
+  expect(getSeatsNeededText(718, half, false, en)).toBe(
+    "360 seats for majority",
+  );
+  expect(
+    getSeatsNeededText(718, { numerator: 5000, denominator: 10000 }, false, en),
+  ).toBe("360 seats for majority");
+  expect(
+    getSeatsNeededText(630, { numerator: 1, denominator: 3 }, false, en),
+  ).toBe("211 seats for the 1/3 threshold");
+  expect(
+    getSeatsNeededText(630, { numerator: 4500, denominator: 10000 }, false, en),
+  ).toBe("284 seats for the 45% threshold");
+  expect(
+    getSeatsNeededText(600, { numerator: 2, denominator: 3 }, false, tr),
+  ).toBe("2/3 eşiği için 400 sandalye");
+});
+
+test("mentions the tie-breaker only when it lowers the count", () => {
+  expect(getSeatsNeededText(718, half, true, en)).toBe(
+    "359 seats for majority with a tie-breaker",
+  );
+  // An odd total cannot tie, so the tie-breaker changes nothing
+  expect(getSeatsNeededText(719, half, true, en)).toBe(
+    "360 seats for majority",
+  );
+  // Ties only count at one half
+  expect(
+    getSeatsNeededText(630, { numerator: 1, denominator: 3 }, true, en),
+  ).toBe("211 seats for the 1/3 threshold");
+});
+
+test("every language names every preset threshold", () => {
+  for (const locale of supportedLocales) {
+    const names: Record<string, string> = locales[locale].majority;
+    for (const { id } of presetThresholds) {
+      expect(typeof names[id]).toBe("string");
+    }
+  }
+});
+
+test("every language has the seats needed wording, with its placeholders", () => {
+  for (const locale of supportedLocales) {
+    const { header } = locales[locale];
+    expect(header.seatsForMajority).toContain("{count}");
+    expect(header.seatsForTieBreakingMajority).toContain("{count}");
+    expect(header.seatsForThreshold).toContain("{count}");
+    expect(header.seatsForThreshold).toContain("{threshold}");
+  }
 });

@@ -14,6 +14,8 @@
     "sampleParliaments": "Örnek meclisler",
     "majorityWithCount": "{count} sandalyelik çoğunluk",
     "seatsForMajority": "Çoğunluk için {count} sandalye",
+    "seatsForThreshold": "{threshold} eşiği için {count} sandalye",
+    "seatsForTieBreakingMajority": "Belirleyici oyla çoğunluk için {count} sandalye",
     "seat": "sandalye",
     "seats": "sandalye",
     "left": "kaldı",

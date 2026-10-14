@@ -24,8 +24,13 @@ import {
   useParties,
   useI18n,
 } from "@/lib/zustandStore";
-import { MajorityThreshold } from "@/types";
-import { getMajority, isSameThreshold } from "@/utils/getMajority";
+import {
+  formatThreshold,
+  getMajority,
+  getPercent,
+  isSameThreshold,
+  presetThresholds,
+} from "@/utils/getMajority";
 import { pluralize } from "@/utils/pluralize";
 import { ChevronDownIcon, ScaleIcon } from "@heroicons/react/16/solid";
 import { AnimatePresence, motion } from "motion/react";
@@ -49,47 +54,16 @@ export default function MajorityThresholdButton() {
   }, [isOpen]);
 
   const total = parties.reduce((acc, party) => acc + party.seats, 0);
-  const thresholdConfigs = [
-    {
-      id: "blockingMinority",
-      label: i("majority.blockingMinority"),
-      threshold: { numerator: 1, denominator: 3 },
-    },
-    {
-      id: "simple",
-      label: i("majority.simple"),
-      threshold: { numerator: 1, denominator: 2 },
-    },
-    {
-      id: "threeFifths",
-      label: i("majority.threeFifths"),
-      threshold: { numerator: 3, denominator: 5 },
-    },
-    {
-      id: "twoThirds",
-      label: i("majority.twoThirds"),
-      threshold: { numerator: 2, denominator: 3 },
-    },
-    {
-      id: "threeQuarters",
-      label: i("majority.threeQuarters"),
-      threshold: { numerator: 3, denominator: 4 },
-    },
-  ] as {
-    id: string;
-    label: string;
-    threshold: MajorityThreshold;
-  }[];
+  const thresholdConfigs = presetThresholds.map(({ id, threshold }) => ({
+    id,
+    label: i(`majority.${id}`),
+    threshold,
+  }));
 
   const selectedConfig = thresholdConfigs.find((config) =>
     isSameThreshold(config.threshold, majorityThreshold),
   );
-  const percent = Number(
-    (
-      (majorityThreshold.numerator / majorityThreshold.denominator) *
-      100
-    ).toFixed(2),
-  );
+  const percent = getPercent(majorityThreshold);
 
   return (
     <div className="flex-1">
@@ -116,9 +90,7 @@ export default function MajorityThresholdButton() {
         >
           <ScaleIcon className="size-4 shrink-0" />
           <span className="font-semibold">
-            {selectedConfig
-              ? `${selectedConfig.threshold.numerator}/${selectedConfig.threshold.denominator}`
-              : `${percent}%`}
+            {formatThreshold(majorityThreshold)}
           </span>
           <ChevronDownIcon
             className={`size-4 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}

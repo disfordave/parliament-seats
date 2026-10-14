@@ -30,7 +30,6 @@ export default function AllowTieBreakerButton() {
       <label className="flex max-w-fit items-center gap-2 text-sm">
         <span className="relative">
           <input
-            title="Allow Tie Breaker"
             type="checkbox"
             name="allowTieBreaker"
             id="allowTieBreaker"
@@ -40,10 +39,9 @@ export default function AllowTieBreakerButton() {
               setAllowTieBreaker(!allowTieBreaker);
             }}
           />
+          {/* Only draws the real checkbox above, which the label names */}
           <div
-            role="checkbox"
-            aria-label={"Allow Tie Breaker"}
-            aria-checked={allowTieBreaker}
+            aria-hidden
             className={`${
               allowTieBreaker
                 ? "bg-zinc-700 dark:bg-zinc-200"

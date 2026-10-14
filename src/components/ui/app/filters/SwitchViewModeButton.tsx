@@ -28,7 +28,7 @@ export default function SwitchViewModeButton() {
     <>
       <div className="order-2 flex flex-1 items-center justify-end gap-2 select-none md:order-3">
         <span
-          title={"Switch to View Mode"}
+          title={i("body.switchToView")}
           className="cursor-default select-none"
           onClick={() => setIsEditMode(false)}
         >
@@ -37,7 +37,7 @@ export default function SwitchViewModeButton() {
         <div
           onClick={() => setIsEditMode(!isEditMode)}
           className={`relative box-content flex h-6 w-12 rounded-full border-2 border-transparent bg-zinc-200 dark:bg-zinc-700`}
-          title={isEditMode ? "Switch to View Mode" : "Switch to Edit Mode"}
+          title={i(isEditMode ? "body.switchToView" : "body.switchToEdit")}
         >
           <div className="absolute z-2 flex h-full w-full items-center justify-around transition-transform duration-300">
             <EyeIcon
@@ -54,7 +54,7 @@ export default function SwitchViewModeButton() {
           ></div>
         </div>
         <span
-          title="Switch to Edit Mode"
+          title={i("body.switchToEdit")}
           className="cursor-default select-none"
           onClick={() => setIsEditMode(true)}
         >

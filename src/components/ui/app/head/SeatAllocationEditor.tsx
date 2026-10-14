@@ -27,13 +27,15 @@ import {
   getDefaultTotalVotes,
   Threshold,
 } from "@/utils/allocateSeats";
-import { CalculatorIcon } from "@heroicons/react/20/solid";
+import { CalculatorIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
 export default function SeatAllocationEditor() {
   const { parties, setParties } = useParties();
   const { selectedParties, setSelectedParties } = useSelectedParties();
   const { i } = useI18n();
+  // Starts collapsed, so it does not push the parties down while editing
+  const [isOpen, setIsOpen] = useState(false);
   const [totalSeats, setTotalSeats] = useState("");
   const [method, setMethod] = useState<AllocationMethod>("dHondt");
   const [threshold, setThreshold] = useState("");
@@ -79,92 +81,108 @@ export default function SeatAllocationEditor() {
 
   return (
     <div className="mb-4 flex flex-col gap-2 rounded-2xl border-2 border-zinc-200 bg-white p-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-900">
-      <span className="text-sm font-semibold opacity-75">
-        {i("allocation.title")}
-      </span>
-      <div className="flex flex-wrap gap-4">
-        <label className="flex min-w-36 flex-1 flex-col gap-1">
-          <span className="text-xs opacity-75">
-            {i("allocation.totalSeats")}
-          </span>
-          <input
-            name="totalSeats"
-            type="number"
-            inputMode="numeric"
-            placeholder={currentTotal.toString()}
-            className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
-            min={1}
-            max={99999}
-            value={totalSeats}
-            onChange={(e) => setTotalSeats(e.target.value)}
-          />
-        </label>
-        <label className="flex min-w-36 flex-1 flex-col gap-1">
-          <span className="text-xs opacity-75">{i("allocation.method")}</span>
-          <select
-            name="allocationMethod"
-            className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700 dark:scheme-dark"
-            value={method}
-            onChange={(e) => setMethod(e.target.value as AllocationMethod)}
-          >
-            {allocationMethods.map((id) => (
-              <option key={id} value={id}>
-                {i(`allocation.${id}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex min-w-36 flex-1 flex-col gap-1">
-          <span className="text-xs opacity-75">
-            {i("allocation.threshold")}
-          </span>
-          <span className="flex items-center gap-1 tabular-nums">
-            <input
-              name="electoralThreshold"
-              type="number"
-              inputMode="decimal"
-              placeholder="0"
-              className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
-              min={0}
-              max={100}
-              step="any"
-              value={threshold}
-              onChange={(e) => setThreshold(e.target.value)}
-            />
-            <span className="opacity-75">%</span>
-          </span>
-        </label>
-        <label className="flex min-w-36 flex-1 flex-col gap-1">
-          <span className="text-xs opacity-75">
-            {i("allocation.totalVotes")}
-          </span>
-          <input
-            name="totalVotes"
-            type="number"
-            inputMode="decimal"
-            placeholder={defaultTotalVotes.toString()}
-            className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
-            min={0}
-            step="any"
-            value={totalVotes}
-            onChange={(e) => setTotalVotes(e.target.value)}
-          />
-        </label>
-      </div>
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <p className="text-xs opacity-75">{i("allocation.hint")}</p>
-        <button
-          onClick={allocate}
-          disabled={!canAllocate}
-          className="rounded-full border-2 border-transparent bg-zinc-200 px-3 py-1 text-nowrap transition-colors hover:bg-zinc-700 hover:text-white disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-700 dark:hover:bg-zinc-200 dark:hover:text-zinc-950"
-          type="button"
-        >
-          <span className="flex items-center justify-center gap-1">
-            <CalculatorIcon className="size-5 shrink-0" />
-            {i("allocation.calculate")}
-          </span>
-        </button>
-      </div>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between gap-2 text-start"
+        type="button"
+        aria-expanded={isOpen}
+      >
+        <span className="text-sm font-semibold opacity-75">
+          {i("allocation.title")}
+        </span>
+        <ChevronDownIcon
+          className={`size-5 shrink-0 opacity-75 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      {isOpen && (
+        <>
+          <div className="flex flex-wrap gap-4">
+            <label className="flex min-w-36 flex-1 flex-col gap-1">
+              <span className="text-xs opacity-75">
+                {i("allocation.totalSeats")}
+              </span>
+              <input
+                name="totalSeats"
+                type="number"
+                inputMode="numeric"
+                placeholder={currentTotal.toString()}
+                className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
+                min={1}
+                max={99999}
+                value={totalSeats}
+                onChange={(e) => setTotalSeats(e.target.value)}
+              />
+            </label>
+            <label className="flex min-w-36 flex-1 flex-col gap-1">
+              <span className="text-xs opacity-75">
+                {i("allocation.method")}
+              </span>
+              <select
+                name="allocationMethod"
+                className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700 dark:scheme-dark"
+                value={method}
+                onChange={(e) => setMethod(e.target.value as AllocationMethod)}
+              >
+                {allocationMethods.map((id) => (
+                  <option key={id} value={id}>
+                    {i(`allocation.${id}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex min-w-36 flex-1 flex-col gap-1">
+              <span className="text-xs opacity-75">
+                {i("allocation.threshold")}
+              </span>
+              <span className="flex items-center gap-1 tabular-nums">
+                <input
+                  name="electoralThreshold"
+                  type="number"
+                  inputMode="decimal"
+                  placeholder="0"
+                  className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
+                  min={0}
+                  max={100}
+                  step="any"
+                  value={threshold}
+                  onChange={(e) => setThreshold(e.target.value)}
+                />
+                <span className="opacity-75">%</span>
+              </span>
+            </label>
+            <label className="flex min-w-36 flex-1 flex-col gap-1">
+              <span className="text-xs opacity-75">
+                {i("allocation.totalVotes")}
+              </span>
+              <input
+                name="totalVotes"
+                type="number"
+                inputMode="decimal"
+                placeholder={defaultTotalVotes.toString()}
+                className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"
+                min={0}
+                step="any"
+                value={totalVotes}
+                onChange={(e) => setTotalVotes(e.target.value)}
+              />
+            </label>
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-xs opacity-75">{i("allocation.hint")}</p>
+            <button
+              onClick={allocate}
+              disabled={!canAllocate}
+              className="rounded-full border-2 border-transparent bg-zinc-200 px-3 py-1 text-nowrap transition-colors hover:bg-zinc-700 hover:text-white disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-700 dark:hover:bg-zinc-200 dark:hover:text-zinc-950"
+              type="button"
+            >
+              <span className="flex items-center justify-center gap-1">
+                <CalculatorIcon className="size-5 shrink-0" />
+                {i("allocation.calculate")}
+              </span>
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }

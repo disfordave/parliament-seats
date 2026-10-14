@@ -19,11 +19,12 @@
 */
 
 import { neutralColor } from "@/components/colors";
-import { useParties } from "@/lib/zustandStore";
+import { useParties, useI18n } from "@/lib/zustandStore";
 import { PlusIcon } from "@heroicons/react/24/outline";
 
 export default function AddNewPartyButton() {
   const { parties, setParties } = useParties();
+  const { i } = useI18n();
   return (
     <>
       <button
@@ -43,8 +44,8 @@ export default function AddNewPartyButton() {
         }}
         className="m-4 aspect-square w-1/3 rounded-full border-2 border-transparent bg-zinc-200 p-2 transition-colors hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600"
         type="button"
-        title="Add Party"
-        aria-label="Add Party"
+        title={i("party.add")}
+        aria-label={i("party.add")}
       >
         <PlusIcon className="m-auto size-2/3 stroke-2 text-zinc-950 dark:text-white" />
       </button>

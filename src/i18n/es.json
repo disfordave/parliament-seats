@@ -29,6 +29,8 @@
     "seats": "Escaños",
     "view": "Ver",
     "edit": "Editar",
+    "switchToView": "Cambiar al modo de visualización",
+    "switchToEdit": "Cambiar al modo de edición",
     "noParties": "No hay partidos disponibles",
     "pasteDataPlaceholder": "Pega aquí los datos exportados",
     "sampleDataUpdatedAt": "Datos de ejemplo actualizados el",
@@ -121,10 +123,23 @@
     "farRight": "Extrema derecha",
     "independent": "Independiente"
   },
+  "party": {
+    "add": "Añadir partido",
+    "remove": "Eliminar partido",
+    "select": "Seleccionar partido",
+    "deselect": "Deseleccionar partido",
+    "selectNamed": "Seleccionar {party}",
+    "deselectNamed": "Deseleccionar {party}",
+    "colour": "Color del partido",
+    "name": "Nombre del partido",
+    "shortName": "Nombre corto"
+  },
   "footer": {
-    "feelFree": "No dudes en abrir una incidencia",
-    "onGitHub": "en GitHub",
-    "ifYouHave": "si tienes algún problema o sugerencia."
+    "sourceCode": "Código fuente",
+    "issues": "Incidencias y sugerencias",
+    "licence": "Licencia",
+    "donate": "Donar",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "embed": {
     "openFullVersion": "Abrir en Parliament Seats",

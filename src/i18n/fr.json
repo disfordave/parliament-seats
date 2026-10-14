@@ -29,6 +29,8 @@
     "seats": "Sièges",
     "view": "Voir",
     "edit": "Modifier",
+    "switchToView": "Passer en mode affichage",
+    "switchToEdit": "Passer en mode modification",
     "noParties": "Aucun parti disponible",
     "pasteDataPlaceholder": "Collez les données exportées ici",
     "sampleDataUpdatedAt": "Données d'exemple mises à jour le",
@@ -121,10 +123,23 @@
     "farRight": "Extrême droite",
     "independent": "Indépendant"
   },
+  "party": {
+    "add": "Ajouter un parti",
+    "remove": "Supprimer le parti",
+    "select": "Sélectionner le parti",
+    "deselect": "Désélectionner le parti",
+    "selectNamed": "Sélectionner {party}",
+    "deselectNamed": "Désélectionner {party}",
+    "colour": "Couleur du parti",
+    "name": "Nom du parti",
+    "shortName": "Nom court"
+  },
   "footer": {
-    "feelFree": "N'hésitez pas à ouvrir un problème",
-    "onGitHub": "sur GitHub",
-    "ifYouHave": "si vous rencontrez des problèmes ou avez des suggestions."
+    "sourceCode": "Code source",
+    "issues": "Problèmes et suggestions",
+    "licence": "Licence",
+    "donate": "Faire un don",
+    "newTab": "(s'ouvre dans un nouvel onglet)"
   },
   "embed": {
     "openFullVersion": "Ouvrir dans Parliament Seats",

@@ -196,8 +196,6 @@ export default function JsonShareExportButton() {
             : "bg-white dark:bg-zinc-900"
         }`}
         type="button"
-        title="Export Parties"
-        aria-label="Export Parties"
         aria-expanded={isOpen}
       >
         <span className="line-clamp-1 flex items-center justify-center gap-1 text-nowrap">

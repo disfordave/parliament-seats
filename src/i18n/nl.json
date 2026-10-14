@@ -29,6 +29,8 @@
     "seats": "Zetels",
     "view": "Bekijken",
     "edit": "Bewerken",
+    "switchToView": "Overschakelen naar weergavemodus",
+    "switchToEdit": "Overschakelen naar bewerkingsmodus",
     "noParties": "Geen partijen beschikbaar",
     "pasteDataPlaceholder": "Plak hier de geëxporteerde gegevens",
     "sampleDataUpdatedAt": "Voorbeelddata bijgewerkt op",
@@ -121,10 +123,23 @@
     "farRight": "Uiterste rechts",
     "independent": "Onafhankelijk"
   },
+  "party": {
+    "add": "Partij toevoegen",
+    "remove": "Partij verwijderen",
+    "select": "Partij selecteren",
+    "deselect": "Partij deselecteren",
+    "selectNamed": "{party} selecteren",
+    "deselectNamed": "{party} deselecteren",
+    "colour": "Partijkleur",
+    "name": "Partijnaam",
+    "shortName": "Korte naam"
+  },
   "footer": {
-    "feelFree": "Voel je vrij om een issue te openen",
-    "onGitHub": "op GitHub",
-    "ifYouHave": "als u problemen of suggesties heeft."
+    "sourceCode": "Broncode",
+    "issues": "Problemen en suggesties",
+    "licence": "Licentie",
+    "donate": "Doneren",
+    "newTab": "(opent in een nieuw tabblad)"
   },
   "embed": {
     "openFullVersion": "Openen in Parliament Seats",

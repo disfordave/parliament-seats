@@ -18,24 +18,21 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { getLocalePath, Locale } from "@/i18n/i18n";
 import { useI18n } from "@/lib/zustandStore";
 import { Logo } from "./icons/Logo";
 
 export default function Header() {
-  const { i, locale } = useI18n();
+  const { i } = useI18n();
   return (
     <>
-      <header className={"flex flex-wrap items-center justify-between gap-4"}>
-        <a href={getLocalePath(locale as Locale, import.meta.env.BASE_URL)}>
-          <div className={"flex items-center gap-2"}>
-            <Logo className="size-12 shrink-0" />
-            <div className="flex flex-col justify-start">
-              <h1 className="text-2xl font-bold">Parliament Seats</h1>
-              <p className="text-sm leading-4 opacity-75">{i("subtitle")}</p>
-            </div>
+      <header className={"flex flex-wrap items-center justify-between gap-4 cursor-default"}>
+        <div className={"flex items-center gap-2"}>
+          <Logo className="size-12 shrink-0" />
+          <div className="flex flex-col justify-start">
+            <h1 className="text-2xl font-bold">Parliament Seats</h1>
+            <p className="text-sm leading-4 opacity-75">{i("subtitle")}</p>
           </div>
-        </a>
+        </div>
       </header>
     </>
   );

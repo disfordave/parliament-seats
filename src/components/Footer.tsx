@@ -19,6 +19,7 @@
 */
 
 import type { ReactNode } from "react";
+import { HeartIcon } from "@heroicons/react/16/solid";
 import { useI18n } from "@/lib/zustandStore";
 import { LocaleSettingButton, ThemeButton } from "@/components/ui/settings/";
 
@@ -50,7 +51,7 @@ function ExternalLink({
 export default function Footer() {
   const { i } = useI18n();
 
-  const links = [
+  const links: { href: string; label: string; icon?: ReactNode }[] = [
     {
       href: "https://github.com/disfordave/parliament-seats",
       label: i("footer.sourceCode"),
@@ -62,6 +63,17 @@ export default function Footer() {
     {
       href: "https://github.com/disfordave/parliament-seats/blob/main/LICENSE",
       label: i("footer.licence"),
+    },
+    {
+      href: "https://github.com/sponsors/disfordave",
+      label: i("footer.donate"),
+      icon: (
+        <HeartIcon
+          className={
+            "me-0.5 inline size-4 align-text-bottom text-pink-600 dark:text-pink-400"
+          }
+        />
+      ),
     },
   ];
 
@@ -88,6 +100,7 @@ export default function Footer() {
               {links.map((link) => (
                 <li key={link.href}>
                   <ExternalLink className={"text-nowrap"} href={link.href}>
+                    {link.icon}
                     {link.label}
                   </ExternalLink>
                 </li>

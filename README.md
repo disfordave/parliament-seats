@@ -235,6 +235,7 @@ Contributions are welcome.
 Possible areas for improvement include:
 
 - additional parliamentary systems
+- updating existing parliaments
 - visualisation improvements
 - accessibility enhancements
 - additional language support
@@ -248,6 +249,37 @@ git push origin feature/your-feature-name
 ```
 
 Then open a pull request.
+
+## Adding a sample parliament
+
+Samples live in [`src/data/parliaments.ts`](src/data/parliaments.ts). Please follow these rules so the list stays consistent.
+
+**What to add**
+
+- **Real parliaments that exist today.** No fictional, proposed or abolished ones.
+- **The latest composition.** Use the current seat numbers, and set `updateDate` to the date they are from. A historical composition, such as a landmark election, is accepted only when it adds something the current one can't. Explain why in the pull request.
+- **A source.** Link where the seat numbers come from in the pull request. (Optional, but strongly encouraged.)
+
+**Naming**
+
+- **The place's name only, without the country it is part of.**
+  - ✅ `London`, `Wallonia`, `Quebec`, `Germany`
+  - ❌ `London, UK`, `Wallonia, Belgium`, `Quebec, Canada`, `Germany, Europe`
+- **A short chamber name when adding more than one chamber** of the same parliament, as in `Australia (House)` and `Australia (Senate)`. A single sample needs no chamber name.
+- **The year for a historical composition**, in the same brackets, after any chamber name: `Germany (2021)`, `Australia (House, 2022)`. The latest composition has no year.
+- **`name` is in English**, and links use it (`?parliament=Germany`), so avoid renaming a sample once it is published.
+- **`localizedNames` gives the name in every other language.** Translate the place but keep the brackets as in English, as in `Australien (Senate)` or `Deutschland (2021)`. TypeScript reports any language that is missing.
+- **No flags or emoji.**
+
+**Checklist**
+
+1. Add the entry to [`src/data/parliaments.ts`](src/data/parliaments.ts). Copying an existing one is the easiest start. Give each party an `id` that starts with the sample, like `au-senate-liberal`, and a `position` from -100 (left) to 100 (right).
+2. Run `npm run build` and `npm run test`.
+
+Optional, but strongly encouraged:
+
+- Add it to the [Sample parliaments](#sample-parliaments) list above, with the chamber's own name, as in `Germany (Bundestag)`.
+- Add it to `seo.parliaments` in [`src/i18n/`](src/i18n/), in the same style. Add it to every language file or to none, since a test checks that the lists are the same length.
 
 ---
 

@@ -8,15 +8,15 @@
 
 🌐 **Live Demo:** [https://parl.hsw.is](https://parl.hsw.is)
 
-Parliament Seats is an interactive **coalition simulator and parliamentary seat visualizer** inspired by election-night graphics used in television broadcasts.
+Parliament Seats is an interactive **coalition simulator and parliamentary seat visualiser** inspired by election-night graphics used in television broadcasts.
 
-Many election visualizations show seat distributions for a single election. Parliament Seats generalizes that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across multiple countries.
+Many election visualisations show seat distributions for a single election. Parliament Seats generalises that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across multiple countries.
 
 The application allows users to experiment with political party configurations and instantly see how seat distributions translate into potential governing coalitions.
 
 ---
 
-# Why This Project Exists
+# Why this project exists
 
 Election broadcasts often include beautiful interactive graphics showing how seats are distributed in a parliament and which coalitions might form a government.
 
@@ -27,13 +27,13 @@ Parliament Seats was created to make that experience reusable:
 - explore different parliamentary systems
 - test hypothetical election outcomes
 - experiment with coalition combinations
-- visualize how seat distributions affect governing majorities
+- visualise how seat distributions affect governing majorities
 
 ---
 
 # Features
 
-## Coalition Simulation
+## Coalition simulation
 
 Select political parties and instantly see whether they reach a governing majority.
 
@@ -41,7 +41,7 @@ Seat totals and majority thresholds update in real time as parties are selected.
 
 ---
 
-## Tie-Breaker Logic
+## Tie-breaker logic
 
 Supports parliamentary systems where a **tie-breaking vote** may determine the outcome (e.g. the US Senate model).
 
@@ -49,7 +49,7 @@ Tie-breaking is treated as a **vote outcome rule**, not as an additional seat.
 
 ---
 
-## Multi-Country Support
+## Multi-country support
 
 Includes sample parliamentary structures such as:
 
@@ -72,13 +72,13 @@ Users can also create custom parliament configurations.
 
 ---
 
-## Political Spectrum Visualization
+## Political spectrum visualisation
 
-Parties can be sorted and displayed according to their **political positioning** (left → center → right), allowing users to visualize ideological balance within coalitions.
+Parties can be sorted and displayed according to their **political positioning** (left → centre → right), allowing users to visualise ideological balance within coalitions.
 
 ---
 
-## Interactive Seat Visualization
+## Interactive seat visualisation
 
 Seat distributions are displayed using:
 
@@ -88,11 +88,11 @@ Seat distributions are displayed using:
 
 Hovering over (or tapping) the half pie shows each party's short name and seat count.
 
-Visualizations update instantly when party data changes.
+Visualisations update instantly when party data changes.
 
 ---
 
-## Seats from Votes
+## Seats from votes
 
 In edit mode, each party can be given a vote count or a vote share, and the seats are calculated from them with the **D'Hondt**, **Sainte-Laguë**, or **largest remainder** (Hare) method.
 
@@ -100,7 +100,7 @@ Set the total number of seats and, optionally, an **electoral threshold**: parti
 
 ---
 
-## Scenario Import / Export
+## Scenario import / export
 
 Parliament configurations can be saved and shared using **JSON import/export**, either as a `.json` file or as text copied to the clipboard.
 
@@ -115,7 +115,7 @@ Scenarios can also be shared as a **link**. The data is compressed into the part
 
 ---
 
-## Images and Embedding
+## Images and embedding
 
 The current coalition can be downloaded or copied as a **PNG image** in square (1:1), portrait (4:5, the tallest Instagram feed post), vertical (9:16, for stories and reels), or wide (16:9) format. Images are drawn in the browser.
 
@@ -129,7 +129,7 @@ Embeds can also be built by hand:
 
 ---
 
-## Multilingual Interface
+## Multilingual interface
 
 The application currently supports:
 
@@ -146,15 +146,15 @@ The root page uses the language chosen before, or else the browser's language. T
 
 ---
 
-## Responsive Design
+## Responsive design
 
 Parliament Seats works across desktop, tablet, and mobile devices.
 
-The visualization layout adapts automatically to different screen sizes.
+The visualisation layout adapts automatically to different screen sizes.
 
 ---
 
-# Getting Started
+# Getting started
 
 ## Prerequisites
 
@@ -192,7 +192,7 @@ http://localhost:5173
 
 ---
 
-# Available Scripts
+# Available scripts
 
 | Command           | Description               |
 | ----------------- | ------------------------- |
@@ -205,20 +205,20 @@ http://localhost:5173
 
 ---
 
-# Built With
+# Built with
 
 - **React** — UI framework
 - **TypeScript** — static typing
 - **Vite** — development server and build tool
 - **Zustand** — state management
 - **Tailwind CSS** — styling
-- **Nivo** — data visualization
+- **Nivo** — data visualisation
 - **Motion** — UI animations
 - **Vitest** — unit testing
 
 ---
 
-# How It Works
+# How it works
 
 1. Select a country or create a custom parliament
 2. Add or modify political parties and seat counts
@@ -235,7 +235,7 @@ Contributions are welcome.
 Possible areas for improvement include:
 
 - additional parliamentary systems
-- visualization improvements
+- visualisation improvements
 - accessibility enhancements
 - additional language support
 
@@ -251,10 +251,10 @@ Then open a pull request.
 
 ---
 
-# License
+# Licence
 
 This project is licensed under the **GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)**.
 
-You are free to use and modify the project, but if you deploy it as a service, you must also share your modifications under the same license.
+You are free to use and modify the project, but if you deploy it as a service, you must also share your modifications under the same licence.
 
 See the [LICENSE](LICENSE) file for details.

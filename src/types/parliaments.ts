@@ -21,9 +21,13 @@
 import { MajorityThreshold } from "./majority";
 import { Party } from "./party";
 import { SortByState } from "./zustand";
+import type { Locale, defaultLocale } from "@/i18n/i18n";
 
 export interface Parliament {
+  // In English, and also what links use to pick the sample
   name: string;
+  // In each of the other languages
+  localizedNames: Record<Exclude<Locale, typeof defaultLocale>, string>;
   parties: Party[];
   updateDate: string;
 }

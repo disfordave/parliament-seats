@@ -140,9 +140,15 @@ export function getArcSegments(
   return segments.filter(({ start, end }) => end - start > 0);
 }
 
-export function getImageFileName(title: string, format: ImageFormat) {
+// Lowercases by the language's rules, so Turkish "İ" becomes "i" rather than
+// "i" and a separate dot
+export function getImageFileName(
+  title: string,
+  format: ImageFormat,
+  locale?: string,
+) {
   const slug = title
-    .toLowerCase()
+    .toLocaleLowerCase(locale)
     .replace(/[^\p{L}\p{N}]+/gu, "-")
     .replace(/^-+|-+$/g, "");
   return `${slug || "parliament-seats"}-${format}.png`;

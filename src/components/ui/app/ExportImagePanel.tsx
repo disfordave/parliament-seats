@@ -37,7 +37,7 @@ import {
   drawImage,
   getImageFileName,
 } from "@/utils/drawImage";
-import { getMajority } from "@/utils/getMajority";
+import { getMajority, getSeatsNeededText } from "@/utils/getMajority";
 import { pluralize } from "@/utils/pluralize";
 import { sort } from "@/utils/sort";
 import {
@@ -63,7 +63,7 @@ export default function ExportImagePanel() {
   const { majorityThreshold } = useMajorityThreshold();
   const { allowTieBreaker } = useAllowTieBreaker();
   const { sortBy } = useSortBy();
-  const { i } = useI18n();
+  const { i, locale } = useI18n();
   const [format, setFormat] = useState<ImageFormat>("square");
   const [isCopied, setIsCopied] = useState(false);
   const [logo, setLogo] = useState<HTMLImageElement | null>(null);
@@ -133,6 +133,7 @@ export default function ExportImagePanel() {
     selectedParliament,
     customInfo,
     i,
+    locale,
   );
   const content: ImageContent = {
     title,
@@ -157,9 +158,11 @@ export default function ExportImagePanel() {
     isMajority:
       majority.status === "majority" ||
       majority.status === "tie-breaking majority",
-    majorityText: i("header.seatsForMajority").replace(
-      "{count}",
-      majority.seatsForMajority.toString(),
+    majorityText: getSeatsNeededText(
+      total,
+      majorityThreshold,
+      allowTieBreaker,
+      i,
     ),
     footer: window.location.host,
   };
@@ -204,7 +207,7 @@ export default function ExportImagePanel() {
 
     const a = document.createElement("a");
     a.href = canvasRef.current.toDataURL("image/png");
-    a.download = getImageFileName(title, format);
+    a.download = getImageFileName(title, format, i("locale"));
     a.click();
   };
 

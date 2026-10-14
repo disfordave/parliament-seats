@@ -40,6 +40,7 @@ import {
   IncludeOptions,
 } from "@/types";
 import { simpleMajority } from "@/utils/getMajority";
+import { getParliamentName } from "@/utils/parliamentTitle";
 import { create } from "zustand";
 
 function getBrowserLocale() {
@@ -173,7 +174,11 @@ function exportParliamentData(include: IncludeOptions): ParliamentData {
   const { allowTieBreaker } = useAllowTieBreaker.getState();
   const { sortBy } = useSortBy.getState();
   const { locale } = useI18n.getState();
-  const { name, updateDate } = selectedParliament ?? customInfo;
+  const { updateDate } = selectedParliament ?? customInfo;
+  // A sample is exported with the name it shows in the current language
+  const name = selectedParliament
+    ? getParliamentName(selectedParliament, locale)
+    : customInfo.name;
 
   return {
     name,

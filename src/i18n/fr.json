@@ -14,6 +14,8 @@
     "custom": "Personnalisé",
     "sampleParliaments": "Exemples de parlements",
     "seatsForMajority": "{count} sièges pour la majorité",
+    "seatsForThreshold": "{count} sièges pour le seuil de {threshold}",
+    "seatsForTieBreakingMajority": "{count} sièges pour la majorité avec bris d'égalité",
     "seat": "siège",
     "seats": "sièges",
     "left": "restants",

@@ -14,6 +14,8 @@
     "custom": "Custom",
     "sampleParliaments": "Sample parliaments",
     "seatsForMajority": "{count} seats for majority",
+    "seatsForThreshold": "{count} seats for the {threshold} threshold",
+    "seatsForTieBreakingMajority": "{count} seats for majority with a tie-breaker",
     "seat": "seat",
     "seats": "seats",
     "left": "left",

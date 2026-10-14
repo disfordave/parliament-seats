@@ -33,9 +33,9 @@ export default function Footer() {
         >
           <div className={"flex-1 text-start"}>
             <p>
-              &copy; {new Date().getFullYear()}{" "}
+              &copy; 2024-{new Date().getFullYear()}{" "}
               <a
-                className={"no-underline hover:underline"}
+                className={"underline hover:no-underline"}
                 href={"https://hsw.is"}
                 rel={"noreferrer noopener"}
                 target={"_blank"}

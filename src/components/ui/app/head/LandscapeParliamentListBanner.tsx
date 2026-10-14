@@ -18,26 +18,26 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { countries } from "@/data/countries";
+import { parliaments } from "@/data/parliaments";
 import {
   useI18n,
-  useSelectedCountry,
+  useSelectedParliament,
   useParties,
   useSelectedParties,
   useCustomInfo,
 } from "@/lib/zustandStore";
-import { Country } from "@/types";
+import { Parliament } from "@/types";
 
-export default function LandscapeCountryListBanner() {
+export default function LandscapeParliamentListBanner() {
   const { i } = useI18n();
-  const { selectedCountry, setSelectedCountry } = useSelectedCountry();
+  const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { setParties } = useParties();
   const { setSelectedParties } = useSelectedParties();
   const { customInfo, setCustomInfo } = useCustomInfo();
   return (
     <>
       <div className="sticky top-4 z-100 h-[80vh] w-full overflow-auto rounded-2xl border-2 border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900">
-        <h2 className="p-2 text-xl font-semibold">{i("header.countries")}</h2>
+        <h2 className="p-2 text-xl font-semibold">{i("header.parliaments")}</h2>
         <ul>
           <li>
             <span className="px-2 py-1 text-sm opacity-75">
@@ -47,26 +47,26 @@ export default function LandscapeCountryListBanner() {
               <li>
                 <button
                   onClick={() => {
-                    if (selectedCountry) {
-                      setSelectedCountry(null);
+                    if (selectedParliament) {
+                      setSelectedParliament(null);
                       setParties([]);
                       setSelectedParties([]);
                       setCustomInfo({ name: "", updateDate: "" });
                     }
                   }}
                   className={`flex w-full flex-col items-start p-2 text-start transition-colors duration-300 ${
-                    !selectedCountry
+                    !selectedParliament
                       ? "bg-zinc-200 dark:bg-zinc-700"
                       : "hover:bg-zinc-200 dark:hover:bg-zinc-700"
                   }`}
                 >
                   <div className="line-clamp-1 flex gap-1">
                     <span>
-                      {(!selectedCountry && customInfo.name) ||
+                      {(!selectedParliament && customInfo.name) ||
                         i("header.custom")}
                     </span>
                   </div>
-                  {!selectedCountry && customInfo.updateDate && (
+                  {!selectedParliament && customInfo.updateDate && (
                     <p className="text-xs opacity-75">
                       {i("body.dataUpdatedAt")}:{" "}
                       {new Date(customInfo.updateDate).toLocaleDateString(
@@ -81,46 +81,49 @@ export default function LandscapeCountryListBanner() {
           </li>
           <li>
             <span className="px-2 py-1 text-sm opacity-75">
-              {i("header.sampleCountries")}
+              {i("header.sampleParliaments")}
             </span>
             <ul>
-              {[...countries]
+              {[...parliaments]
                 .sort((a, b) => a.name.localeCompare(b.name))
-                .map((country) => (
-                  <li key={country.name} value={country.name} id={country.name}>
+                .map((parliament) => (
+                  <li
+                    key={parliament.name}
+                    value={parliament.name}
+                    id={parliament.name}
+                  >
                     <button
                       onClick={() => {
-                        function select(country: Country) {
-                          setSelectedCountry(country);
-                          const findCountry = countries.find(
-                            (c) => c.name === country.name,
+                        function select(parliament: Parliament) {
+                          setSelectedParliament(parliament);
+                          const findParliament = parliaments.find(
+                            (c) => c.name === parliament.name,
                           );
-                          if (findCountry) {
-                            setParties(findCountry.parties);
-                            setSelectedParties(findCountry.parties);
+                          if (findParliament) {
+                            setParties(findParliament.parties);
+                            setSelectedParties(findParliament.parties);
                           } else {
-                            setSelectedCountry(null);
+                            setSelectedParliament(null);
                             setParties([]);
                             setSelectedParties([]);
                           }
                         }
 
-                        select(country);
+                        select(parliament);
                       }}
                       className={`flex w-full flex-col items-start p-2 text-start transition-colors duration-300 ${
-                        selectedCountry === country
+                        selectedParliament === parliament
                           ? "bg-zinc-200 dark:bg-zinc-700"
                           : "hover:bg-zinc-200 dark:hover:bg-zinc-700"
                       }`}
                     >
                       <div className="line-clamp-1 flex gap-1">
-                        <span>{country.name}</span>
-                        <span>{country.emoji}</span>
+                        <span>{parliament.name}</span>
                       </div>
-                      {/* {selectedCountry === country && ( */}
+                      {/* {selectedParliament === parliament && ( */}
                       <p className="text-xs opacity-75">
                         {i("body.sampleDataUpdatedAt")}:{" "}
-                        {new Date(country.updateDate).toLocaleDateString(
+                        {new Date(parliament.updateDate).toLocaleDateString(
                           i("locale"),
                           { timeZone: "UTC" },
                         )}

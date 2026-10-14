@@ -18,33 +18,23 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { MajorityThreshold } from "./majority";
-import { Party } from "./party";
-import { SortByState } from "./zustand";
+import { Parliament, ParliamentInfo } from "@/types";
 
-export interface Country {
-  name: string;
-  emoji?: string;
-  parties: Party[];
-  updateDate: string;
-}
+// The name and date line shown above a chart
+export function getParliamentTitle(
+  selectedParliament: Parliament | null,
+  customInfo: ParliamentInfo,
+  i: (key: string) => string,
+) {
+  const { name: title, updateDate } = selectedParliament ?? customInfo;
+  const dateLabel = selectedParliament
+    ? i("body.sampleDataUpdatedAt")
+    : i("body.dataUpdatedAt");
+  const subtitle = updateDate
+    ? `${dateLabel}: ${new Date(updateDate).toLocaleDateString(i("locale"), {
+        timeZone: "UTC",
+      })}`
+    : "";
 
-export type CountryInfo = Pick<Country, "name" | "updateDate">;
-
-export interface CountryData extends CountryInfo {
-  parties: Party[];
-  selectedParties: Party[];
-  // Left out when the importer should keep their own settings
-  majorityThreshold?: MajorityThreshold;
-  allowTieBreaker?: boolean;
-  sortBy?: SortByState["sortBy"];
-  locale?: string;
-}
-
-// Which settings an export carries along with the parties
-export interface IncludeOptions {
-  selectedParties: boolean;
-  majorityThreshold: boolean;
-  sortBy: boolean;
-  locale: boolean;
+  return { title, subtitle };
 }

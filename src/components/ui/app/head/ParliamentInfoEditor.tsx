@@ -18,27 +18,31 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { useCustomInfo, useI18n, useSelectedCountry } from "@/lib/zustandStore";
-import { CountryInfo } from "@/types";
+import {
+  useCustomInfo,
+  useI18n,
+  useSelectedParliament,
+} from "@/lib/zustandStore";
+import { ParliamentInfo } from "@/types";
 
-export default function CountryInfoEditor() {
-  const { selectedCountry, setSelectedCountry } = useSelectedCountry();
+export default function ParliamentInfoEditor() {
+  const { selectedParliament, setSelectedParliament } = useSelectedParliament();
   const { customInfo, setCustomInfo } = useCustomInfo();
   const { i } = useI18n();
-  const { name, updateDate } = selectedCountry ?? customInfo;
+  const { name, updateDate } = selectedParliament ?? customInfo;
 
-  // Editing a sample country turns it into custom data
-  const updateInfo = (info: Partial<CountryInfo>) => {
+  // Editing a sample parliament turns it into custom data
+  const updateInfo = (info: Partial<ParliamentInfo>) => {
     setCustomInfo({ name, updateDate, ...info });
-    setSelectedCountry(null);
+    setSelectedParliament(null);
   };
 
   return (
     <div className="mb-4 flex flex-wrap gap-4 rounded-2xl border-2 border-zinc-200 bg-white p-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-900">
       <label className="flex min-w-48 flex-1 flex-col gap-1">
-        <span className="text-xs opacity-75">{i("body.countryName")}</span>
+        <span className="text-xs opacity-75">{i("body.parliamentName")}</span>
         <input
-          name="countryName"
+          name="parliamentName"
           type="text"
           placeholder={i("header.custom")}
           className="w-full border-b border-zinc-200 bg-transparent outline-hidden dark:border-zinc-700"

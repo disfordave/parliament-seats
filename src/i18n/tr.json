@@ -9,9 +9,9 @@
     "auto": "Otomatik"
   },
   "header": {
-    "countries": "Ülkeler",
+    "parliaments": "Meclisler",
     "custom": "Özel",
-    "sampleCountries": "Örnek ülkeler",
+    "sampleParliaments": "Örnek meclisler",
     "majorityWithCount": "{count} sandalyelik çoğunluk",
     "seatsForMajority": "Çoğunluk için {count} sandalye",
     "seat": "sandalye",
@@ -34,7 +34,7 @@
     "noParties": "Kullanılabilir parti yok",
     "pasteDataPlaceholder": "Dışa aktarılan verileri buraya yapıştırın",
     "sampleDataUpdatedAt": "Örnek veri güncellemesi",
-    "countryName": "Ülke/bölge",
+    "parliamentName": "Başlık",
     "dataUpdatedAt": "Veri güncellemesi"
   },
   "majority": {

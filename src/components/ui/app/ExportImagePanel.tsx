@@ -21,7 +21,7 @@
 import {
   useParties,
   useSelectedParties,
-  useSelectedCountry,
+  useSelectedParliament,
   useCustomInfo,
   useMajorityThreshold,
   useAllowTieBreaker,
@@ -29,7 +29,7 @@ import {
   useI18n,
 } from "@/lib/zustandStore";
 import { canCopyImage, copyImage } from "@/utils/clipboard";
-import { getCountryTitle } from "@/utils/countryTitle";
+import { getParliamentTitle } from "@/utils/parliamentTitle";
 import {
   ImageContent,
   ImageFormat,
@@ -58,7 +58,7 @@ interface FormatConfig {
 export default function ExportImagePanel() {
   const { parties } = useParties();
   const { selectedParties } = useSelectedParties();
-  const { selectedCountry } = useSelectedCountry();
+  const { selectedParliament } = useSelectedParliament();
   const { customInfo } = useCustomInfo();
   const { majorityThreshold } = useMajorityThreshold();
   const { allowTieBreaker } = useAllowTieBreaker();
@@ -129,7 +129,11 @@ export default function ExportImagePanel() {
     i("header.seat"),
     i("header.seats"),
   );
-  const { title, subtitle } = getCountryTitle(selectedCountry, customInfo, i);
+  const { title, subtitle } = getParliamentTitle(
+    selectedParliament,
+    customInfo,
+    i,
+  );
   const content: ImageContent = {
     title,
     subtitle,

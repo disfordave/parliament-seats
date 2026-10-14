@@ -24,7 +24,7 @@ import Body from "@/components/Body";
 import Embed from "@/components/Embed";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LandscapeCountryListBanner from "./components/ui/app/head/LandscapeCountryListBanner";
+import LandscapeParliamentListBanner from "./components/ui/app/head/LandscapeParliamentListBanner";
 import { useUrlData } from "@/lib/useUrlData";
 import { useI18n } from "@/lib/zustandStore";
 
@@ -32,7 +32,7 @@ import { useI18n } from "@/lib/zustandStore";
 const isEmbed = new URLSearchParams(window.location.search).has("embed");
 
 function App() {
-  const { sharedCountry, isShareLinkInvalid } = useUrlData(isEmbed);
+  const { sharedParliament, isShareLinkInvalid } = useUrlData(isEmbed);
   const { locale, i } = useI18n();
 
   // Keeps the page's language and title in step with the chosen language
@@ -44,7 +44,7 @@ function App() {
   if (isEmbed) {
     return (
       <Embed
-        sharedCountry={sharedCountry}
+        sharedParliament={sharedParliament}
         isShareLinkInvalid={isShareLinkInvalid}
       />
     );
@@ -59,7 +59,7 @@ function App() {
             <Body />
           </div>
           <div className="hidden pt-4 lg:block">
-            <LandscapeCountryListBanner />
+            <LandscapeParliamentListBanner />
           </div>
         </main>
         <Footer />

@@ -10,7 +10,7 @@
 
 Parliament Seats is an interactive **coalition simulator and parliamentary seat visualiser** inspired by election-night graphics used in television broadcasts.
 
-Many election visualisations show seat distributions for a single election. Parliament Seats generalises that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across multiple countries.
+Many election visualisations show seat distributions for a single election. Parliament Seats generalises that idea into a reusable tool where users can explore **different parliamentary systems, party configurations, and coalition scenarios** across many parliaments.
 
 The application allows users to experiment with political party configurations and instantly see how seat distributions translate into potential governing coalitions.
 
@@ -49,7 +49,7 @@ Tie-breaking is treated as a **vote outcome rule**, not as an additional seat.
 
 ---
 
-## Multi-country support
+## Sample parliaments
 
 Includes sample parliamentary structures such as:
 
@@ -124,7 +124,7 @@ The current coalition can be downloaded or copied as a **PNG image** in square (
 Embeds can also be built by hand:
 
 - `?embed` shows only the chart
-- `?embed&country=Germany` shows a sample country
+- `?embed&parliament=Germany` shows a sample parliament (`?country=` also works)
 - `&theme=dark` or `&theme=auto` changes the default light theme
 
 ---
@@ -220,7 +220,7 @@ http://localhost:5173
 
 # How it works
 
-1. Select a country or create a custom parliament
+1. Select a sample parliament or create a custom one
 2. Add or modify political parties and seat counts
 3. Adjust ideological positions or party metadata
 4. Select parties to form potential coalitions

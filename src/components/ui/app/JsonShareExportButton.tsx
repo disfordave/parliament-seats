@@ -18,10 +18,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { useI18n, exportCountryData } from "@/lib/zustandStore";
+import { useI18n, exportParliamentData } from "@/lib/zustandStore";
 import { IncludeOptions } from "@/types";
 import { copyText } from "@/utils/clipboard";
-import { stringifyCountry } from "@/utils/parseCountry";
+import { stringifyParliament } from "@/utils/parseParliament";
 import {
   createEmbedCode,
   createEmbedLink,
@@ -107,7 +107,7 @@ export default function JsonShareExportButton() {
 
     if (!shouldExport) return;
 
-    const data = stringifyCountry(exportCountryData(includeOptions));
+    const data = stringifyParliament(exportParliamentData(includeOptions));
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -149,7 +149,9 @@ export default function JsonShareExportButton() {
       onClick: () =>
         handleCopy(
           "text",
-          Promise.resolve(stringifyCountry(exportCountryData(includeOptions))),
+          Promise.resolve(
+            stringifyParliament(exportParliamentData(includeOptions)),
+          ),
         ),
     },
     {
@@ -159,7 +161,7 @@ export default function JsonShareExportButton() {
       onClick: () =>
         handleCopy(
           "link",
-          createShareLink(exportCountryData(includeOptions), getAppUrl()),
+          createShareLink(exportParliamentData(includeOptions), getAppUrl()),
         ),
     },
     {
@@ -167,11 +169,11 @@ export default function JsonShareExportButton() {
       label: i("buttons.exportToEmbed"),
       icon: <CodeBracketIcon className="size-5 shrink-0" />,
       onClick: () => {
-        const country = exportCountryData(includeOptions);
+        const parliament = exportParliamentData(includeOptions);
         handleCopy(
           "embed",
-          createEmbedLink(country, getAppUrl()).then((embedLink) =>
-            createEmbedCode(embedLink, country),
+          createEmbedLink(parliament, getAppUrl()).then((embedLink) =>
+            createEmbedCode(embedLink, parliament),
           ),
         );
       },

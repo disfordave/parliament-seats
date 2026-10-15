@@ -62,7 +62,7 @@ export default function PartyButton({ party }: { party: Party }) {
         }
       }}
       className={`${
-        isEditMode ? "items-start" : "cursor-pointer items-center"
+        isEditMode ? "h-full items-start" : "cursor-pointer items-center"
       } party-button flex w-full gap-2 overflow-hidden rounded-2xl border-2 bg-white p-2 shadow-lg transition-all duration-300 dark:bg-zinc-900`}
       style={{
         borderColor: selected ? colour : "var(--border-colour)", // dark mode #374151
@@ -247,7 +247,7 @@ export default function PartyButton({ party }: { party: Party }) {
       )}
       {isEditMode ? (
         <>
-          <div className="flex w-full">
+          <div className="flex h-full w-full">
             <label className="flex w-full flex-col items-center gap-1">
               <input
                 name="position"
@@ -276,7 +276,7 @@ export default function PartyButton({ party }: { party: Party }) {
                   }
                 }}
               />
-              <span className="text-center">
+              <span className="px-1 text-center text-sm leading-tight">
                 {i(`spectrum.${getPosition(party.position).full}`)}
               </span>
             </label>

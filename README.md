@@ -65,6 +65,7 @@ Includes sample parliamentary structures such as:
 - France (Assemblée nationale)
 - Malta (House of Representatives)
 - New Zealand (House of Representatives)
+- Quebec (Assemblée nationale)
 - Spain (Congreso de los Diputados)
 - Turkey (Türkiye Büyük Millet Meclisi)
 

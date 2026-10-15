@@ -1689,4 +1689,55 @@ export const parliaments: Parliament[] = [
       },
     ],
   },
+  {
+    // As elected on 5 October 2026. The PQ asked for judicial recounts in
+    // Vachon and Champlain, where it came second by 10 and 191 votes
+    name: "Quebec",
+    localizedNames: {
+      de: "Québec",
+      es: "Quebec",
+      fr: "Québec",
+      nl: "Québec",
+      tr: "Québec",
+    },
+    updateDate: "2026-10-15",
+    parties: [
+      {
+        id: "qc-pq",
+        name: "Parti Québécois",
+        shortName: "PQ",
+        seats: 59,
+        colour: "#87CEFA",
+        position: -25,
+        isIndependent: false,
+      },
+      {
+        id: "qc-liberal",
+        name: "Parti libéral du Québec",
+        shortName: "PLQ",
+        seats: 40,
+        colour: "#EA6D6A",
+        position: 25,
+        isIndependent: false,
+      },
+      {
+        id: "qc-conservative",
+        name: "Parti conservateur du Québec",
+        shortName: "PCQ",
+        seats: 19,
+        colour: "#313E6B",
+        position: 75,
+        isIndependent: false,
+      },
+      {
+        id: "qc-qs",
+        name: "Québec solidaire",
+        shortName: "QS",
+        seats: 9,
+        colour: "#FF8040",
+        position: -75,
+        isIndependent: false,
+      },
+    ],
+  },
 ];

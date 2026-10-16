@@ -108,10 +108,12 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <div className="flex gap-2">
+            <div className="order-2 flex gap-2 sm:order-1">
               <LocaleSettingButton />
             </div>
-            <ThemeButton />
+            <div className="order-1 sm:order-2">
+              <ThemeButton />
+            </div>
           </div>
         </div>
       </footer>

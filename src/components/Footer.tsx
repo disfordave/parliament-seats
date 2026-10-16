@@ -108,10 +108,10 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <ThemeButton />
             <div className="flex gap-2">
               <LocaleSettingButton />
             </div>
+            <ThemeButton />
           </div>
         </div>
       </footer>

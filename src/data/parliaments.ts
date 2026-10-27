@@ -1398,7 +1398,8 @@ export const parliaments: Parliament[] = [
       nl: "Turkije",
       tr: "Türkiye",
     },
-    updateDate: "2026-09-15",
+    // Fixed positioning of parties
+    updateDate: "2026-10-27",
     parties: [
       {
         id: "tr-akp",
@@ -1414,7 +1415,7 @@ export const parliaments: Parliament[] = [
         name: "Yeni Parti",
         shortName: "Yeni Parti",
         seats: 91,
-        colour: "#990030",
+        colour: "#B3141B",
         position: -25,
         isIndependent: false,
       },
@@ -1460,7 +1461,7 @@ export const parliaments: Parliament[] = [
         shortName: "YENİ YOL",
         seats: 20,
         colour: "#3465aa",
-        position: 25,
+        position: 75,
         isIndependent: false,
       },
       {
@@ -1505,7 +1506,7 @@ export const parliaments: Parliament[] = [
         shortName: "DBP",
         seats: 2,
         colour: "#30a13e",
-        position: -75,
+        position: -100,
         isIndependent: false,
       },
       {
@@ -1523,7 +1524,7 @@ export const parliaments: Parliament[] = [
         shortName: "SP",
         seats: 1,
         colour: "#4682B4",
-        position: 75,
+        position: 100,
         isIndependent: false,
       },
       {
@@ -1532,7 +1533,7 @@ export const parliaments: Parliament[] = [
         shortName: "DSP",
         seats: 1,
         colour: "#00C4C2",
-        position: -25,
+        position: -75,
         isIndependent: false,
       },
       {

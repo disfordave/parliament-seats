@@ -68,6 +68,7 @@ Includes sample parliamentary structures such as:
 - Quebec (Assemblée nationale)
 - Spain (Congreso de los Diputados)
 - Turkey (Türkiye Büyük Millet Meclisi)
+- United States (Senate)
 
 Users can also create custom parliament configurations.
 
@@ -258,7 +259,9 @@ Samples live in [`src/data/parliaments.ts`](src/data/parliaments.ts). Please fol
 **What to add**
 
 - **Real parliaments that exist today.** No fictional, proposed or abolished ones.
-- **The latest composition.** Use the current seat numbers, and set `updateDate` to the date they are from. A historical composition, such as a landmark election, is accepted only when it adds something the current one can't. Explain why in the pull request.
+- **The current composition.** Use the seat numbers in force now, and set `updateDate` to the date they are from.
+- **The incoming composition, after an election.** Until the newly elected members take their seats, a chamber can have two samples: the outgoing composition and the incoming one, as in `United States (Senate, 2026)` and `United States (Senate, 2027)`.
+- **A historical composition**, such as a landmark election, only when it adds something the current one can't. Explain why in the pull request.
 - **A source.** Link where the seat numbers come from in the pull request. (Optional, but strongly encouraged.)
 
 **Naming**
@@ -266,20 +269,28 @@ Samples live in [`src/data/parliaments.ts`](src/data/parliaments.ts). Please fol
 - **The place's name only, without the country it is part of.**
   - ✅ `London`, `Wallonia`, `Quebec`, `Germany`
   - ❌ `London, UK`, `Wallonia, Belgium`, `Quebec, Canada`, `Germany, Europe`
-- **A short chamber name when adding more than one chamber** of the same parliament, as in `Australia (House)` and `Australia (Senate)`. A single sample needs no chamber name.
-- **The year for a historical composition**, in the same brackets, after any chamber name: `Germany (2021)`, `Australia (House, 2022)`. The latest composition has no year.
-- **`name` is in English**, and links use it (`?parliament=Germany`), so avoid renaming a sample once it is published.
-- **`localizedNames` gives the name in every other language.** Translate the place but keep the brackets as in English, as in `Australien (Senate)` or `Deutschland (2021)`. TypeScript reports any language that is missing.
+- **A short chamber name for an upper house, or when adding more than one chamber** of the same parliament, as in `United States (Senate, 2027)`, or `Australia (House)` and `Australia (Senate)`. A lower or only chamber on its own needs no chamber name, as in `Germany`.
+- **A year for any composition other than the current one**, in the same brackets, after any chamber name. The current composition has no year, unless the chamber also has an incoming one.
+  - Outgoing and incoming: the year each one sits, as in `United States (Senate, 2026)` for the Senate in office now and `United States (Senate, 2027)` for the one elected in November 2026, which takes its seats in January 2027.
+  - Historical: the year it took its seats, as in `Germany (2021)` or `Australia (House, 2022)`.
+- **`name` is in English**, and links use it (`?parliament=Germany`), so avoid renaming a sample once it is published. When the new members take their seats, the incoming sample keeps its name, year included. The outgoing one stays only if it is worth keeping as a historical composition.
+- **`localizedNames` gives the name in every other language.** Translate the place and the chamber, and keep everything else in the brackets as in English, as in `Vereinigte Staaten (Senat, 2026)` or `Deutschland (2021)`. TypeScript reports any language that is missing.
 - **No flags or emoji.**
+
+**Parties**
+
+- **An `id` that starts with a short code for the sample**, like `us-democratic` or `au-senate-liberal`. Each `id` must be unique within its sample. A party keeps the same `id` in every composition of a chamber, as `us-democratic` does in both US Senate samples.
+- **A `position`** from -100 (left) to 100 (right).
+- **Members who sit with a party, such as independents who caucus with it, can be counted with that party.** Say so in `name`, as in `Democratic Party (including independents)`.
 
 **Checklist**
 
-1. Add the entry to [`src/data/parliaments.ts`](src/data/parliaments.ts). Copying an existing one is the easiest start. Give each party an `id` that starts with the sample, like `au-senate-liberal`, and a `position` from -100 (left) to 100 (right).
+1. Add the entry to [`src/data/parliaments.ts`](src/data/parliaments.ts). Copying an existing one is the easiest start.
 2. Run `npm run build` and `npm run test`.
 
 Optional, but strongly encouraged:
 
-- Add it to the [Sample parliaments](#sample-parliaments) list above, with the chamber's own name, as in `Germany (Bundestag)`.
+- Add it to the [Sample parliaments](#sample-parliaments) list above, with the chamber's own name, as in `Germany (Bundestag)`. A chamber with more than one composition is listed once, without years.
 - Add it to `seo.parliaments` in [`src/i18n/`](src/i18n/), in the same style. Add it to every language file or to none, since a test checks that the lists are the same length.
 
 ---

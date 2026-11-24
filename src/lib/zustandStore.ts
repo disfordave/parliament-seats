@@ -18,7 +18,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { parliaments } from "@/data/parliaments";
+import { DEFAULT_PARLIAMENT, parliaments } from "@/data/parliaments";
 import {
   defaultLocale,
   translate,
@@ -127,7 +127,7 @@ const useI18n = create<I18nState>((set, get) => ({
 
 const useSelectedParliament = create<SelectedParliamentState>((set) => ({
   selectedParliament:
-    parliaments.find((c) => c.name === "European Union") ?? null,
+    parliaments.find((c) => c.name === DEFAULT_PARLIAMENT) ?? null,
   setSelectedParliament: (by) => {
     set(() => ({ selectedParliament: by }));
   },

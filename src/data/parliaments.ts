@@ -20,6 +20,9 @@
 
 import { Parliament } from "@/types";
 
+// Parliament shown when the URL doesn't ask for one (must match a `name` below)
+export const DEFAULT_PARLIAMENT = "European Union";
+
 export const parliaments: Parliament[] = [
   {
     name: "European Union",

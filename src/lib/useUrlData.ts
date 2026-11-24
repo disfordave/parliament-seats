@@ -19,7 +19,7 @@
 */
 
 import { useEffect, useState } from "react";
-import { parliaments } from "@/data/parliaments";
+import { DEFAULT_PARLIAMENT, parliaments } from "@/data/parliaments";
 import { supportedLocales } from "@/i18n/i18n";
 import {
   useParties,
@@ -53,7 +53,9 @@ export function useUrlData(isEmbed: boolean) {
     const loadParliament = () => {
       const parliament =
         parliaments.find((parliament) => parliament.name === parliamentName) ??
-        parliaments.find((parliament) => parliament.name === "European Union");
+        parliaments.find(
+          (parliament) => parliament.name === DEFAULT_PARLIAMENT,
+        );
       if (parliament) {
         setSelectedParliament(parliament);
         setParties(parliament.parties);

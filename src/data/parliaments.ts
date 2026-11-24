@@ -1558,7 +1558,7 @@ export const parliaments: Parliament[] = [
       nl: "Spanje",
       tr: "İspanya",
     },
-    updateDate: "2026-10-14",
+    updateDate: "2026-11-24",
     parties: [
       {
         id: "es-pp",
